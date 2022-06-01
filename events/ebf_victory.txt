@@ -1,0 +1,392 @@
+
+# add_namespace = victory_timer
+
+# news_event = {
+# 	id = victory_timer.1
+# 	title = victory_timer.1.t
+# 	desc = victory_timer.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	fire_only_once = yes
+
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 		random_owned_controlled_state = {
+# 			limit = {
+# 				has_built = {
+# 					type = air_base
+# 					value > 0
+# 				}
+# 			}
+# 		}	
+# 	}
+
+# 	immediate = {
+# 		random_owned_controlled_state = {
+# 			limit = {
+# 				has_built = {
+# 					type = air_base
+# 					value > 10
+# 				}
+# 			}
+# 		}
+# 	}
+# }
+
+# news_event = {
+# 	id = victory_timer.2
+# 	title = victory_timer.2.t
+# 	desc = victory_timer.2.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	trigger = {}
+
+# 	is_triggered_only = yes
+
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = GER
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = GER
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = GER
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_GER.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = ENG
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = ENG
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = ENG
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_ENG.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = ITA
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = ITA
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = ITA
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_ITA.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = HUN
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = HUN
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = HUN
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_HUN.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = BUL
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = BUL
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = BUL
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_BUL.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = POR
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = POR
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = POR
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_POR.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = OCC
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = OCC
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = OCC
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_OCC.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = SWE
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = SWE
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = SWE
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_SWE.1 days = 1 }
+# 		}
+
+# 		if = {
+# 			limit = {
+# 				any_state = {
+# 					is_controlled_by = POL
+# 					OR = {
+# 						is_on_continent = north_america
+# 						is_on_continent = south_america
+# 					}
+# 				}
+# 				any_state = {
+# 					is_controlled_by = POL
+# 					is_on_continent = africa
+# 				}
+# 				any_state = {
+# 					is_controlled_by = POL
+# 					is_on_continent = asia
+# 				}
+# 			}
+# 			news_event = { id = victory_POL.1 days = 1 }
+# 		}
+
+# 		else = {
+# 			news_event = { id = victory_timer.2 days = 180 }
+# 		}
+# 	}
+# }
+
+# add_namespace = victory
+
+# # Victory Germany
+# news_event = {
+# 	id = victory_GER.1
+# 	title = victory_GER.1.t
+# 	desc = victory_GER.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_SWE.1
+# 	title = victory_SWE.1.t
+# 	desc = victory_SWE.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_ENG.1
+# 	title = victory_ENG.1.t
+# 	desc = victory_ENG.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_ITA.1
+# 	title = victory_ITA.1.t
+# 	desc = victory_ITA.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_HUN.1
+# 	title = victory_HUN.1.t
+# 	desc = victory_HUN.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_BUL.1
+# 	title = victory_BUL.1.t
+# 	desc = victory_BUL.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_POR.1
+# 	title = victory_POR.1.t
+# 	desc = victory_POR.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_OCC.1
+# 	title = victory_OCC.1.t
+# 	desc = victory_OCC.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }
+
+# news_event = {
+# 	id = victory_POL.1
+# 	title = victory_POL.1.t
+# 	desc = victory_POL.1.d
+# 	picture = GFX_news_event_001
+	
+# 	major = yes
+	
+# 	mean_time_to_happen = { days = 1 }
+	
+# 	trigger = {
+# 	}
+
+# 	is_triggered_only = yes
+# }

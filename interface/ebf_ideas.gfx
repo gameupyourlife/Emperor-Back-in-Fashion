@@ -1,0 +1,279 @@
+spriteTypes = {	
+
+	#### EBF Extended Government Laws
+	SpriteType = {
+		name = "GFX_idea_air_production_focus"
+		texturefile = "gfx/interface/ideas/government/air_production_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_armor_production_focus"
+		texturefile = "gfx/interface/ideas/government/armor_production_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_base_focus"
+		texturefile = "gfx/interface/ideas/government/base_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_censored_press"
+		texturefile = "gfx/interface/ideas/government/censored_press.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_censored_school"
+		texturefile = "gfx/interface/ideas/government/censored_school.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_civilian_focus"
+		texturefile = "gfx/interface/ideas/government/civilian_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_defense_force"
+		texturefile = "gfx/interface/ideas/government/defense_force.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_elite_training"
+		texturefile = "gfx/interface/ideas/government/elite_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_free_child_policy"
+		texturefile = "gfx/interface/ideas/government/free_child_policy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_free_press"
+		texturefile = "gfx/interface/ideas/government/free_press.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_full_intervention"
+		texturefile = "gfx/interface/ideas/government/full_intervention.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_high_training"
+		texturefile = "gfx/interface/ideas/government/high_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_independent_courts"
+		texturefile = "gfx/interface/ideas/government/independent_courts.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_indoctrination"
+		texturefile = "gfx/interface/ideas/government/indoctrination.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_infantry_production_focus"
+		texturefile = "gfx/interface/ideas/government/infantry_production_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_limited_intervention"
+		texturefile = "gfx/interface/ideas/government/limited_intervention.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_limited_surveillance"
+		texturefile = "gfx/interface/ideas/government/limited_surveillance.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_low_training"
+		texturefile = "gfx/interface/ideas/government/low_training.dds"
+	}
+
+
+	
+	SpriteType = {
+		name = "GFX_idea_medium_training"
+		texturefile = "gfx/interface/ideas/government/medium_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_military_focus"
+		texturefile = "gfx/interface/ideas/government/military_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_minimal_healthcare"
+		texturefile = "gfx/interface/ideas/government/minimal_healthcare.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_naval_focus"
+		texturefile = "gfx/interface/ideas/government/naval_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_navy_production_focus"
+		texturefile = "gfx/interface/ideas/government/navy_production_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_no_focus"
+		texturefile = "gfx/interface/ideas/government/no_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_no_healthcare"
+		texturefile = "gfx/interface/ideas/government/no_healthcare.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_no_press"
+		texturefile = "gfx/interface/ideas/government/no_press.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_no_surveillance"
+		texturefile = "gfx/interface/ideas/government/no_surveillance.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_no_training"
+		texturefile = "gfx/interface/ideas/government/no_training.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_objective_schools"
+		texturefile = "gfx/interface/ideas/government/objective_schools.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_one_child_policy"
+		texturefile = "gfx/interface/ideas/government/one_child_policy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_one_forced_child_policy"
+		texturefile = "gfx/interface/ideas/government/one_forced_child_policy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_presidential_veto"
+		texturefile = "gfx/interface/ideas/government/presidential_veto.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_private_healthcare"
+		texturefile = "gfx/interface/ideas/government/private_healthcare.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_propaganda_press"
+		texturefile = "gfx/interface/ideas/government/propaganda_press.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_state_controlled"
+		texturefile = "gfx/interface/ideas/government/state_controlled.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_subjective_school"
+		texturefile = "gfx/interface/ideas/government/subjective_school.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_supervised_courts"
+		texturefile = "gfx/interface/ideas/government/supervised_courts.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_surveillance_state"
+		texturefile = "gfx/interface/ideas/government/surveillance_state.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_tow_child_policy"
+		texturefile = "gfx/interface/ideas/government/tow_child_policy.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_universal_healthcare"
+		texturefile = "gfx/interface/ideas/government/universal_healthcare.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_war_bonds_ebf_0"
+		texturefile = "gfx/interface/ideas/government/war_bonds_ebf_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_war_bonds_ebf_1"
+		texturefile = "gfx/interface/ideas/government/war_bonds_ebf_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_war_bonds_ebf_2"
+		texturefile = "gfx/interface/ideas/government/war_bonds_ebf_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_war_bonds_ebf_3"
+		texturefile = "gfx/interface/ideas/government/war_bonds_ebf_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_war_bonds_ebf_4"
+		texturefile = "gfx/interface/ideas/government/war_bonds_ebf_4.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_scientific_education"
+		texturefile = "gfx/interface/ideas/government/scientific_education.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_worker_class_education"
+		texturefile = "gfx/interface/ideas/government/worker_class_education.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_entrepreneurial_education"
+		texturefile = "gfx/interface/ideas/government/entrepreneurial_education.dds"
+	}
+	##
+
+	SpriteType = {
+		name = "GFX_idea_focus_on_other_things"
+		texturefile = "gfx/interface/ideas/idea_focus_on_other_things.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_import_focus"
+		texturefile = "gfx/interface/ideas/idea_import_focus.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_kids_in_the_army"
+		texturefile = "gfx/interface/ideas/idea_kids_in_the_army.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_last_man_standing"
+		texturefile = "gfx/interface/ideas/idea_last_man_standing.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_sacrifice_the_civilians"
+		texturefile = "gfx/interface/ideas/idea_sacrifice_the_civilians.dds"
+	}
+	SpriteType = {
+		name = "GFX_idea_woman_in_the_army"
+		texturefile = "gfx/interface/ideas/idea_woman_in_the_army.dds"
+	}
+
+	#gouvernments etc.
+	spriteType = {
+		name = "GFX_idea_categories"
+		texturefile = "gfx/interface/idea_categories.dds"
+		noOfFrames = 9
+	}
+	#slots
+	spriteType = {
+		name = "GFX_idea_slot_war_bonds_ebf"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_military_utilazation"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_production_focus"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_training"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_inner_security"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_education"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_healthcare"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_child_policy"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_press"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_judiciary"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_slot_economy_focus"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+
+}

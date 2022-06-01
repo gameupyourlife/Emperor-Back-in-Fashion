@@ -1,0 +1,397 @@
+ideas = {
+	country = {
+		OCC_air_supports_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			equipment_bonus = {
+				tac_bomber_equipment = {
+					air_ground_attack = 0.15
+					instant = yes
+				}
+				CAS_equipment = {
+					air_ground_attack = 0.15
+					instant = yes
+				}
+			}
+
+			modifier = {
+				
+			}
+
+			picture = air_war_plans_division_focus
+		}
+
+		OCC_occitanian_fire_power_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				armor = {
+					maximum_speed = 0.1
+				}
+			}
+
+			modifier = {
+				army_attack_factor = 0.05
+				experience_gain_factor = 0.1
+			}
+
+			picture = generic_intel_bonus
+		}
+
+		OCC_financial_relief_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+			picture = generic_intel_bonus
+		}
+
+		OCC_construction_improvement_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+
+			picture = generic_production_bonus
+		}
+
+		OCC_open_minded_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				trade_opinion_factor = 0.2
+			}
+
+			picture = GFX_idea_can_wartime_prices_and_trade_board
+		}
+
+		OCC_liberte_egalite_fraternite_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+
+			picture = GFX_fra_undividable
+		}
+
+		OCC_elite_divsions_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				special_forces_cap = 0.03
+			}
+
+			picture = FRA_scw_intervention_nationalists_focus
+		}
+
+		OCC_defensive_fire_power_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			picture = FRA_fortification_focus
+		}
+
+		OCC_mass_production_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.2
+					instant = yes
+				}
+			}
+
+			picture = generic_production_bonus
+		}
+
+		OCC_defense_with_help_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.2
+				production_speed_coastal_bunker_factor = 0.2
+			}
+
+			picture = generic_wall_line
+		}
+
+		OCC_occitanian_defensive_power_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_dig_in_factor = 0.1
+				army_defence_factor = 0.05
+				experience_gain_factor = 0.1
+			}
+			picture = generic_wall_line
+		}
+
+		OCC_mass_mobilisation_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_army_factor = -0.2
+			}
+
+			picture = generic_manpower_bonus
+		}
+
+		OCC_new_special_forces_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				special_forces_cap = 0.03
+			}
+
+			picture = idea_eng_special_air_service
+		}
+
+		OCC_the_navy_of_navys_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				navy_max_range_factor = 0.1
+				navy_org_factor = 0.1
+			}
+
+			picture = generic_navy_bonus
+		}
+
+		OCC_exploit_the_colonies_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				compliance_growth_on_our_occupied_states = 0.01
+			}
+
+			picture = FRA_scw_intervention_republicans_focus
+		}
+
+		OCC_liberated_workers_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.025
+			}
+
+			picture = FRA_matignon_agreements
+		}
+
+		OCC_organized_fronts_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_Factor = 0.1
+			}
+
+			picture = FRA_motorized_focus
+		}
+
+		OCC_large_recruitment_campaign_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription_factor = 0.2
+			}
+
+			picture = generic_infantry_bonus
+		}
+
+		OCC_the_young_school = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+			}
+
+			picture = generic_navy_bonus
+		}
+
+		OCC_civilan_trucks_idea = {
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			picture = generic_navy_bonus
+		}
+
+
+
+	}
+}

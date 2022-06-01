@@ -1,0 +1,1969 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+# focus = {
+# 	id = ENG_go_with_the_hohenzollern
+# 	icon = GFX_focus_ger_oppose_hitler
+# 	x = 1
+# 	y = 1
+#	cost = 10
+
+# 	relative_position_id = {
+		
+# 	}
+
+# 	prerequisite = {
+		
+# 	}
+
+# 	available = {
+           # has_government = democratic
+            
+
+# 	}
+
+# 	completion_reward = {
+	
+# 	}
+# }
+
+focus_tree = {
+	id = england_focus
+	continuous_focus_position = {
+		x = 200
+		y = 1000
+	}
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 200
+			tag = ENG
+		}
+	}
+	
+	default = no
+
+	##############################
+	#### Leader and Civil War ####
+	##############################
+
+	
+
+	##################################
+	#### Indutrie after Civil War ####
+	##################################
+
+	focus = {
+		id = ENG_steady_as_she_goes_ebf
+		available = { 
+			
+		}
+
+		cancel_if_invalid = yes
+
+		icon = GFX_goal_support_democracy
+
+		x = 24
+		y = 0
+
+		cost = 5
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_country_flag = ENG_abdication_crisis_normal_marriage
+					has_country_flag = ENG_abdication_crisis_morganatic_marriage
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}	
+		completion_reward = {
+			add_timed_idea = { idea = ENG_steady_as_she_goes_idea days = 365 }
+		}
+	}
+	
+	focus = {
+		id = ENG_wilhelm_werke
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -16
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_steady_as_she_goes_ebf
+
+		prerequisite = { focus = ENG_steady_as_she_goes_ebf }
+			
+		
+
+		available = {
+            has_government = democratic
+            
+			 
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_industrial_effort_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_industrial_effort_2IC
+			}
+		}
+	}
+
+	###################################################################################################################
+	####### Research
+	###################################################################################################################
+
+	focus = {
+		id = ENG_fund_the_prussian_acadamy
+		icon = GFX_focus_research2
+		x = -4
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_wilhelm_werke
+		prerequisite = { focus = ENG_wilhelm_werke }
+		
+		available = {
+            has_government = democratic
+            
+			 
+		}
+
+		completion_reward = {
+			add_ideas = GER_fund_the_prussian_acadamy_idea
+		}
+	}
+
+	focus = {
+		id = ENG_employ_more_staff
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_fund_the_prussian_acadamy
+		prerequisite = { focus = ENG_fund_the_prussian_acadamy }
+		
+		available = {
+            has_government = democratic
+            
+			 
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = ENG_imperial_research_ambitions
+		icon = GFX_goal_generic_great_science
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_employ_more_staff
+		prerequisite = { focus = ENG_employ_more_staff }
+		
+		available = {
+            has_government = democratic
+            
+			has_full_control_of_state = 127
+			has_full_control_of_state = 126
+			has_full_control_of_state = 123
+			has_full_control_of_state = 338
+			has_full_control_of_state = 125
+			has_full_control_of_state = 129
+			has_full_control_of_state = 128
+			has_full_control_of_state = 130
+			has_full_control_of_state = 132
+			has_full_control_of_state = 131
+			has_full_control_of_state = 122
+			has_full_control_of_state = 133
+			has_full_control_of_state = 121
+			has_full_control_of_state = 136
+			has_full_control_of_state = 120
+			has_full_control_of_state = 119
+			has_full_control_of_state = 134
+			has_full_control_of_state = 113
+			has_full_control_of_state = 135
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	###################################################################################################################
+	####### Naval Industrie
+	###################################################################################################################
+
+	focus = {
+		id = ENG_improve_naval_sektor
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -2
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_wilhelm_werke
+		prerequisite = { focus = ENG_wilhelm_werke }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_improve_naval_sektor1IC }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_improve_naval_sektor1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_improve_naval_sektor1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = GER_improve_naval_sektor1IC
+			}
+		}
+	}
+	
+	focus = {
+		id = ENG_rebuild_navy
+		icon = GFX_goal_generic_navy_cruiser
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_improve_naval_sektor
+		prerequisite = { focus = ENG_improve_naval_sektor }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_improve_naval_sektor2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_improve_naval_sektor2IC
+			}	
+		}
+	}
+
+	focus = {
+		id = ENG_raise_the_schaumweinsteuer
+		icon = GFX_goal_generic_navy_battleship
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_rebuild_navy
+		prerequisite = { focus = ENG_rebuild_navy }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = GER_raised_schaumweinsteuer	
+		}
+	}
+
+	###################################################################################################################
+	####### Military Industrie
+	###################################################################################################################
+
+	focus = {
+		id = ENG_ask_porsche_for_support
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_wilhelm_werke
+		prerequisite = { focus = ENG_wilhelm_werke }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_porsche_help }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				remove_building = { type = industrial_complex  level = 2 }
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					industrial_complex > 1
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				remove_building = { type = industrial_complex  level = 2 }
+				set_state_flag = GER_porsche_help
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_expand_the_german_war_economy
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_ask_porsche_for_support
+		prerequisite = { focus = ENG_ask_porsche_for_support }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_arms_factory_1IC }
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = arms_factory
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = GER_arms_factory_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_lessons_learned
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_expand_the_german_war_economy
+		prerequisite = { focus = ENG_expand_the_german_war_economy }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+
+		completion_reward = {
+			add_ideas = GER_lessons_learned_idea
+		}
+	}
+
+	focus = {
+		id = ENG_investment_campain
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_wilhelm_werke
+		prerequisite = { focus = ENG_wilhelm_werke }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_investment_campain1IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_investment_campain1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = GER_investment_campain1IC
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_reichs_autobahn
+		icon = GFX_goal_reichsautobahn
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_investment_campain
+		prerequisite = { focus = ENG_investment_campain }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = GER_reichs_autobahn1IC }
+				add_building_construction = {
+					type = infrastructure
+					level = 20
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 20
+					instant_build = yes
+				}
+				set_state_flag = GER_reichs_autobahn1IC
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 20
+					instant_build = yes
+				}
+				set_state_flag = GER_reichs_autobahn1IC
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = infrastructure
+					level = 20
+					instant_build = yes
+				}
+				set_state_flag = GER_reichs_autobahn1IC
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_increase_infrastructure_spendings
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_reichs_autobahn
+		prerequisite = { focus = ENG_reichs_autobahn }
+		
+		available = {
+            has_government = democratic
+            
+
+		}
+
+
+		completion_reward = {
+			add_ideas = GER_increase_infrastructure_spendings_idea
+			add_ideas = ENG_increased_construction_fundings_idea
+		}
+	}
+
+	
+
+	###################################################################################################################
+	####### Prioritize Industrie
+	###################################################################################################################
+
+
+
+	###################################################################################################################
+	####### Political
+	###################################################################################################################
+
+	focus = {
+		id = ENG_home_defence_ebf
+		prerequisite = { focus = ENG_steady_as_she_goes_ebf }
+		icon = GFX_focus_generic_home_defense
+		x = 0
+		y = 1
+
+		relative_position_id = ENG_steady_as_she_goes_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT}	
+		completion_reward = {
+			add_war_support = 0.05
+			# Ipswich
+			125 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#Plymouth
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 271
+						instant_build = yes
+					}
+				}
+			}
+			# Greater London Area
+			126 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#London
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 11374
+						instant_build = yes
+					}
+				}
+			}
+			# Sussex
+			127 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#Dover
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 3501
+						instant_build = yes
+					}
+					#Portsmouth
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 9458
+						instant_build = yes
+					}
+				}								
+			}
+			# Cornwall
+			123 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					#Plymouth
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 540
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	################################
+
+	focus = {
+		id = ENG_military_buildup
+		available = {
+			OR = {
+				threat > 0.1
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_home_defence_ebf }
+		icon = GFX_goal_generic_construct_military
+		x = -1
+		y = 1
+
+		relative_position_id = ENG_home_defence_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_STABILITY}	
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = ENG_military_training_act_ebf
+		available = {
+			OR = {
+				threat > 0.2
+				has_war = yes
+			}
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_military_buildup }
+		icon = GFX_focus_generic_commonwealth_build_infantry
+		x = 0
+		y = 1
+		relative_position_id = ENG_military_buildup
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			remove_ideas = ENG_the_war_to_end_all_wars
+			set_rule = { can_send_volunteers = yes }
+		}
+	}
+
+	focus = {
+		id = ENG_increase_moral
+		available = {
+			
+		}
+		bypass = {
+			has_war_with = GER
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_military_training_act_ebf }
+		icon = GFX_focus_chi_army_reform
+		x = 0
+		y = 1
+		relative_position_id = ENG_military_training_act_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = ENG_increase_mora_idea
+		}
+	}
+
+	focus = {
+		id = ENG_special_air_service_ebf
+		prerequisite = { focus = ENG_military_training_act_ebf }
+		available = { 
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_special_air_service
+		x = -2
+		y = 1
+		relative_position_id = ENG_military_training_act_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_ideas = ENG_special_air_service_idea
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = ENG_david_stirling
+		}
+	}
+
+	focus = {
+		id = ENG_chiefs_of_staff_committee_ebf
+		prerequisite = { focus = ENG_special_air_service_ebf }
+
+		available = { 
+			
+		}
+
+		continue_if_invalid = yes
+
+		icon = GFX_focus_eng_chiefs_of_staff_committee
+		x = -1
+		y = 1
+		relative_position_id = ENG_special_air_service_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
+			add_ideas = ENG_chiefs_of_staff_committee_idea
+		}
+	}
+
+	focus = {
+		id = uk_small_arms_focus_ebf
+		prerequisite = { focus = ENG_special_air_service_ebf }
+		icon = GFX_goal_generic_production2
+		x = 1
+		y = 1
+		relative_position_id = ENG_special_air_service_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+			add_ideas = british_arms_discount
+		}
+	}
+
+	#############################
+
+	focus = {
+		id = ENG_national_preparations
+		available = {
+			
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_home_defence_ebf }
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+
+		relative_position_id = ENG_home_defence_ebf
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = ENG_international_preparations
+		available = {
+			
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_national_preparations }
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+		relative_position_id = ENG_national_preparations
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			add_threat = 5
+			hidden_effect = { news_event = { id = wtt_news.338 hours = 6 } }
+			every_country = {
+				limit = {
+					is_ai = no
+					NOT = {
+						original_tag = ENG
+					}
+				}
+				add_political_power = 10
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_which_way_we_choose
+		available = {
+			
+		}
+		bypass = {
+
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = ENG_international_preparations }
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 0
+		y = 1
+		relative_position_id = ENG_international_preparations
+		cost = 10
+		ai_will_do = {
+			factor = 1
+		}	
+		completion_reward = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_which_way_we_choose_flag
+			}
+			add_political_power = 25
+		}
+	}
+
+	##############
+
+	focus = {
+		id = ENG_integrate_what_once_was_ours
+		icon = GFX_goal_generic_territory_or_war
+		cost = 10
+
+		prerequisite = { focus = ENG_home_defence_ebf }
+		relative_position_id = ENG_home_defence_ebf
+
+		x = -3
+		y = 1
+
+		available = {
+			IRE = {
+				exists = yes
+			}
+		}
+
+		bypass = {
+			119 = {
+				is_owned_and_controlled_by = ENG
+			}
+			134 = {
+				is_owned_and_controlled_by = ENG
+			}
+			113 = {
+				is_owned_and_controlled_by = ENG
+			}
+			135 = {
+				is_owned_and_controlled_by = ENG
+			}
+		}
+
+		completion_reward = {
+			add_state_core = 119
+			create_wargoal = {
+				target = IRE 
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_invasion_of_the_mainland
+		icon = GFX_focus_hol_oranje_boven
+		cost = 10
+
+		prerequisite = { focus = ENG_integrate_what_once_was_ours }
+		relative_position_id = ENG_integrate_what_once_was_ours
+
+		x = 0
+		y = 1
+
+		bypass = {
+			15 = {
+				is_owned_and_controlled_by = ENG
+			}
+			16 = {
+				is_owned_and_controlled_by = ENG
+			}
+			18 = {
+				is_owned_and_controlled_by = ENG
+			}
+			785 = {
+				is_owned_and_controlled_by = ENG
+			}
+			29 = {
+				is_owned_and_controlled_by = ENG
+			}
+			34 = {
+				is_owned_and_controlled_by = ENG
+			}
+			6 = {
+				is_owned_and_controlled_by = ENG
+			}
+			8 = {
+				is_owned_and_controlled_by = ENG
+			}
+			807 = {
+				is_owned_and_controlled_by = ENG
+			}
+			35 = {
+				is_owned_and_controlled_by = ENG
+			}
+			7 = {
+				is_owned_and_controlled_by = ENG
+			}
+			36 = {
+				is_owned_and_controlled_by = ENG
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = HOL 
+				type = annex_everything
+			}
+		}
+	}
+
+	
+
+	##############
+
+	focus = {
+		id = ENG_defend_the_fatherland
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+
+		prerequisite = { focus = ENG_home_defence_ebf }
+		relative_position_id = ENG_home_defence_ebf
+
+		x = 3
+		y = 1
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			127 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 3501
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 9458
+					instant_build = yes
+				}
+			}
+			125 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 271
+					instant_build = yes
+				}
+			}
+			126 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 6103
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = radar_station
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			123 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					province = 540
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_prepare_for_the_inevitable_ebf
+		available = {
+
+		}		
+		prerequisite = { focus = ENG_defend_the_fatherland }
+
+		icon = GFX_goal_generic_construction
+
+		x = 0
+		y = 1
+
+		relative_position_id = ENG_defend_the_fatherland
+		cost = 10
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}	
+		completion_reward = {
+			add_ideas = ENG_prepare_for_the_inevitable_idea
+		}
+	}
+
+	##############
+
+	focus = {
+		id = ENG_democratic_bastion
+		icon = GFX_goal_generic_fortify_city
+		cost = 10
+
+		prerequisite = { focus = ENG_increase_moral }
+		prerequisite = { focus = ENG_which_way_we_choose }
+		relative_position_id = ENG_increase_moral
+
+		x = 1
+		y = 1
+
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			complete_national_focus = ENG_western_way_of_life
+		}
+	}
+
+	###################################################################################################################
+	####### Army Inovations, Air...
+	###################################################################################################################
+
+	focus = {
+		id = ENG_military_expansion
+		icon = GFX_goal_generic_army_doctrines
+		x = 16
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_steady_as_she_goes_ebf
+
+		prerequisite = { 	focus = ENG_steady_as_she_goes_ebf }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#################
+	# Armor, Tank
+	#################
+
+	focus = {
+		id = ENG_army_innovations
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -4
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_military_expansion
+
+		prerequisite = { 	focus = ENG_military_expansion }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_tech_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_armored_wave
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_army_innovations
+
+		prerequisite = { 	focus = ENG_army_innovations }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	#################
+	# Airplanes
+	#################
+
+	focus = {
+		id = ENG_german_airplanes
+		icon = GFX_goal_generic_air_production
+		x = -2
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_military_expansion
+
+		prerequisite = { 	focus = ENG_military_expansion }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_equipment_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_revenge_the_hindenburg
+		icon = GFX_focus_generic_air_defense
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_german_airplanes
+
+		prerequisite = { 	focus = ENG_german_airplanes }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			#WIP wenn die zepeline existieren dafür
+			add_tech_bonus = {
+				name = airship_bonus
+				bonus = 1.0
+				uses = 2
+				category = airship
+			}
+		}
+	}
+
+	#################
+	# Navy
+	#################
+
+	focus = {
+		id = ENG_love_for_the_navy
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_military_expansion
+
+		prerequisite = { 	focus = ENG_military_expansion }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_equipment_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_fleet_in_beeing
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_love_for_the_navy
+
+		prerequisite = { 	focus = ENG_love_for_the_navy }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	#################
+	# Infantry, Artillerie
+	#################
+
+	focus = {
+		id = ENG_world_war_one_tactics
+		icon = GFX_goal_generic_army_artillery2
+		x = 2
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_military_expansion
+
+		prerequisite = { 	focus = ENG_military_expansion }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_evolve_world_war_one_tactics
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_world_war_one_tactics
+
+		prerequisite = { 	focus = ENG_world_war_one_tactics }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_anti_tank
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_world_war_tow_tactics
+		icon = GFX_focus_generic_army_tanks2
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_evolve_world_war_one_tactics
+
+		prerequisite = { 	focus = ENG_evolve_world_war_one_tactics }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	########################
+	#Elektronik and Indutrie
+	########################
+
+	focus = {
+		id = ENG_industrial_revulotion
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_military_expansion
+
+		prerequisite = { 	focus = ENG_military_expansion }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_electronic_revulotion
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_industrial_revulotion
+
+		prerequisite = { 	focus = ENG_industrial_revulotion }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	#################
+	# Special Weapons, Rockets, Nukes
+	#################
+
+	focus = {
+		id = ENG_wunderwaffe_v2
+		icon = GFX_focus_rocketry
+		x = -1
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_revenge_the_hindenburg
+
+		prerequisite = { 	focus = ENG_armored_wave focus = ENG_revenge_the_hindenburg focus = ENG_fleet_in_beeing }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = rocketry_bonus
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_nukes
+		icon = GFX_focus_wonderweapons
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_wunderwaffe_v2
+
+		prerequisite = { 	focus = ENG_wunderwaffe_v2 }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
+	#################
+	# More Airplanes
+	#################
+
+	focus = {
+		id = ENG_long_range_bomber
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_revenge_the_hindenburg
+
+		prerequisite = { 	focus = ENG_armored_wave focus = ENG_revenge_the_hindenburg focus = ENG_fleet_in_beeing }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cat_strategic_bomber_bonus
+				bonus = 3.0
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_new_fuel_tanks
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_long_range_bomber
+
+		prerequisite = { 	focus = ENG_long_range_bomber }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = GER_new_fuel_tanks_idea
+		}
+	}
+
+
+
+
+
+
+	###################################################################################################################
+	####### Kaiserreich
+	###################################################################################################################
+
+	focus = {
+		id = ENG_western_way_of_life
+		icon = GFX_focus_generic_royal_wedding
+		x = 54
+		y = 0
+		cost = 10
+
+		bypass = {
+			has_completed_focus = ENG_democratic_bastion
+		}
+		
+		available = {
+            has_government = democratic
+            
+			always = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = ENG_prepare_against_submarine_warfare
+		icon = GFX_goal_generic_navy_anti_submarine
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_western_way_of_life
+
+		prerequisite = { 	focus = ENG_western_way_of_life }
+		
+		available = {
+            has_government = democratic
+            
+			
+		}
+
+		completion_reward = {
+			add_ideas = ENG_prepare_against_submarine_warfare_idea
+		}
+	}
+
+	focus = {
+		id = ENG_new_and_efficient_building_methods
+		icon = GFX_goal_continuous_non_factory_construct
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_prepare_against_submarine_warfare
+
+		prerequisite = { 	focus = ENG_prepare_against_submarine_warfare }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = ENG_new_and_efficient_building_methods_idea
+		}
+	}
+
+	focus = {
+		id = ENG_navy_and_airforce_cooperation
+		icon = GFX_goal_generic_navy_carrier
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_new_and_efficient_building_methods
+
+		prerequisite = { focus = ENG_new_and_efficient_building_methods }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = ENG_navy_and_airforce_cooperation_idea
+		}
+	}
+
+	focus = {
+		id = ENG_naval_dominance
+		icon = GFX_focus_ger_accept_british_naval_dominance
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_navy_and_airforce_cooperation
+
+		prerequisite = { 	focus = ENG_navy_and_airforce_cooperation }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = GER_industrial_revitalisation_idea
+		}
+	}
+
+	focus = {
+		id = ENG_a_second_time
+		icon = GFX_focus_attack_germany
+		x = -2
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_prepare_against_submarine_warfare
+
+		prerequisite = { 	focus = ENG_prepare_against_submarine_warfare }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_defeat_our_long_time_enemy
+		icon = GFX_focus_attack_france
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_a_second_time
+
+		prerequisite = { 	focus = ENG_a_second_time }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = OCC
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_war_against_a_old_friend
+		icon = GFX_focus_generic_attack_portugal
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_defeat_our_long_time_enemy
+
+		prerequisite = { 	focus = ENG_defeat_our_long_time_enemy }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = POR
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_new_form_of_patriotism
+		icon = GFX_focus_eng_imperial_federation
+		prerequisite = { focus = ENG_prepare_against_submarine_warfare }
+		available = {
+            has_government = democratic
+            
+			is_puppet = no
+		}
+		x = 2
+		y = 1
+		relative_position_id = ENG_prepare_against_submarine_warfare
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = ENG_new_form_of_patriotism_idea
+		}
+	}
+
+	focus = {
+		id = ENG_british_grenadiers
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_new_form_of_patriotism
+
+		prerequisite = { 	focus = ENG_new_form_of_patriotism }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = ENG_british_grenadiers_idea
+		}
+	}
+
+	focus = {
+		id = ENG_english_worker_spirit
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_british_grenadiers
+
+		prerequisite = { 	focus = ENG_british_grenadiers }
+		
+		available = {
+            has_government = democratic
+            
+		}
+
+		completion_reward = {
+			add_ideas = ENG_english_worker_spirit_idea
+		}
+	}
+
+	focus = {
+		id = ENG_great_great_britain
+		icon = GFX_goal_support_democracy
+		x = 0
+		y = 1
+		cost = 10
+
+		relative_position_id = ENG_naval_dominance
+
+		prerequisite = { 	focus = ENG_war_against_a_old_friend }
+		prerequisite = { 	focus = ENG_naval_dominance }
+		prerequisite = { 	focus = ENG_english_worker_spirit }
+		
+		available = {
+            has_government = democratic
+            
+			has_full_control_of_state = 14
+			has_full_control_of_state = 15
+			has_full_control_of_state = 30
+			has_full_control_of_state = 23
+			has_full_control_of_state = 24
+			has_full_control_of_state = 33
+			has_full_control_of_state = 27
+			has_full_control_of_state = 17
+			has_full_control_of_state = 18
+			has_full_control_of_state = 16
+			has_full_control_of_state = 785
+			has_full_control_of_state = 29
+			has_full_control_of_state = 34
+			has_full_control_of_state = 6
+			has_full_control_of_state = 8
+			has_full_control_of_state = 807
+			has_full_control_of_state = 35
+			has_full_control_of_state = 7
+			has_full_control_of_state = 36
+
+			is_puppet = no 
+			
+		}
+
+		completion_reward = {
+			add_state_core = 14
+			add_state_core = 15
+			add_state_core = 30
+			add_state_core = 23
+			add_state_core = 24
+			add_state_core = 33
+			add_state_core = 27
+			add_state_core = 17
+			add_state_core = 18
+			add_state_core = 16
+			add_state_core = 785
+			add_state_core = 29
+			add_state_core = 34
+			add_state_core = 6
+			add_state_core = 8
+			add_state_core = 807
+			add_state_core = 35
+			add_state_core = 7
+			add_state_core = 36
+		}
+	}
+}

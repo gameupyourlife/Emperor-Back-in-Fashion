@@ -1,0 +1,92 @@
+# ideas = {
+
+# 	nationalization = { 
+	
+# 		law = yes
+		
+# 		#State Property
+# 		nationalization_full = {
+# 		    available = {
+# 				has_government = communism
+# 			}
+			
+# 			modifier = {
+# 				production_factory_max_efficiency_factor = 0.1
+# 				production_factory_efficiency_gain_factor = -0.1	
+# 				production_speed_buildings_factor = 0.2
+# 				min_export = -0.2
+# 			}
+# 			cost = 100
+			
+# 			cancel_if_invalid = yes
+			
+# 			ai_will_do = {
+#    				factor = 0.5
+# 				modifier = {
+# 					has_government = communism
+# 					factor = 10
+# 				}
+#    			}
+# 		}
+		
+# 		#State Capitalism
+# 		nationalization_partial = {
+# 		   available = {
+# 				NOT = {
+# 					has_government = communism
+# 				  }
+# 				}
+			
+			
+# 			modifier = {
+# 				production_factory_max_efficiency_factor = 0.05
+# 				production_factory_efficiency_gain_factor = -0.05	
+# 				production_speed_buildings_factor = 0.1		
+# 				political_power_factor = 0.05
+# 			}
+# 			cost = 100
+# 			cancel_if_invalid = yes
+
+# 			ai_will_do = {
+#    				factor = 0.5
+
+#    				modifier = {
+# 					has_government = fascism
+# 					factor = 10
+# 				}
+
+#    			}
+# 		}
+		
+# 		#Capitalism
+# 		nationalization_capital = {
+# 		  available = {
+# 				NOT = {
+# 				  OR = { 
+# 					has_government = communism
+# 					has_government = fascism
+# 				    }
+# 				  }
+# 				}
+			
+# 			modifier = {
+# 				production_factory_max_efficiency_factor = -0.05
+# 				production_factory_efficiency_gain_factor = 0.1	
+# 				min_export = 0.1
+# 				political_power_factor = 0.15
+# 			}
+# 			cost = 100
+# 			cancel_if_invalid = yes
+
+# 			ai_will_do = {
+#    				factor = 0.5
+# 				modifier = {
+# 					has_government = democratic
+# 					factor = 10
+# 				}
+#    			}
+# 		}
+		
+		
+# 	}
+# }

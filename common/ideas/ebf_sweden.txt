@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		swe_consc_law = {
+			
+			allowed = {
+				always = yes
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				conscription = 0.01
+			}
+		}
+	}
+}

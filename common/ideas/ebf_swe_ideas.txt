@@ -1,0 +1,195 @@
+ideas = {
+	country = {
+		SWE_forcefully_taken_2_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = -0.01
+				stability_factor = -0.10
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_forcefully_taken_1_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = -0.005
+				stability_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_revive_the_northern_imperium_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_create_factions = yes
+				can_send_volunteers = yes
+				can_use_kamikaze_pilots = yes
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_be_prepared_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_factor = 0.05
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_the_royal_family_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.05
+				political_advisor_cost_factor = -0.15
+				political_power_gain = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_reformed_tax_policy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_universal_conscription_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_army_in_the_snow_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.5
+				army_defence_factor = 0.1
+				army_attack_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_professional_army_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_gain_army_factor = 0.1
+				land_reinforce_rate = 0.3
+				max_dig_in_factor = 0.1
+				army_org_Factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_and_now_it_is_time_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				justify_war_goal_time = -0.5
+				experience_gain_army_factor = 0.1
+				resistance_growth = -0.1
+				compliance_growth = 0.1
+				war_support_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+
+
+		SWE_reform_invasion_strategy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = DEN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}	
+			picture = generic_research_bonus
+		}
+
+		SWE_northern_willingness_to_fight_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_org_Factor = 0.05
+				attrition = -0.1
+				army_attack_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		SWE_investment_campain_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+	}
+}

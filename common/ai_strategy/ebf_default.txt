@@ -1,0 +1,15 @@
+do_not_waste_pp_if_playing_with_human_players_laws = {
+
+	enable = {
+		always = yes
+	}
+	abort = {
+		always = no
+	}
+
+	ai_strategy = {
+		type = pp_spend_priority
+		id = guarantee
+		value = -9999
+	}
+}

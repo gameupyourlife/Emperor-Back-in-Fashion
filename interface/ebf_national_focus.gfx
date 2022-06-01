@@ -1,0 +1,24 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_goal_generic_tungsten"
+		texturefile = "gfx/interface/goals/goal_generic_tungsten.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_all_resource"
+		texturefile = "gfx/interface/goals/goal_generic_all_resource.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_great_science"
+		texturefile = "gfx/interface/goals/goal_generic_great_science.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_FNG_artillery_tactics"
+		texturefile = "gfx/interface/goals/goal_FNG_artillery_tactics.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_generic_workers_democracy"
+		texturefile = "gfx/interface/goals/goal_generic_workers_democracy.dds"
+	}
+	
+}

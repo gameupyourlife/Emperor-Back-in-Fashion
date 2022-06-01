@@ -1,0 +1,360 @@
+ideas = {
+	country = {
+		GER_fund_the_prussian_acadamy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		GER_raised_schaumweinsteuer = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+			picture = generic_economic_increase
+		}
+
+		GER_lessons_learned_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			equipment_bonus = {
+				infantry = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				support = {
+					build_cost_ic = -0.10 instant = yes
+				}
+				artillery = {
+					build_cost_ic = -0.10 instant = yes
+				}
+			}
+
+			picture = idea_chi_wargaming_division
+		}
+
+		GER_increase_infrastructure_spendings_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+
+			picture = idea_generic_build_infrastructure
+		}
+
+		GER_searched_for_resources = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				local_resources_factor = 0.20
+			}
+
+			picture = generic_exploit_mines
+		}
+
+		GER_wood_as_fuel_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				fuel_gain_factor = 1.0
+			}
+
+			picture = generic_exploit_mines
+		}
+
+		GER_we_are_the_sun_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_weekly = 0.001
+				war_support_weekly = 0.001
+				conscription = 0.025
+				consumer_goods_factor = -0.05
+			}
+
+			picture = air_support_focus
+		}
+
+		GER_the_german_war_machine_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+
+			picture = idea_generic_acquire_tanks
+		}
+
+		GER_the_german_naval_dream_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+
+			picture = generic_navy_bonus
+		}
+
+		GER_the_imperial_luftwaffe_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			equipment_bonus = {
+				fighter  = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				cas = {
+					build_cost_ic = -0.1a
+					instant = yes
+				}
+				tac_bomber = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+				strat_bomber = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+
+			picture = generic_air_bonus
+		}
+
+		GER_prussian_militarism1 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.015
+			}
+
+			picture = generic_manpower_bonus
+		}
+
+		GER_prussian_militarism2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.015
+				army_org_Factor = 0.05
+			}
+
+			picture = generic_manpower_bonus
+		}
+
+		GER_prussian_militarism3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.02
+				army_org_Factor = 0.05
+				supply_consumption_factor = -0.1
+				no_supply_grace = 72
+			}
+
+			picture = generic_manpower_bonus
+		}
+
+		GER_german_quality_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			equipment_bonus = {
+				infantry = {
+					reliability_factor = 0.1
+				}
+				armor = {
+					reliability_factor = 0.1
+				}
+				artillery = {
+					reliability_factor = 0.1
+				}
+				fighter = {
+					reliability_factor = 0.1
+				}
+				tac_bomber = {
+					reliability_factor = 0.1
+				}
+				strat_bomber = {
+					reliability_factor = 0.1
+				}
+				support = {
+					reliability_factor = 0.1
+				}
+			}
+			picture = ger_rebuild_the_nation
+		}
+
+		GER_secure_our_colonies_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				navy_max_range_factor = 0.1
+			}
+
+			picture = idea_por_colonial_assimilation
+		}
+		
+		GER_industrial_revitalisation_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
+			}
+
+			picture = idea_man_five_year_plan_industry
+		}
+
+		GER_new_fuel_tanks_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_range_factor = 0.2
+			}
+
+			picture = idea_generic_air_research
+		}
+
+		GER_german_army_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				land_reinforce_rate = 0.2
+				max_dig_in_factor = 0.1
+				army_org_Factor = 0.075
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+
+			picture = generic_intel_bonus
+		}
+
+		GER_decisons_should_be_made_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+
+			picture = air_support_focus
+		}
+
+
+	}
+}

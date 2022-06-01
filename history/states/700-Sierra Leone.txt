@@ -1,0 +1,32 @@
+state={
+	id=700
+	name="STATE_700"
+	manpower = 1768500
+	resources = {
+		grain = 0
+		wood = 023
+		coal = 0
+	}
+	state_category = pastoral
+	
+	history=
+	{
+		owner = MOR
+		add_core_of = SIE
+		add_core_of = MOR
+		victory_points = {
+			2038 1 
+		}
+		buildings = {
+			infrastructure = 3
+			2038 = {
+				naval_base = 3
+			}
+		}
+
+	}
+	
+	provinces={
+		2038 2094 
+	}
+}

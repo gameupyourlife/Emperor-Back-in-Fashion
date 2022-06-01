@@ -1,0 +1,27 @@
+idea_categories = {
+
+	government_policies = {
+		slot = war_bonds_ebf # #
+		slot = military_utilazation # #
+		slot = production_focus # #
+		slot = training # #
+		slot = inner_security # #
+		
+		cost = 0
+		removal_cost = 0
+	
+	}
+
+	internal_politic = {
+		slot = education # #
+		slot = healthcare	# #
+		slot = child_policy # #
+		slot = press # #
+		slot = judiciary # # 
+		slot = economy_focus # #
+		
+		cost = 0
+		removal_cost = 0
+	
+	}
+}

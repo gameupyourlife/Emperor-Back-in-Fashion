@@ -1,0 +1,58 @@
+BUL_intervene_in_the_war_ebf = {
+	BUL_intervene_on_the_side_of_croatia = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_completed_focus = BUL_intervene_in_the_war
+			original_tag = BUL
+			NOT = { has_country_flag = BUL_supported_yugoslavia }
+		}
+
+		cost = 0
+
+
+		visible = {
+			has_completed_focus = BUL_intervene_in_the_war
+		}
+
+		complete_effect = {
+			set_country_flag = BUL_supported_croatia
+			declare_war_on = {
+				target = YUG
+			}
+			CRO = {
+				give_military_access = BUL
+			}
+		}
+	}
+
+	BUL_intervene_on_the_side_of_yugoslavia = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_completed_focus = BUL_intervene_in_the_war
+			original_tag = BUL
+			NOT = { has_country_flag = BUL_supported_croatia }
+		}
+
+		cost = 0
+
+
+		visible = {
+			has_completed_focus = BUL_intervene_in_the_war
+		}
+
+		complete_effect = {
+			set_country_flag = BUL_supported_yugoslavia
+			declare_war_on = {
+				target = CRO
+			}
+			YUG = {
+				give_military_access = BUL
+			}
+			
+		}
+	}
+}

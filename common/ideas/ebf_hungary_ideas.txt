@@ -1,0 +1,405 @@
+ideas = {
+	political_advisor = {
+		HUN_max_lorenz = {
+			
+			allowed = {
+				original_tag = "HUN"
+			}
+
+			available = {
+				has_completed_focus = HUN_appoint_economic_minister
+				has_government = neutrality
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { captain_of_industry2 }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	country = {
+		HUN_suppresed_minorities_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = -0.005
+				stability_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_economic_deficit_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				stability_factor = -0.15
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_adjust_taxes_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = 0.2
+				stability_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_invest_in_the_future_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_new_way_of_construction_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_see_to_the_west_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				navy_screen_attack_factor = 0.05
+				navy_submarine_attack_factor = 0.05
+				navy_capital_ship_attack_factor = 0.05
+
+				navy_screen_defence_factor = 0.05
+				navy_submarine_defence_factor = 0.05
+				navy_capital_ship_defence_factor = 0.05
+
+			}
+
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = 0.05 
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = 0.05 
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = 0.05 
+					instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = 0.05 
+					instant = yes
+				}
+			}
+
+			picture = generic_research_bonus
+		}
+
+		HUN_see_to_the_east_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.1 
+					reliability = -0.1
+					instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.1 
+					reliability = -0.1
+					instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.1
+					reliability = -0.1 
+					instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.1
+					reliability = -0.1 
+					instant = yes
+				}
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_italian_resistance_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = -0.01
+				stability_factor = -0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_future_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				experience_gain_army_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_no_support_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_low_support_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_medium_support_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_high_support_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_guaranteed_support_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_work_together_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_march_to_war_and_march_fast_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_speed_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_fuer_kaiser_gott_und_vaterland_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.04
+				army_morale_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_the_imperial_army_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_attack_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_the_army_of_the_future_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				land_reinforce_rate = 0.1
+				research_speed_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_a_place_for_the_emperor_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_gold_for_the_palace_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				fuel_gain_factor = 0.1
+				local_resources_factor = 0.2
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_our_pride_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.2
+				war_support_weekly = 0.02
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_we_will_win_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_gain_army_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				conscription = 0.04
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		HUN_autarky_ebf_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+	}
+}

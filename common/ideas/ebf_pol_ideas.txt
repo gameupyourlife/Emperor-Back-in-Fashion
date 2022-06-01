@@ -1,0 +1,427 @@
+ideas = {
+	country = {
+		POL_speed_is_key_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+
+				light_armor = {
+					build_cost_ic = -0.05
+					soft_attack = 0.1
+					maximum_speed = 0.10
+				}
+
+				# light_tank_equipment_1 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_equipment_2 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_equipment_3 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_artillery_equipment_1 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_artillery_equipment_2 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_artillery_equipment_3 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_destroyer_equipment_1 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_destroyer_equipment_2 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_destroyer_equipment_3 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_aa_equipment_1 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_aa_equipment_2 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+				# light_tank_aa_equipment_3 = {
+				# 	build_cost_ic = -0.05
+				# 	soft_attack = 0.1
+				# 	maximum_speed = 0.10
+				# }
+			}
+			picture = generic_armor_bonus
+		}
+		POL_royalist_revolts_idea1 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.001
+				stability_factor = -0.20
+				conscription_factor = -0.5
+				consumer_goods_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+		POL_royalist_revolts_idea2 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.001
+				stability_factor = -0.15
+				conscription_factor = -0.35
+				consumer_goods_factor = 0.035
+			}
+			picture = generic_research_bonus
+		}
+		POL_royalist_revolts_idea3 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.001
+				stability_factor = -0.10
+				conscription_factor = -0.2
+				consumer_goods_factor = 0.02
+			}
+			picture = generic_research_bonus
+		}
+		POL_royalist_revolts_idea4 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				neutrality_drift = 0.001
+				stability_factor = 0.0
+				conscription_factor = -0.1
+				consumer_goods_factor = 0.01
+			}
+			picture = generic_research_bonus
+		}
+		POL_royalist_revolts_idea5 = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				communism_drift = 0.001
+				stability_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+
+		POL_prefabricated_buildings_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_just_the_bare_minimum_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_dominate_the_navy_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				navy_capital_ship_attack_factor = 0.1
+				navy_screen_attack_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_the_four_year_plan_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_limited_consumergoods_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_exploit_the_mines_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				local_resources_factor = 0.20
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_communist_worker_spirit_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.02
+			}
+			picture = generic_research_bonus
+		}
+		
+		POL_financal_support_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_polish_revangeism_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				industrial_capacity_factory = 0.1
+			}
+			picture = generic_research_bonus
+		}
+		
+		POL_defend_our_own_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_morale_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_the_new_way_of_war_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_defence_factor = -0.05
+				army_attack_factor = 0.15
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_intel_for_the_win_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				decryption = 10
+			}
+			picture = generic_research_bonus
+		}
+		
+		POL_soviet_worker_ethos_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_human_wave_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription_factor = 0.3
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_workers_army_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.02
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_soviet_idol_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_the_eight_year_plan_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+		
+		POL_time_for_innovations_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		POL_fight_in_the_air_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = -0.05
+				}
+				tac_bomber = {
+					build_cost_ic = -0.05
+				}
+				strat_bomber = {
+					build_cost_ic = -0.05
+				}
+				cas = {
+					build_cost_ic = -0.05
+				}
+				heavy_fighter = {
+					build_cost_ic = -0.05
+				}
+				naval_bomber = {
+					build_cost_ic = -0.05
+				}
+			}
+			picture = generic_research_bonus
+		}
+	}
+}

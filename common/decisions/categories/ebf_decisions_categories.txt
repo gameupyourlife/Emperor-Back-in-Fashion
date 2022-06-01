@@ -1,0 +1,57 @@
+GER_reichskommissariats_ebf = {
+	
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		OR = { 
+			has_completed_focus = GER_guarantee_self_autonomy
+		}
+	}
+}
+
+ai_defense_ebf = {
+	
+	allowed = {
+		is_ai = yes
+	}
+
+	visible = {
+		is_ai = yes
+	}
+}
+
+BUL_intervene_in_the_war_ebf = {
+	
+	allowed = {
+		original_tag = BUL
+	}
+
+	visible = {
+		original_tag = BUL
+		has_completed_focus = BUL_intervene_in_the_war
+	}
+}
+
+EBF_ideas_decision = {
+	
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		always = yes
+	}
+}
+
+ebf_unification_decision = {
+	
+	allowed = {
+		always = yes
+	}
+
+	visible = {
+		always = yes
+	}
+}

@@ -1,0 +1,62 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            every_country = {
+                add_equipment_to_stockpile = {
+                    type = rations_equipment_x
+                    amount = 100000
+                }
+            }
+        }
+        effect = {
+            every_country = {
+                limit = {
+                    is_ai = yes
+                    NOT = {
+                        OR = {
+                            original_tag = GER
+                            original_tag = OCC
+                            original_tag = SWE
+                            original_tag = HUN
+                            original_tag = BUL
+                            original_tag = POR 
+                            original_tag = ENG 
+                            original_tag = POL 
+                            
+                            ### To avoid overkill
+                            original_tag = HOL
+                        }
+                    }
+                }
+                add_ideas = AI_generic_manpower
+            }
+        }
+        effect = {
+            every_country = {
+                limit = {
+                    is_ai = yes
+                    
+                }
+                set_rule = { 
+                    can_boost_other_ideologies = no
+                    can_create_factions = no
+                    can_declare_war_on_same_ideology = no
+                    can_declare_war_without_wargoal_when_in_war = no
+                    can_decline_call_to_war = yes
+                    can_force_government = no
+                    can_guarantee_other_ideologies = no
+                    can_join_factions = no
+                    can_join_opposite_factions = no
+                    can_lower_tension = no
+                    can_not_declare_war = yes
+                    can_occupy_non_war = no
+                    can_only_justify_war_on_threat_country = yes
+                    can_puppet = no
+                    can_send_volunteers = no
+                    can_use_kamikaze_pilots = no
+                    units_deployed_to_overlord = no
+                }
+            }
+        }
+    }
+}

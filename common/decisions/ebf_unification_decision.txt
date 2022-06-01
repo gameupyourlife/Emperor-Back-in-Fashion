@@ -1,0 +1,2912 @@
+ebf_unification_decision = {
+	ebf_eng_path_of_war = {
+		icon = GFX_decision_icon_default
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_which_way_we_choose_flag
+					NOT = {
+						has_country_flag = ebf_eng_path_of_war_flag
+						has_country_flag = ebf_eng_path_of_peace_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 50
+
+		visible = {
+
+			ENG = {
+				has_country_flag = ebf_eng_which_way_we_choose_flag
+				NOT = {
+					has_country_flag = ebf_eng_path_of_war_flag
+					has_country_flag = ebf_eng_path_of_peace_flag
+				}
+			}
+			original_tag = ENG
+
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_path_of_war_flag
+			}
+		}
+	}
+	
+	ebf_eng_wargoal_wls = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 122
+		}
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_war_flag
+					NOT = {
+						has_country_flag = ebf_eng_wargoal_wls_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_war_flag
+				NOT = {
+					has_country_flag = ebf_eng_wargoal_wls_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_wargoal_wls_flag
+			}
+			create_wargoal = {
+				target = WLS
+				type = annex_everything
+			}
+		}
+	}
+
+	ebf_eng_wargoal_sco = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 133
+			state = 120
+			state = 136
+			state = 121
+		}
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_war_flag
+					NOT = {
+						has_country_flag = ebf_eng_wargoal_sco_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_war_flag
+				NOT = {
+					has_country_flag = ebf_eng_wargoal_sco_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_wargoal_sco_flag
+			}
+			create_wargoal = {
+				target = SCO
+				type = annex_everything
+			}
+		}
+	}
+
+	ebf_eng_wargoal_ire = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 119
+		}
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_war_flag
+					NOT = {
+						has_country_flag = ebf_eng_wargoal_ire_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_war_flag
+				NOT = {
+					has_country_flag = ebf_eng_wargoal_ire_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_wargoal_ire_flag
+			}
+			create_wargoal = {
+				target = IRE
+				type = annex_everything
+			}
+		}
+	}
+
+	#### Peace
+
+	ebf_eng_path_of_peace = {
+		icon = GFX_decision_icon_default
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_which_way_we_choose_flag
+					NOT = {
+						has_country_flag = ebf_eng_path_of_war_flag
+						has_country_flag = ebf_eng_path_of_peace_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_which_way_we_choose_flag
+				NOT = {
+					has_country_flag = ebf_eng_path_of_war_flag
+					has_country_flag = ebf_eng_path_of_peace_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_path_of_peace_flag
+				set_variable = { ebf_eng_campaings_wls_var = 0 }
+				set_variable = { ebf_eng_campaings_sco_var = 0 }
+				set_variable = { ebf_eng_campaings_ire_var = 0 }
+			}
+		}
+	}
+
+	##########################
+	######### Wales
+	##########################
+
+	ebf_eng_campaings_wls = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 122
+		}
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_peace_flag
+					NOT = {
+						has_country_flag = ebf_eng_referendum_wls_flag
+						has_country_flag = ebf_eng_guaranteed_support_wls_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_peace_flag
+				NOT = {
+					has_country_flag = ebf_eng_referendum_wls_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_campaings_wls_flag
+				add_to_variable = { ebf_eng_campaings_wls_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_eng_no_support_wls_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_wls_flag
+					clr_country_flag = ebf_eng_high_support_wls_flag
+					clr_country_flag = ebf_eng_medium_support_wls_flag
+					clr_country_flag = ebf_eng_low_support_wls_flag
+					#clr_country_flag = ebf_eng_no_support_wls_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_wls_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_wls_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_low_support_wls_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_wls_flag
+					clr_country_flag = ebf_eng_high_support_wls_flag
+					clr_country_flag = ebf_eng_medium_support_wls_flag
+					#clr_country_flag = ebf_eng_low_support_wls_flag
+					clr_country_flag = ebf_eng_no_support_wls_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_eng_campaings_wls_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_eng_campaings_wls_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_wls_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_medium_support_wls_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_wls_flag
+					clr_country_flag = ebf_eng_high_support_wls_flag
+					#clr_country_flag = ebf_eng_medium_support_wls_flag
+					clr_country_flag = ebf_eng_low_support_wls_flag
+					clr_country_flag = ebf_eng_no_support_wls_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_wls_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_wls_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_high_support_wls_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_wls_flag
+					#clr_country_flag = ebf_eng_high_support_wls_flag
+					clr_country_flag = ebf_eng_medium_support_wls_flag
+					clr_country_flag = ebf_eng_low_support_wls_flag
+					clr_country_flag = ebf_eng_no_support_wls_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_eng_campaings_wls_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_eng_campaings_wls_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_wls_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_eng_campaings_wls_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_guaranteed_support_wls_flag
+
+					#clr_country_flag = ebf_eng_guaranteed_support_wls_flag
+					clr_country_flag = ebf_eng_high_support_wls_flag
+					clr_country_flag = ebf_eng_medium_support_wls_flag
+					clr_country_flag = ebf_eng_low_support_wls_flag
+					clr_country_flag = ebf_eng_no_support_wls_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_eng_campaings_wls_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_eng_campaings_wls_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_eng_campaings_wls_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_eng_referendum_wls = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 122
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_peace_flag
+					has_country_flag = ebf_eng_campaings_wls_flag
+					NOT = {
+						has_country_flag = ebf_eng_no_support_wls_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_peace_flag
+				has_country_flag = ebf_eng_campaings_wls_flag
+				NOT = {
+					has_country_flag = ebf_eng_referendum_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_referendum_wls_flag
+				set_country_flag = ebf_eng_referendum_wls_sucess_flag #Placeholder
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_no_support_wls_flag
+					}
+				}
+				create_wargoal = {
+					target = WLS
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_low_support_wls_flag
+					}
+				}
+				random_list = {
+					80 = {
+						create_wargoal = {
+							target = WLS
+							type = annex_everything
+						}
+					}
+					20 = {
+						transfer_state = 122
+						set_country_flag = ebf_eng_referendum_wls_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_medium_support_wls_flag
+					}
+				}
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = WLS
+							type = annex_everything
+						}
+					}
+					50 = {
+						transfer_state = 122
+						set_country_flag = ebf_eng_referendum_wls_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_high_support_wls_flag
+					}
+				}
+				random_list = {
+					20 = {
+						create_wargoal = {
+							target = WLS
+							type = annex_everything
+						}
+					}
+					80 = {
+						transfer_state = 122
+						set_country_flag = ebf_eng_referendum_wls_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_guaranteed_support_wls_flag
+					}
+				}
+				transfer_state = 122
+				set_country_flag = ebf_eng_referendum_wls_sucess_flag 
+			}
+		}
+	}
+
+	ebf_eng_core_wls = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 122
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				controls_state = 122
+				original_tag = ENG
+			}
+		}
+
+		cost = 50
+
+		visible = {
+			controls_state = 122
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			add_state_core = 122
+		}
+	}
+
+	##########################
+	######### Scotland
+	##########################
+
+	ebf_eng_campaings_sco = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 133
+			state = 120
+			state = 136
+			state = 121
+		}
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_peace_flag
+					NOT = {
+						has_country_flag = ebf_eng_referendum_sco_flag
+						has_country_flag = ebf_eng_guaranteed_support_sco_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_peace_flag
+				NOT = {
+					has_country_flag = ebf_eng_referendum_sco_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_campaings_sco_flag
+				add_to_variable = { ebf_eng_campaings_sco_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_eng_no_support_sco_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_sco_flag
+					clr_country_flag = ebf_eng_high_support_sco_flag
+					clr_country_flag = ebf_eng_medium_support_sco_flag
+					clr_country_flag = ebf_eng_low_support_sco_flag
+					#clr_country_flag = ebf_eng_no_support_sco_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_sco_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_sco_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_low_support_sco_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_sco_flag
+					clr_country_flag = ebf_eng_high_support_sco_flag
+					clr_country_flag = ebf_eng_medium_support_sco_flag
+					#clr_country_flag = ebf_eng_low_support_sco_flag
+					clr_country_flag = ebf_eng_no_support_sco_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_eng_campaings_sco_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_eng_campaings_sco_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_sco_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_medium_support_sco_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_sco_flag
+					clr_country_flag = ebf_eng_high_support_sco_flag
+					#clr_country_flag = ebf_eng_medium_support_sco_flag
+					clr_country_flag = ebf_eng_low_support_sco_flag
+					clr_country_flag = ebf_eng_no_support_sco_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_sco_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_sco_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_high_support_sco_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_sco_flag
+					#clr_country_flag = ebf_eng_high_support_sco_flag
+					clr_country_flag = ebf_eng_medium_support_sco_flag
+					clr_country_flag = ebf_eng_low_support_sco_flag
+					clr_country_flag = ebf_eng_no_support_sco_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_eng_campaings_sco_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_eng_campaings_sco_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_sco_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_eng_campaings_sco_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_guaranteed_support_sco_flag
+
+					#clr_country_flag = ebf_eng_guaranteed_support_sco_flag
+					clr_country_flag = ebf_eng_high_support_sco_flag
+					clr_country_flag = ebf_eng_medium_support_sco_flag
+					clr_country_flag = ebf_eng_low_support_sco_flag
+					clr_country_flag = ebf_eng_no_support_sco_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_eng_campaings_sco_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_eng_campaings_sco_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_eng_campaings_sco_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_eng_referendum_sco = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 133
+			state = 120
+			state = 136
+			state = 121
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_peace_flag
+					has_country_flag = ebf_eng_campaings_sco_flag
+					NOT = {
+						has_country_flag = ebf_eng_no_support_sco_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_peace_flag
+				has_country_flag = ebf_eng_campaings_sco_flag
+				NOT = {
+					has_country_flag = ebf_eng_referendum_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_referendum_sco_flag
+				
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_no_support_sco_flag
+					}
+				}
+				create_wargoal = {
+					target = SCO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_low_support_sco_flag
+					}
+				}
+				random_list = {
+					80 = {
+						create_wargoal = {
+							target = SCO
+							type = annex_everything
+						}
+					}
+					20 = {
+						transfer_state = 121
+						transfer_state = 133
+						transfer_state = 120
+						transfer_state = 136
+						set_country_flag = ebf_eng_referendum_sco_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_medium_support_sco_flag
+					}
+				}
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = SCO
+							type = annex_everything
+						}
+					}
+					50 = {
+						transfer_state = 121
+						transfer_state = 133
+						transfer_state = 120
+						transfer_state = 136
+						set_country_flag = ebf_eng_referendum_sco_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_high_support_sco_flag
+					}
+				}
+				random_list = {
+					20 = {
+						create_wargoal = {
+							target = SCO
+							type = annex_everything
+						}
+					}
+					80 = {
+						transfer_state = 121
+						transfer_state = 133
+						transfer_state = 120
+						transfer_state = 136
+						set_country_flag = ebf_eng_referendum_sco_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_guaranteed_support_sco_flag
+					}
+				}
+				transfer_state = 121
+				transfer_state = 133
+				transfer_state = 120
+				transfer_state = 136
+				set_country_flag = ebf_eng_referendum_sco_sucess_flag 
+			}
+		}
+	}
+
+	ebf_eng_core_sco = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 133
+			state = 120
+			state = 136
+			state = 121
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				controls_state = 121
+				controls_state = 133
+				controls_state = 120
+				controls_state = 136
+				original_tag = ENG
+			}
+		}
+
+		cost = 50
+
+		visible = {
+			controls_state = 121
+			controls_state = 133
+			controls_state = 120
+			controls_state = 136
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			add_state_core = 121
+			add_state_core = 133
+			add_state_core = 120
+			add_state_core = 136
+		}
+	}
+
+	##########################
+	######### Ireland
+	##########################
+
+	ebf_eng_campaings_ire = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 119
+		}
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_peace_flag
+					NOT = {
+						has_country_flag = ebf_eng_referendum_ire_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_peace_flag
+				NOT = {
+					has_country_flag = ebf_eng_referendum_ire_flag
+					has_country_flag = ebf_eng_guaranteed_support_ire_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_campaings_ire_flag
+				add_to_variable = { ebf_eng_campaings_ire_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_eng_no_support_ire_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_ire_flag
+					clr_country_flag = ebf_eng_high_support_ire_flag
+					clr_country_flag = ebf_eng_medium_support_ire_flag
+					clr_country_flag = ebf_eng_low_support_ire_flag
+					#clr_country_flag = ebf_eng_no_support_ire_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_ire_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_ire_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_low_support_ire_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_ire_flag
+					clr_country_flag = ebf_eng_high_support_ire_flag
+					clr_country_flag = ebf_eng_medium_support_ire_flag
+					#clr_country_flag = ebf_eng_low_support_ire_flag
+					clr_country_flag = ebf_eng_no_support_ire_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_eng_campaings_ire_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_eng_campaings_ire_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_ire_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_medium_support_ire_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_ire_flag
+					clr_country_flag = ebf_eng_high_support_ire_flag
+					#clr_country_flag = ebf_eng_medium_support_ire_flag
+					clr_country_flag = ebf_eng_low_support_ire_flag
+					clr_country_flag = ebf_eng_no_support_ire_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_ire_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_ire_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_high_support_ire_flag
+
+					clr_country_flag = ebf_eng_guaranteed_support_ire_flag
+					#clr_country_flag = ebf_eng_high_support_ire_flag
+					clr_country_flag = ebf_eng_medium_support_ire_flag
+					clr_country_flag = ebf_eng_low_support_ire_flag
+					clr_country_flag = ebf_eng_no_support_ire_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_eng_campaings_ire_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_eng_campaings_ire_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_eng_campaings_ire_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_eng_campaings_ire_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_eng_guaranteed_support_ire_flag
+
+					#clr_country_flag = ebf_eng_guaranteed_support_ire_flag
+					clr_country_flag = ebf_eng_high_support_ire_flag
+					clr_country_flag = ebf_eng_medium_support_ire_flag
+					clr_country_flag = ebf_eng_low_support_ire_flag
+					clr_country_flag = ebf_eng_no_support_ire_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_eng_campaings_ire_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_eng_campaings_ire_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_eng_campaings_ire_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_eng_referendum_ire = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 119
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				ENG = {
+					has_country_flag = ebf_eng_path_of_peace_flag
+					has_country_flag = ebf_eng_campaings_ire_flag
+					NOT = {
+						has_country_flag = ebf_eng_no_support_ire_flag
+					}
+				}
+				original_tag = ENG
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			ENG = {
+				has_country_flag = ebf_eng_path_of_peace_flag
+				has_country_flag = ebf_eng_campaings_ire_flag
+				NOT = {
+					has_country_flag = ebf_eng_referendum_flag
+				}
+			}
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_eng_referendum_ire_flag
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_no_support_ire_flag
+					}
+				}
+				create_wargoal = {
+					target = IRE
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_low_support_ire_flag
+					}
+				}
+				random_list = {
+					80 = {
+						create_wargoal = {
+							target = IRE
+							type = annex_everything
+						}
+					}
+					20 = {
+						transfer_state = 119
+						set_country_flag = ebf_eng_referendum_ire_sucess_flag
+
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_medium_support_ire_flag
+					}
+				}
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = IRE
+							type = annex_everything
+						}
+					}
+					50 = {
+						transfer_state = 119
+						set_country_flag = ebf_eng_referendum_ire_sucess_flag
+
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_high_support_ire_flag
+					}
+				}
+				random_list = {
+					20 = {
+						create_wargoal = {
+							target = IRE
+							type = annex_everything
+						}
+					}
+					80 = {
+						transfer_state = 119
+						set_country_flag = ebf_eng_referendum_ire_sucess_flag
+
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_country_flag = ebf_eng_guaranteed_support_ire_flag
+					}
+				}
+				transfer_state = 119
+				set_country_flag = ebf_eng_referendum_ire_sucess_flag
+
+			}
+		}
+	}
+
+	ebf_eng_core_ire = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 119
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				controls_state = 119
+				original_tag = ENG
+			}
+		}
+
+		cost = 50
+
+		visible = {
+			controls_state = 119
+			original_tag = ENG
+		}
+
+		complete_effect = {
+			add_state_core = 119
+		}
+	}
+
+	################################
+	### Hungary || Chechz Slovakia
+	################################
+
+	ebf_hun_path_of_war = {
+		icon = GFX_decision_icon_default
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_cze_north_expansion
+					NOT = {
+						has_country_flag = ebf_hun_path_of_war_flag
+						has_country_flag = ebf_hun_path_of_peace_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 25
+
+		visible = {
+
+			HUN = {
+				has_country_flag = ebf_hun_cze_north_expansion
+				NOT = {
+					has_country_flag = ebf_hun_path_of_war_flag
+					has_country_flag = ebf_hun_path_of_peace_flag
+				}
+			}
+			original_tag = HUN
+
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_path_of_war_flag
+			}
+		}
+	}
+
+	###
+
+	ebf_hun_wargoal_cze = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_path_of_war_flag
+					NOT = {
+						has_country_flag = ebf_hung_wargoal_cze_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_path_of_war_flag
+				NOT = {
+					has_country_flag = ebf_hung_wargoal_cze_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hung_wargoal_cze_flag
+			}
+			create_wargoal = {
+				target = CZE
+				type = annex_everything
+			}
+		}
+	}
+
+	ebf_hun_wargoal_slo = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 70
+			state = 71
+			state = 73
+			state = 664
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_path_of_war_flag
+					NOT = {
+						has_country_flag = ebf_hun_wargoal_slo_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_path_of_war_flag
+				NOT = {
+					has_country_flag = ebf_hun_wargoal_slo_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_wargoal_slo_flag
+			}
+			create_wargoal = {
+				target = SLO
+				type = annex_everything
+			}
+		}
+	}
+
+	###############
+	### Peace 
+	###############
+
+	ebf_hun_path_of_peace = {
+		icon = GFX_decision_icon_default
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_cze_north_expansion
+					NOT = {
+						has_country_flag = ebf_hun_path_of_war_flag
+						has_country_flag = ebf_hun_path_of_peace_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 25
+
+		visible = {
+
+			HUN = {
+				has_country_flag = ebf_hun_cze_north_expansion
+				NOT = {
+					has_country_flag = ebf_hun_path_of_war_flag
+					has_country_flag = ebf_hun_path_of_peace_flag
+				}
+			}
+			original_tag = HUN
+
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_path_of_peace_flag
+			}
+		}
+	}
+
+	###
+
+	ebf_hun_unifiy_cze_slo = {
+		icon = GFX_decision_icon_default
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_path_of_peace_flag
+					NOT = {
+						has_country_flag = ebf_hun_unifiy_cze_slo_flag
+						has_country_flag = ebf_hun_integreate_them_separately_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 10
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_path_of_peace_flag
+				NOT = {
+					has_country_flag = ebf_hun_unifiy_cze_slo_flag
+					has_country_flag = ebf_hun_integreate_them_separately_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_unifiy_cze_slo_flag
+			}
+		}
+	}
+
+	
+
+
+
+	ebf_hun_campaings_union_slo = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 70
+			state = 71
+			state = 73
+			state = 664
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_unifiy_cze_slo_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_union_flag
+						has_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_unifiy_cze_slo_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_cze_union_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_campaings_slo_union_flag
+				add_to_variable = { ebf_hun_campaings_union_slo_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_hun_no_support_union_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+					clr_country_flag = ebf_hun_high_support_union_slo_flag
+					clr_country_flag = ebf_hun_medium_support_union_slo_flag
+					clr_country_flag = ebf_hun_low_support_union_slo_flag
+					#clr_country_flag = ebf_hun_no_support_union_slo_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_slo_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_slo_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_low_support_union_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+					clr_country_flag = ebf_hun_high_support_union_slo_flag
+					clr_country_flag = ebf_hun_medium_support_union_slo_flag
+					#clr_country_flag = ebf_hun_low_support_union_slo_flag
+					clr_country_flag = ebf_hun_no_support_union_slo_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_union_slo_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_union_slo_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_slo_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_medium_support_union_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+					clr_country_flag = ebf_hun_high_support_union_slo_flag
+					#clr_country_flag = ebf_hun_medium_support_union_slo_flag
+					clr_country_flag = ebf_hun_low_support_union_slo_flag
+					clr_country_flag = ebf_hun_no_support_union_slo_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_slo_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_slo_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_high_support_union_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+					#clr_country_flag = ebf_hun_high_support_union_slo_flag
+					clr_country_flag = ebf_hun_medium_support_union_slo_flag
+					clr_country_flag = ebf_hun_low_support_union_slo_flag
+					clr_country_flag = ebf_hun_no_support_union_slo_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_union_slo_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_union_slo_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_slo_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_hun_campaings_union_slo_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+
+					#clr_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+					clr_country_flag = ebf_hun_high_support_union_slo_flag
+					clr_country_flag = ebf_hun_medium_support_union_slo_flag
+					clr_country_flag = ebf_hun_low_support_union_slo_flag
+					clr_country_flag = ebf_hun_no_support_union_slo_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_union_slo_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_union_slo_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_hun_campaings_union_slo_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	
+
+
+
+
+	ebf_hun_campaings_union_cze = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_unifiy_cze_slo_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_union_flag
+						has_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_unifiy_cze_slo_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_cze_union_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_campaings_cze_union_flag
+				add_to_variable = { ebf_hun_campaings_union_cze_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_hun_no_support_union_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+					clr_country_flag = ebf_hun_high_support_union_cze_flag
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag
+					clr_country_flag = ebf_hun_low_support_union_cze_flag
+					#clr_country_flag = ebf_hun_no_support_union_cze_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_cze_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_cze_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_low_support_union_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+					clr_country_flag = ebf_hun_high_support_union_cze_flag
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag
+					#clr_country_flag = ebf_hun_low_support_union_cze_flag
+					clr_country_flag = ebf_hun_no_support_union_cze_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_union_cze_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_union_cze_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_cze_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_medium_support_union_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+					clr_country_flag = ebf_hun_high_support_union_cze_flag
+					#clr_country_flag = ebf_hun_medium_support_union_cze_flag
+					clr_country_flag = ebf_hun_low_support_union_cze_flag
+					clr_country_flag = ebf_hun_no_support_union_cze_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_cze_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_cze_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_high_support_union_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+					#clr_country_flag = ebf_hun_high_support_union_cze_flag
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag
+					clr_country_flag = ebf_hun_low_support_union_cze_flag
+					clr_country_flag = ebf_hun_no_support_union_cze_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_union_cze_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_union_cze_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union_cze_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_hun_campaings_union_cze_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+
+					#clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+					clr_country_flag = ebf_hun_high_support_union_cze_flag
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag
+					clr_country_flag = ebf_hun_low_support_union_cze_flag
+					clr_country_flag = ebf_hun_no_support_union_cze_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_union_cze_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_union_cze_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_hun_campaings_union_cze_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_hun_referendum_union_cze = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+			state = 70
+			state = 71
+			state = 73
+			state = 664
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_campaings_cze_union_flag
+					has_country_flag = ebf_hun_campaings_slo_union_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_union_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_campaings_cze_union_flag
+				has_country_flag = ebf_hun_campaings_slo_union_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_cze_union_flag
+				}
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_referendum_cze_union_flag
+				
+			}
+			
+			if = {
+				limit = {
+					HUN = {
+						OR = {
+							has_country_flag = ebf_hun_no_support_union_slo_flag
+							has_country_flag = ebf_hun_no_support_union_cze_flag
+						}
+					}
+				}
+				clr_country_flag = ebf_hun_unifiy_cze_slo_flag
+				clr_country_flag = ebf_hun_campaings_cze_union_flag
+				clr_country_flag = ebf_hun_campaings_slo_union_flag
+				set_country_flag = ebf_hun_integreate_them_separately_flag
+			}
+
+			else_if = {
+				limit = {
+					HUN = {
+						OR = {
+							AND = {
+								has_country_flag = ebf_hun_guaranteed_support_union_cze_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_slo_flag
+								}
+							}
+							AND = {
+								has_country_flag = ebf_hun_guaranteed_support_union_slo_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_cze_flag
+								}
+							}
+						}
+						
+					}
+				}
+				CZE = {
+					transfer_state = 9
+					transfer_state = 69
+					transfer_state = 74
+					transfer_state = 75
+					transfer_state = 72
+					transfer_state = 70
+					transfer_state = 71
+					transfer_state = 73
+					transfer_state = 664
+				}
+				set_country_flag = ebf_hun_referendum_cze_union_sucess_flag 
+			}
+
+			else_if = {
+				limit = {
+					HUN = {
+						OR = {
+							AND = {
+								has_country_flag = ebf_hun_high_support_union_cze_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_slo_flag
+								}
+							}
+							AND = {
+								has_country_flag = ebf_hun_high_support_union_slo_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_cze_flag
+								}
+							}
+						}
+						
+					}
+				}
+				random_list = {
+					20 = {
+						clr_country_flag = ebf_hun_unifiy_cze_slo_flag
+						clr_country_flag = ebf_hun_campaings_cze_union_flag
+						clr_country_flag = ebf_hun_campaings_slo_union_flag
+						set_country_flag = ebf_hun_integreate_them_separately_flag
+					}
+					80 = {
+						CZE = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+						set_country_flag = ebf_hun_referendum_cze_union_sucess_flag 
+					}
+				}
+			}
+			
+			else_if = {
+				limit = {
+					HUN = {
+						OR = {
+							AND = {
+								has_country_flag = ebf_hun_medium_support_union_cze_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_slo_flag
+								}
+							}
+							AND = {
+								has_country_flag = ebf_hun_medium_support_union_slo_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_cze_flag
+								}
+							}
+						}
+					}
+				}
+				random_list = {
+					50 = {
+						clr_country_flag = ebf_hun_unifiy_cze_slo_flag
+						clr_country_flag = ebf_hun_campaings_cze_union_flag
+						clr_country_flag = ebf_hun_campaings_slo_union_flag
+						set_country_flag = ebf_hun_integreate_them_separately_flag
+					}
+					50 = {
+						CZE = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+						set_country_flag = ebf_hun_referendum_cze_union_sucess_flag 
+					}
+				}
+			}
+			
+			else_if = {
+				limit = {
+					HUN = {
+						OR = {
+							AND = {
+								has_country_flag = ebf_hun_low_support_union_cze_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_slo_flag
+								}
+							}
+							AND = {
+								has_country_flag = ebf_hun_low_support_union_slo_flag
+								NOT = {
+									has_country_flag = ebf_hun_no_support_union_cze_flag
+								}
+							}
+						}
+					}
+				}
+				random_list = {
+					80 = {
+						clr_country_flag = ebf_hun_unifiy_cze_slo_flag
+						clr_country_flag = ebf_hun_campaings_cze_union_flag
+						clr_country_flag = ebf_hun_campaings_slo_union_flag
+						set_country_flag = ebf_hun_integreate_them_separately_flag
+					}
+					20 = {
+						CZE = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+						set_country_flag = ebf_hun_referendum_cze_union_sucess_flag 
+					}
+				}
+			}
+
+			else = {
+				random_list = {
+					50 = {
+						clr_country_flag = ebf_hun_unifiy_cze_slo_flag
+						clr_country_flag = ebf_hun_campaings_cze_union_flag
+						clr_country_flag = ebf_hun_campaings_slo_union_flag
+						set_country_flag = ebf_hun_integreate_them_separately_flag
+					}
+					50 = {
+						CZE = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+						set_country_flag = ebf_hun_referendum_cze_union_sucess_flag 
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	ebf_hun_campaings_union_cze2 = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_referendum_cze_union_sucess_flag
+					NOT = {
+						has_country_flag = ebf_hun_campaings_cze_union_flag2
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_referendum_cze_union_sucess_flag
+					NOT = {
+						has_country_flag = ebf_hun_campaings_cze_union_flag2
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_campaings_cze_union_flag2
+				add_to_variable = { ebf_hun_campaings_union2_cze_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_hun_no_support_union_cze_flag2
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+					clr_country_flag = ebf_hun_high_support_union_cze_flag2
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag2
+					clr_country_flag = ebf_hun_low_support_union_cze_flag2
+					#clr_country_flag = ebf_hun_no_support_union_cze_flag2
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_low_support_union_cze_flag2
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+					clr_country_flag = ebf_hun_high_support_union_cze_flag2
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag2
+					#clr_country_flag = ebf_hun_low_support_union_cze_flag2
+					clr_country_flag = ebf_hun_no_support_union_cze_flag2
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_union2_cze_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_union2_cze_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_medium_support_union_cze_flag2
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+					clr_country_flag = ebf_hun_high_support_union_cze_flag2
+					#clr_country_flag = ebf_hun_medium_support_union_cze_flag2
+					clr_country_flag = ebf_hun_low_support_union_cze_flag2
+					clr_country_flag = ebf_hun_no_support_union_cze_flag2
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_high_support_union_cze_flag2
+
+					clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+					#clr_country_flag = ebf_hun_high_support_union_cze_flag2
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag2
+					clr_country_flag = ebf_hun_low_support_union_cze_flag2
+					clr_country_flag = ebf_hun_no_support_union_cze_flag2
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_union2_cze_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_union2_cze_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_hun_campaings_union2_cze_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+
+					#clr_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+					clr_country_flag = ebf_hun_high_support_union_cze_flag2
+					clr_country_flag = ebf_hun_medium_support_union_cze_flag2
+					clr_country_flag = ebf_hun_low_support_union_cze_flag2
+					clr_country_flag = ebf_hun_no_support_union_cze_flag2
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_union2_cze_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_hun_campaings_union2_cze_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_hun_referendum_union_cze2 = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+			state = 70
+			state = 71
+			state = 73
+			state = 664
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_campaings_cze_union_flag2
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_union_flag2
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_campaings_cze_union_flag2
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_union_flag2
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_referendum_cze_union_flag2
+				
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_no_support_union_cze_flag2
+					}
+				}
+				create_wargoal = {
+					target = cze
+					type = annex_everything
+				}
+			}
+			else_if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_low_support_union_cze_flag2
+					}
+				}
+				random_list = {
+					80 = {
+						create_wargoal = {
+							target = cze
+							type = annex_everything
+						}
+					}
+					20 = {
+						HUN = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_medium_support_union_cze_flag2
+					}
+				}
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = CZE
+							type = annex_everything
+						}
+					}
+					50 = {
+						HUN = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_high_support_union_cze_flag2
+					}
+				}
+				random_list = {
+					20 = {
+						create_wargoal = {
+							target = CZE
+							type = annex_everything
+						}
+					}
+					80 = {
+						HUN = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_guaranteed_support_union_cze_flag2
+					}
+				}
+				HUN = {
+					transfer_state = 9
+					transfer_state = 69
+					transfer_state = 74
+					transfer_state = 75
+					transfer_state = 72
+					transfer_state = 70
+					transfer_state = 71
+					transfer_state = 73
+					transfer_state = 664
+				}
+			}
+			else = {
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = CZE
+							type = annex_everything
+						}
+					}
+					50 = {
+						HUN = {
+							transfer_state = 9
+							transfer_state = 69
+							transfer_state = 74
+							transfer_state = 75
+							transfer_state = 72
+							transfer_state = 70
+							transfer_state = 71
+							transfer_state = 73
+							transfer_state = 664
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	##################################################################################################################################################################
+
+	ebf_hun_integreate_them_separately = {
+		icon = GFX_decision_icon_default
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_path_of_peace_flag
+					NOT = {
+						has_country_flag = ebf_hun_integreate_them_separately_flag
+						has_country_flag = ebf_hun_unifiy_cze_slo_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 10
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_path_of_peace_flag
+				NOT = {
+					has_country_flag = ebf_hun_integreate_them_separately_flag
+					has_country_flag = ebf_hun_unifiy_cze_slo_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_integreate_them_separately_flag
+			}
+		}
+	}
+
+
+
+
+	ebf_hun_campaings_slo = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 70
+			state = 71
+			state = 73
+			state = 664
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_integreate_them_separately_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_slo_flag
+						has_country_flag = ebf_hun_guaranteed_support_slo_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_integreate_them_separately_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_slo_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_campaings_slo_flag
+				add_to_variable = { ebf_hun_campaings_slo_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_hun_no_support_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_slo_flag
+					clr_country_flag = ebf_hun_high_support_slo_flag
+					clr_country_flag = ebf_hun_medium_support_slo_flag
+					clr_country_flag = ebf_hun_low_support_slo_flag
+					#clr_country_flag = ebf_hun_no_support_slo_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_slo_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_slo_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_low_support_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_slo_flag
+					clr_country_flag = ebf_hun_high_support_slo_flag
+					clr_country_flag = ebf_hun_medium_support_slo_flag
+					#clr_country_flag = ebf_hun_low_support_slo_flag
+					clr_country_flag = ebf_hun_no_support_slo_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_slo_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_slo_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_slo_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_medium_support_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_slo_flag
+					clr_country_flag = ebf_hun_high_support_slo_flag
+					#clr_country_flag = ebf_hun_medium_support_slo_flag
+					clr_country_flag = ebf_hun_low_support_slo_flag
+					clr_country_flag = ebf_hun_no_support_slo_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_slo_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_slo_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_high_support_slo_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_slo_flag
+					#clr_country_flag = ebf_hun_high_support_slo_flag
+					clr_country_flag = ebf_hun_medium_support_slo_flag
+					clr_country_flag = ebf_hun_low_support_slo_flag
+					clr_country_flag = ebf_hun_no_support_slo_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_slo_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_slo_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_slo_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_hun_campaings_slo_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_guaranteed_support_slo_flag
+
+					#clr_country_flag = ebf_hun_guaranteed_support_slo_flag
+					clr_country_flag = ebf_hun_high_support_slo_flag
+					clr_country_flag = ebf_hun_medium_support_slo_flag
+					clr_country_flag = ebf_hun_low_support_slo_flag
+					clr_country_flag = ebf_hun_no_support_slo_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_slo_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_slo_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_hun_campaings_slo_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_hun_referendum_slo = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 70
+			state = 71
+			state = 73
+			state = 664
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_campaings_slo_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_slo_sucess_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_campaings_slo_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_slo_flag
+				}
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_referendum_slo_flag
+				
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_no_support_slo_flag
+					}
+				}
+				create_wargoal = {
+					target = SLO
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_low_support_slo_flag
+					}
+				}
+				random_list = {
+					80 = {
+						create_wargoal = {
+							target = SLO
+							type = annex_everything
+						}
+					}
+					20 = {
+						transfer_state = 70
+						transfer_state = 71
+						transfer_state = 73
+						transfer_state = 664
+						set_country_flag = ebf_hun_referendum_slo_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_medium_support_slo_flag
+					}
+				}
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = SLO
+							type = annex_everything
+						}
+					}
+					50 = {
+						transfer_state = 70
+						transfer_state = 71
+						transfer_state = 73
+						transfer_state = 664
+						set_country_flag = ebf_hun_referendum_slo_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_high_support_slo_flag
+					}
+				}
+				random_list = {
+					20 = {
+						create_wargoal = {
+							target = SLO
+							type = annex_everything
+						}
+					}
+					80 = {
+						transfer_state = 70
+						transfer_state = 71
+						transfer_state = 73
+						transfer_state = 664
+						set_country_flag = ebf_hun_referendum_slo_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_guaranteed_support_slo_flag
+					}
+				}
+						transfer_state = 70
+						transfer_state = 71
+						transfer_state = 73
+						transfer_state = 664
+				set_country_flag = ebf_hun_referendum_slo_sucess_flag 
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+	ebf_hun_campaings_cze = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+		}
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_integreate_them_separately_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_flag
+						has_country_flag = ebf_hun_guaranteed_support_cze_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 75
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_integreate_them_separately_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_cze_flag
+				}
+				original_tag = HUN
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_campaings_cze_flag
+				add_to_variable = { ebf_hun_campaings_cze_var = 1 }
+			}
+			random_list = {
+				20 = {
+					set_country_flag = ebf_hun_no_support_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_cze_flag
+					clr_country_flag = ebf_hun_high_support_cze_flag
+					clr_country_flag = ebf_hun_medium_support_cze_flag
+					clr_country_flag = ebf_hun_low_support_cze_flag
+					#clr_country_flag = ebf_hun_no_support_cze_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_cze_var > 0 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_cze_var > 1 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_low_support_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_cze_flag
+					clr_country_flag = ebf_hun_high_support_cze_flag
+					clr_country_flag = ebf_hun_medium_support_cze_flag
+					#clr_country_flag = ebf_hun_low_support_cze_flag
+					clr_country_flag = ebf_hun_no_support_cze_flag
+
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_cze_var > 0 }
+					}
+					modifier = {
+						add = -5
+						check_variable = { ebf_hun_campaings_cze_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_cze_var > 2 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_medium_support_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_cze_flag
+					clr_country_flag = ebf_hun_high_support_cze_flag
+					#clr_country_flag = ebf_hun_medium_support_cze_flag
+					clr_country_flag = ebf_hun_low_support_cze_flag
+					clr_country_flag = ebf_hun_no_support_cze_flag
+
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_cze_var > 2 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_cze_var > 3 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_high_support_cze_flag
+
+					clr_country_flag = ebf_hun_guaranteed_support_cze_flag
+					#clr_country_flag = ebf_hun_high_support_cze_flag
+					clr_country_flag = ebf_hun_medium_support_cze_flag
+					clr_country_flag = ebf_hun_low_support_cze_flag
+					clr_country_flag = ebf_hun_no_support_cze_flag
+
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_cze_var > 0 }
+					}
+					modifier = {
+						add = 5
+						check_variable = { ebf_hun_campaings_cze_var > 1 }
+					}
+					modifier = {
+						add = -10
+						check_variable = { ebf_hun_campaings_cze_var > 3 }
+					}
+					modifier = {
+						add = -20
+						check_variable = { ebf_hun_campaings_cze_var > 4 }
+					}
+				}
+				20 = {
+					set_country_flag = ebf_hun_guaranteed_support_cze_flag
+
+					#clr_country_flag = ebf_hun_guaranteed_support_cze_flag
+					clr_country_flag = ebf_hun_high_support_cze_flag
+					clr_country_flag = ebf_hun_medium_support_cze_flag
+					clr_country_flag = ebf_hun_low_support_cze_flag
+					clr_country_flag = ebf_hun_no_support_cze_flag
+
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_cze_var > 0 }
+					}
+					modifier = {
+						add = 10
+						check_variable = { ebf_hun_campaings_cze_var > 1 }
+					}
+					modifier = {
+						add = 20
+						check_variable = { ebf_hun_campaings_cze_var > 2 }
+					}
+				}
+			}
+		}
+	}
+
+	ebf_hun_referendum_cze = {
+		icon = GFX_decision_icon_default
+		highlight_state_targets = {
+			state = 9
+			state = 69
+			state = 74
+			state = 75
+			state = 72
+		}
+		fire_only_once = yes
+
+		available = {
+			hidden_trigger = {
+				HUN = {
+					has_country_flag = ebf_hun_campaings_cze_flag
+					NOT = {
+						has_country_flag = ebf_hun_referendum_cze_sucess_flag
+					}
+				}
+				original_tag = HUN
+			}
+		}
+
+		cost = 25
+
+		visible = {
+			HUN = {
+				has_country_flag = ebf_hun_campaings_cze_flag
+				NOT = {
+					has_country_flag = ebf_hun_referendum_cze_flag
+				}
+			}
+			original_tag = HUN
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = ebf_hun_referendum_cze_flag
+				
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_no_support_cze_flag
+					}
+				}
+				create_wargoal = {
+					target = cze
+					type = annex_everything
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_low_support_cze_flag
+					}
+				}
+				random_list = {
+					80 = {
+						create_wargoal = {
+							target = CZE
+							type = annex_everything
+						}
+					}
+					20 = {
+						transfer_state = 9
+						transfer_state = 69
+						transfer_state = 74
+						transfer_state = 75
+						transfer_state = 72
+						set_country_flag = ebf_hun_referendum_cze_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_medium_support_cze_flag
+					}
+				}
+				random_list = {
+					50 = {
+						create_wargoal = {
+							target = CZE
+							type = annex_everything
+						}
+					}
+					50 = {
+						transfer_state = 9
+						transfer_state = 69
+						transfer_state = 74
+						transfer_state = 75
+						transfer_state = 72
+						set_country_flag = ebf_hun_referendum_cze_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_high_support_cze_flag
+					}
+				}
+				random_list = {
+					20 = {
+						create_wargoal = {
+							target = CZE
+							type = annex_everything
+						}
+					}
+					80 = {
+						transfer_state = 9
+						transfer_state = 69
+						transfer_state = 74
+						transfer_state = 75
+						transfer_state = 72
+						set_country_flag = ebf_hun_referendum_cze_sucess_flag 
+					}
+				}
+			}
+			if = {
+				limit = {
+					HUN = {
+						has_country_flag = ebf_hun_guaranteed_support_cze_flag
+					}
+				}
+				transfer_state = 9
+				transfer_state = 69
+				transfer_state = 74
+				transfer_state = 75
+				transfer_state = 72
+				set_country_flag = ebf_hun_referendum_cze_sucess_flag 
+			}
+		}
+	}
+
+}

@@ -1,0 +1,104 @@
+buildings = {
+	steel_mill = {
+		show_on_map = 1
+		base_cost = 10000
+		icon_frame = 15
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		local_resources_steel = 6 # May use local_resources_ + any resource name
+		country_resource_cost_coal = 12
+		refinery = yes
+		max_level = 3 # This is the max unlock level
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+	}
+
+	grain_farm = {
+		show_on_map = 1
+		base_cost = 3000
+		icon_frame = 16
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		local_resources_grain = 24 # May use local_resources_ + any resource name
+		
+		refinery = yes
+		max_level = 20 # This is the max unlock level
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+	}
+
+	lumber_mill = {
+		show_on_map = 1
+		base_cost = 5000
+		icon_frame = 17
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		local_resources_wood = 16 # May use local_resources_ + any resource name
+		refinery = yes
+		max_level = 20 # This is the max unlock level
+		shares_slots = yes
+		value = 5
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+	}
+
+	steel_mill_inactive = {
+		show_on_map = 1
+		base_cost = 10000
+		icon_frame = 18
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		refinery = yes
+		max_level = 3 # This is the max unlock level
+		shares_slots = yes
+		value = -50
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+	}
+
+	grain_farm_inactive = {
+		show_on_map = 1
+		base_cost = 3000
+		icon_frame = 19
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		refinery = yes
+		max_level = 20 # This is the max unlock level
+		shares_slots = yes
+		value = -50
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+	}
+
+	lumber_mill_inactive = {
+		show_on_map = 1
+		base_cost = 5000
+		icon_frame = 20
+		#local_resources_oil = 1 # May use local_resources_ + any resource name
+		refinery = yes
+		max_level = 20 # This is the max unlock level
+		shares_slots = yes
+		value = -50
+		infrastructure_construction_effect = yes
+		
+		show_modifier = yes
+	}
+
+	nuclear_reactor_inactive = {
+		show_on_map = 1
+		base_cost = 9999999
+		icon_frame = 13
+		nuclear_reactor = yes
+		nuclear_production_factor = 0
+		max_level = 4 # This is the max unlock level
+		shares_slots = yes
+		value = 10
+		infrastructure_construction_effect = yes
+	}
+	
+}
+ 

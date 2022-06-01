@@ -1,0 +1,198 @@
+GER_reichskommissariats_ebf = {
+	GER_reichskommissariat_french_netherlands = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			has_completed_focus = GER_guarantee_self_autonomy
+			controls_state = 15
+			controls_state = 29
+			controls_state = 785
+			controls_state = 16e
+			controls_state = 18
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 1
+				ENG = { has_capitulated = yes }
+			}
+		}
+
+		visible = {
+			has_completed_focus = GER_guarantee_self_autonomy
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					country_exists = HOL
+					NOT = { HOL = { has_government = neutrality } }
+				}
+				hidden_effect = {
+					HOL = {
+						transfer_state = 15
+						transfer_state = 29
+						transfer_state = 785
+						transfer_state = 16
+						transfer_state = 18
+					}
+				}
+				HOL = {
+					start_civil_war = {
+						ideology = neutrality
+						size = 1
+
+						transfer_state = 15
+						transfer_state = 29
+						transfer_state = 785
+						transfer_state = 16
+						transfer_state = 18
+						GER = {
+							puppet = PREV
+						}
+						set_cosmetic_tag = NOR_reichskommissariat
+					}
+				}
+			}
+			else = {
+				HOL = {
+					transfer_state = 15
+					transfer_state = 29
+					transfer_state = 785
+					transfer_state = 16
+					transfer_state = 18
+					set_cosmetic_tag = NOR_reichskommissariat
+				}
+				GER = {
+					puppet = HOL
+				}
+			}
+		}
+	}
+}
+
+EBF_ideas_decision = {
+	# defense_force_decision = {
+	# 	visible = {
+	# 		always = yes
+	# 	}
+	# 	allowed = {
+	# 		always = yes
+	# 	}
+	# 	available = {
+	# 		has_idea = defense_force
+	# 	}
+	# 	activation = {
+	# 		has_idea = defense_force
+	# 	}
+	# 	days_mission_timeout = 1
+	# 	is_good = yes
+	# 	timeout_effect = {
+	# 		set_rule = {
+	# 			can_send_volunteers = no
+	# 			can_guarantee_other_ideologies = no
+	# 			can_lower_tension = yes
+	# 			can_create_factions = no
+	# 		}
+	# 	}
+	# }
+
+	# limited_intervention_decision = {
+	# 	visible = {
+	# 		always = yes
+	# 	}
+	# 	allowed = {
+	# 		always = yes
+	# 	}
+	# 	available = {
+	# 		has_idea = limited_intervention
+	# 	}
+	# 	activation = {
+	# 		has_idea = limited_intervention
+	# 	}
+	# 	days_mission_timeout = 1
+	# 	is_good = yes
+	# 	timeout_effect = {
+	# 		set_rule = {
+	# 			can_send_volunteers = yes
+	# 			can_guarantee_other_ideologies = yes
+	# 			can_lower_tension = yes
+	# 		}
+	# 	}
+	# }
+
+	# full_intervention_decision = {
+	# 	visible = {
+	# 		always = yes
+	# 	}
+	# 	allowed = {
+	# 		always = yes
+	# 	}
+	# 	available = {
+	# 		has_idea = full_intervention
+	# 	}
+	# 	activation = {
+	# 		has_idea = full_intervention
+	# 	}
+	# 	days_mission_timeout = 1
+	# 	is_good = yes
+	# 	timeout_effect = {
+	# 		set_rule = {
+	# 			can_guarantee_other_ideologies = yes
+	# 			can_send_volunteers = yes
+	# 			can_create_factions = yes
+	# 			can_lower_tension = no
+	# 		}
+	# 	}
+	# }
+
+
+
+	auto_log_industry = {
+		days_remove = 0
+		visible = {
+			is_ai = no
+		}
+		allowed = {
+			
+		}
+		available = {
+			always = no
+		}
+		activation = {
+			is_ai = no
+		}
+		days_mission_timeout = 363
+		is_good = yes
+		timeout_effect = {
+			every_country = {
+				limit = {
+					is_ai = no
+				}
+				set_variable = { Civs = num_of_civilian_factories }
+				set_variable = { Mils = num_of_military_factories }
+				set_variable = { Dock = num_of_naval_factories }
+				if = {
+					limit = {
+						NOT = {
+							check_variable = { Date > 1936 }
+						}
+					}
+					set_variable = { Date = 1937 }
+				}
+				else = {
+					add_to_variable = { Date = 1 }
+				}
+				#set_variable = { DATE = GetDateString }
+				print_variables = {
+					file = Industry_Sims
+					text = Test Run
+					var_list = { Date Civs Mils Dock }
+				}
+			}
+		}
+	}
+}

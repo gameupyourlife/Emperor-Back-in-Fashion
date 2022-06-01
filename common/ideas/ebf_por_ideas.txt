@@ -1,0 +1,172 @@
+ideas = {
+	country = {
+		POR_improved_national_pride_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.1
+				conscription = 0.025
+				army_org_regain = 0.005
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_further_improved_national_pride_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = 0.1
+				conscription = 0.04
+				army_org_regain = 0.005
+				army_org_Factor = 0.05
+				surrender_limit = 0.25
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_ensure_quality_controll_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				armor = {
+					reliability = 0.1
+				}
+				infantry = {
+					reliability = 0.1
+				}
+				artillery = {
+					reliability = 0.1
+				}
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_industrial_reforms_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_a_professional_army_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_org_Factor = 0.05
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				attrition = -0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_a_nation_to_unite_them_all_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				war_support_weekly = 0.002
+				war_support_weekly = 0.002				
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_portugals_navy_all_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				battleship = {
+					build_cost_ic = -0.1
+					lg_attack = 0.05
+					hg_attack = 0.05
+				}
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_aviation_like_it_is_ment_to_be_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_agility_factor = 0.03
+				air_attack_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_economic_rethinking_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_extract_resources_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				local_resources_factor = 0.15
+			}
+			picture = generic_research_bonus
+		}
+
+		POR_strong_and_united_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.03
+				conscription = 0.03
+			}
+			picture = generic_research_bonus
+		}
+	}
+}

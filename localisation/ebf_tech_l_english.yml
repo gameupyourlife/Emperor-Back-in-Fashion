@@ -1,0 +1,43 @@
+﻿l_english:
+
+#Tech
+rations_equipment_x:0 "Rations"
+rations_equipment_x_y:0 "Canned Rations"
+rations_equipment:0 "Rations"
+rations:0 "Rations"
+rations_a:0 "Canned Rations"
+
+airship_equipment_0:0 "Airship"
+airship_equipment_1:0 "Airship 2"
+airship_equipment_2:0 "Airship 3"
+airship:0 "Airship"
+
+light_tank_equipment_x:0 "Light Tank IV"
+light_tank_destroyer_equipment_x:0 "Light Tank IV Destroyer"
+light_tank_artillery_equipment_x:0 "Light Tank IV Artillery"
+light_tank_aa_equipment_x:0 "Light Tank IV Anti Air"
+
+ultra_heavy_tank_equipment_1:0 "Ultra Heavy Tank"
+ultra_heavy_tank_destroyer_equipment_1:0 "Ultra Heavy Tank Destroyer"
+ultra_heavy_tank_artillery_equipment_1:0 "Ultra Heavy Tank Artillery"
+ultra_heavy_tank_aa_equipment_1:0 "Ultra Heavy Tank Anti Air"
+
+super_heavy_tank_equipment_x:0 "Super Heavy Tank 2"
+super_heavy_tank_destroyer_equipment_x:0 "Super Heavy Tank 2 Destroyer"
+super_heavy_tank_artillery_equipment_x:0 "Super Heavy Tank 2 Artillery"
+super_heavy_tank_aa_equipment_x:0 "Super Heavy Tank 2 Anti Air"
+
+modern_tank_equipment_x:0 "Modern Tank 2"
+modern_tank_destroyer_equipment_x:0 "Modern Tank 2 Destroyer"
+modern_tank_artillery_equipment_x:0 "Modern Tank 2 Artillery"
+modern_tank_aa_equipment_x:0 "Modern Tank 2 Anti Air"
+
+ultra_heavy_armor:0 "Ultra Heavy Tank"
+ultra_heavy_sp_artillery_brigade:0 "Ultra Heavy SP Artillery"
+ultra_heavy_sp_anti_air_brigade:0 "Ultra Heavy SP Anti-Air"
+ultra_heavy_tank_destroyer_brigade:0 "Ultra Heavy Tank Destroyer"
+
+
+
+
+

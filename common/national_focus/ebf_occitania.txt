@@ -1,0 +1,2392 @@
+﻿focus_tree = {
+	id = occitania_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 200
+			tag = OCC
+		}
+	}
+
+	continuous_focus_position = {
+		x = 300
+		y = 1000
+	}
+	
+	default = no
+
+	focus = {
+		id = OCC_napoleonic_order
+		icon = GFX_focus_focus_fra_third_empire
+		cost = 10
+		x = 22
+		y = 0
+		completion_reward = { 
+			add_stability = 0.1
+			create_country_leader = {
+				name = "Napoléon VI"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portraits_fra_napoleon_vi
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = FRA_bonepartist_party_long
+				name = FRA_bonepartist_party
+			}
+			set_politics = { ruling_party = neutrality }
+		}
+	}
+
+	##########################################
+	###	Army Off
+	##########################################
+
+	focus = {
+		id = OCC_army_offense
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		x = -4
+		y = 1
+
+		relative_position_id = OCC_napoleonic_order
+
+		mutually_exclusive = {
+			focus = OCC_army_defense
+		}
+
+		prerequisite = {
+			focus = OCC_napoleonic_order
+		}
+
+		completion_reward = { 
+			army_experience = 25
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	##########
+	## Left
+	##########
+
+	focus = {
+		id = OCC_the_right_generals
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = -2
+		y = 1
+
+		relative_position_id = OCC_army_offense
+
+		prerequisite = {
+			focus = OCC_army_offense
+		}
+
+		completion_reward = { 
+			every_army_leader = {
+				add_attack = 1
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_air_supports
+		icon = GFX_goal_poland_goal
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_the_right_generals
+
+		prerequisite = {
+			focus = OCC_the_right_generals
+		}
+
+		completion_reward = { 
+			add_ideas = { OCC_air_supports_idea }
+		}
+	}
+
+	focus = {
+		id = OCC_the_ground
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_air_supports
+
+		prerequisite = {
+			focus = OCC_air_supports
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = charles_de_gaulle
+		}
+	}
+
+	##########
+	## Middle
+	##########
+
+	focus = {
+		id = OCC_armored_warfare
+		icon = GFX_goal_generic_army_tanks
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_army_offense
+
+		prerequisite = {
+			focus = OCC_army_offense
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_civilan_trucks
+		icon = GFX_goal_generic_army_motorized
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_armored_warfare
+
+		prerequisite = {
+			focus = OCC_armored_warfare
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_civilan_trucks_idea
+		}
+	}
+
+	focus = {
+		id = OCC_mechanized_elite
+		icon = GFX_goal_generic_build_tank
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_civilan_trucks
+
+		prerequisite = {
+			focus = OCC_civilan_trucks
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = cat_mechanized_equipment
+			}
+		}
+	}
+
+	##########
+	## Right
+	##########
+
+	focus = {
+		id = OCC_firepower_is_everything
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 2
+		y = 1
+
+		relative_position_id = OCC_army_offense
+
+		prerequisite = {
+			focus = OCC_army_offense
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_superior_firepower_bonus
+				bonus = 1.0
+				uses = 3
+				category = cat_superior_firepower
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_air_firepower
+		icon = GFX_goal_generic_air_doctrine
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_firepower_is_everything
+
+		prerequisite = {
+			focus = OCC_firepower_is_everything
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_air_doctrine_bonus_2
+				bonus = 1.0
+				uses = 3
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_even_more_firepower
+		icon = GFX_goal_generic_army_artillery2
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_air_firepower
+
+		prerequisite = {
+			focus = OCC_air_firepower
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_artillery_bonus
+				bonus = 1.0
+				uses = 3
+				category = artillery
+			}
+		}
+	}
+
+	##########
+	## Completion
+	##########
+
+	focus = {
+		id = OCC_occitanian_fire_power
+		icon = GFX_goal_FNG_artillery_tactics
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_mechanized_elite
+
+		prerequisite = {
+			focus = OCC_the_ground
+		}
+		prerequisite = {
+			focus = OCC_mechanized_elite
+		}
+		prerequisite = {
+			focus = OCC_even_more_firepower
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_occitanian_fire_power_idea
+		}
+	}
+
+	##########################################
+	###	Army Def
+	##########################################
+
+	focus = {
+		id = OCC_army_defense
+		icon = GFX_goal_generic_defence
+		cost = 10
+		x = 4
+		y = 1
+
+		mutually_exclusive = {
+			focus = OCC_army_offense
+		}
+
+
+		relative_position_id = OCC_napoleonic_order
+
+		prerequisite = {
+			focus = OCC_napoleonic_order
+		}
+
+		completion_reward = { 
+			army_experience = 25
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	
+	##########
+	## Left
+	##########
+
+	focus = {
+		id = OCC_the_right_generals2
+		icon = GFX_goal_generic_intelligence_exchange
+		cost = 10
+		x = -2
+		y = 1
+
+		relative_position_id = OCC_army_defense
+
+		prerequisite = {
+			focus = OCC_army_defense
+		}
+
+		completion_reward = { 
+			every_army_leader = {
+				add_defense = 1
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_more_resources
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_the_right_generals2
+
+		prerequisite = {
+			focus = OCC_the_right_generals2
+		}
+
+		completion_reward = { 
+			random_owned_controlled_state = {
+				add_resource = {
+					type = chromium
+					amount = 15
+				}
+			}
+			random_owned_controlled_state = {
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_elite_divsions
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_more_resources
+
+		prerequisite = {
+			focus = OCC_more_resources
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_elite_divsions_idea
+		}
+	}
+
+	##########
+	## Middle
+	##########
+
+	focus = {
+		id = OCC_defensive_fire_power
+		icon = GFX_goal_generic_army_artillery
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_army_defense
+
+		prerequisite = {
+			focus = OCC_army_defense
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_defensive_fire_power_idea
+		}
+	}
+
+	focus = {
+		id = OCC_mass_production
+		icon = GFX_goal_generic_military_sphere
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_defensive_fire_power
+
+		prerequisite = {
+			focus = OCC_defensive_fire_power
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_mass_production_idea
+		}
+	}
+
+	focus = {
+		id = OCC_defense_with_help
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_mass_production
+
+		prerequisite = {
+			focus = OCC_mass_production
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_defense_with_help_idea
+		}
+	}
+
+	##########
+	## Right
+	##########
+
+	focus = {
+		id = OCC_grand_battleplan
+		icon = GFX_goal_generic_army_doctrines
+		cost = 10
+		x = 2
+		y = 1
+
+		relative_position_id = OCC_army_defense
+
+		prerequisite = {
+			focus = OCC_army_defense
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_grand_battle_plan_bonus
+				bonus = 1.0
+				uses = 3
+				category = cat_grand_battle_plan
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_support_is_all
+		icon = GFX_focus_generic_license_production
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_grand_battleplan
+
+		prerequisite = {
+			focus = OCC_grand_battleplan
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_support_tech_bonus
+				bonus = 1.0
+				uses = 3
+				category = support_tech
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_modern_equipment
+		icon = GFX_focus_generic_manpower
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_support_is_all
+
+		prerequisite = {
+			focus = OCC_support_is_all
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_infantry_tech_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
+
+	##########
+	## Completion
+	##########
+
+	focus = {
+		id = OCC_occitanian_defensive_power
+		icon = GFX_goal_generic_defence
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_defense_with_help
+
+		prerequisite = {
+			focus = OCC_elite_divsions
+		}
+		prerequisite = {
+			focus = OCC_defense_with_help
+		}
+		prerequisite = {
+			focus = OCC_modern_equipment
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_occitanian_defensive_power_idea
+		}
+	}
+
+	####################################################################################
+	###	Political
+	####################################################################################
+
+	focus = {
+		id = OCC_the_occitanian_way
+		icon = GFX_focus_generic_treaty
+		cost = 10
+		x = 0
+		y = 6
+
+		relative_position_id = OCC_napoleonic_order
+
+		prerequisite = {
+			focus = OCC_napoleonic_order
+		}
+
+		completion_reward = { 
+			add_political_power = 150
+		}
+	}
+
+	#############
+	### Left 1
+	#############	
+
+	focus = {
+		id = OCC_a_new_maginot
+		icon = GFX_goal_generic_construct_military
+		cost = 10
+		x = -3
+		y = 1
+
+		relative_position_id = OCC_the_occitanian_way
+
+		prerequisite = {
+			focus = OCC_the_occitanian_way
+		}
+
+		completion_reward = { 
+			OCC = { country_event = { id = france.2 } }
+		}
+	}
+
+	focus = {
+		id = OCC_mass_mobilisation
+		icon = GFX_focus_generic_little_entente
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_a_new_maginot
+
+		prerequisite = {
+			focus = OCC_a_new_maginot
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_mass_mobilisation_idea
+		}
+	}
+
+	focus = {
+		id = OCC_new_special_forces
+		icon = GFX_goal_generic_special_forces
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_mass_mobilisation
+
+		prerequisite = {
+			focus = OCC_mass_mobilisation
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_new_special_forces_idea
+		}
+	}
+
+	focus = {
+		id = OCC_naval_invasion_dependency
+		icon = GFX_goal_generic_amphibious_assault
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_new_special_forces
+
+		prerequisite = {
+			focus = OCC_new_special_forces
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_marine_tech_bonus
+				bonus = 2.0
+				uses = 1
+				category = marine_tech
+			}
+		}
+	}	
+
+	#############
+	### Left 2
+	#############
+
+	focus = {
+		id = OCC_tack_back_former_colonies
+		icon = GFX_focus_generic_africa_production
+		cost = 10
+		x = -1
+		y = 1
+
+		relative_position_id = OCC_the_occitanian_way
+
+		prerequisite = {
+			focus = OCC_the_occitanian_way
+		}
+
+		completion_reward = { 
+			create_wargoal = {
+				target = MOR
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_the_navy_of_navys
+		icon = GFX_focus_generic_africa_naval
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_tack_back_former_colonies
+
+		prerequisite = {
+			focus = OCC_tack_back_former_colonies
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_the_navy_of_navys_idea
+		}
+	}
+
+	focus = {
+		id = OCC_exploit_the_colonies
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_the_navy_of_navys
+
+		prerequisite = {
+			focus = OCC_the_navy_of_navys
+		}
+
+		completion_reward = { 
+			add_timed_idea = {
+				idea = OCC_exploit_the_colonies_idea
+				days = 360
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_africa_corps
+		icon = GFX_focus_hol_united_netherlands
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_exploit_the_colonies
+
+		prerequisite = {
+			focus = OCC_exploit_the_colonies
+		}
+
+		completion_reward = {
+			division_template = {
+				name = "Division Cuirassée" 	
+				division_names_group = FRA_ARM_01
+
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 0 y = 3 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					artillery_brigade = { x = 2 y = 0 }
+					artillery_brigade = { x = 2 y = 1 }
+				}
+			
+				support = {
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"1re Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2me Division Cuirassée\" division_template = \"Division Cuirassée\" start_experience_factor = 0.7"  
+					owner = ROOT
+				}
+			}
+		}
+	}
+
+	#############
+	### Right 1
+	#############
+
+	focus = {
+		id = OCC_reclaim_the_fallen_throne
+		icon = GFX_goal_generic_major_war
+		cost = 10
+		x = 1
+		y = 1
+
+		relative_position_id = OCC_the_occitanian_way
+
+		prerequisite = {
+			focus = OCC_the_occitanian_way
+		}
+
+		completion_reward = { 
+			create_wargoal = {
+				target = FRA
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_liberated_workers
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_reclaim_the_fallen_throne
+
+		prerequisite = {
+			focus = OCC_reclaim_the_fallen_throne
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_liberated_workers_idea
+		}
+	}
+
+	focus = {
+		id = OCC_organized_fronts
+		icon = GFX_focus_chi_army_reform
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_liberated_workers
+
+		prerequisite = {
+			focus = OCC_liberated_workers
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_organized_fronts_idea
+		}
+	}
+
+	focus = {
+		id = OCC_avenge_waterloo
+		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_organized_fronts
+
+		prerequisite = {
+			focus = OCC_organized_fronts
+		}
+
+		completion_reward = { 
+			create_wargoal = {
+				target = ENG
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+		}
+	}
+
+	#############
+	### Right 2
+	#############
+
+	focus = {
+		id = OCC_spanish_approach
+		icon = GFX_goal_generic_improve_relations
+		cost = 10
+		x = 3
+		y = 1
+
+		relative_position_id = OCC_the_occitanian_way
+
+		prerequisite = {
+			focus = OCC_the_occitanian_way
+		}
+
+		completion_reward = { 
+			add_opinion_modifier = {
+				target = GLC
+				modifier = non_aggression_pact
+			}
+			add_opinion_modifier = {
+				target = CAT
+				modifier = non_aggression_pact
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_old_ties
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_spanish_approach
+
+		prerequisite = {
+			focus = OCC_spanish_approach
+		}
+
+		completion_reward = { 
+			add_state_claim = 793 
+			add_state_claim = 41
+			add_state_claim = 791
+			add_state_claim = 176
+			add_state_claim = 790
+			add_state_claim = 174
+			add_state_claim = 171
+			add_state_claim = 175
+			add_state_claim = 168
+			add_state_claim = 789
+			add_state_claim = 173
+			add_state_claim = 118
+		}
+	}
+
+	focus = {
+		id = OCC_tow_crown_moarchy1
+		icon = GFX_goal_generic_demand_territory
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_old_ties
+
+		prerequisite = {
+			focus = OCC_old_ties
+		}
+
+		completion_reward = { 
+			create_wargoal = {
+				target = GLC
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_tow_crown_moarchy2
+		icon = GFX_focus_rom_royal_dictatorship
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_tow_crown_moarchy1
+
+		prerequisite = {
+			focus = OCC_tow_crown_moarchy1
+		}
+
+		completion_reward = { 
+			create_wargoal = {
+				target = CAT
+				type = annex_everything
+			}
+		}
+	}
+
+	#############
+	### Center
+	#############
+
+	focus = {
+		id = OCC_united_empire
+		icon = GFX_focus_generic_monarchy_2
+		cost = 10
+		x = 1
+		y = 1
+
+		relative_position_id = OCC_africa_corps
+
+		prerequisite = {
+			focus = OCC_naval_invasion_dependency
+		}
+
+		prerequisite = {
+			focus = OCC_africa_corps
+		}
+
+		prerequisite = {
+			focus = OCC_avenge_waterloo
+		}
+
+		prerequisite = {
+			focus = OCC_tow_crown_moarchy2
+		}
+
+		available = {
+			has_full_control_of_state = 793 
+			has_full_control_of_state = 41
+			has_full_control_of_state = 791
+			has_full_control_of_state = 176
+			has_full_control_of_state = 790
+			has_full_control_of_state = 174
+			has_full_control_of_state = 171
+			has_full_control_of_state = 175
+			has_full_control_of_state = 168
+			has_full_control_of_state = 789
+			has_full_control_of_state = 173
+			has_full_control_of_state = 118
+		}
+
+		completion_reward = { 
+			add_state_core = 793 
+			add_state_core = 41
+			add_state_core = 791
+			add_state_core = 176
+			add_state_core = 790
+			add_state_core = 174
+			add_state_core = 171
+			add_state_core = 175
+			add_state_core = 168
+			add_state_core = 789
+			add_state_core = 173
+			add_state_core = 118
+
+			set_cosmetic_tag = FRANCO_SPAIN
+		}
+	}
+
+	focus = {
+		id = OCC_large_recruitment_campaign
+		icon = GFX_focus_generic_military_mission
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_united_empire
+
+		prerequisite = {
+			focus = OCC_united_empire
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_large_recruitment_campaign_idea
+			add_research_slot = 1
+			
+		}
+	}
+
+	##########################################
+	###	Industrie
+	##########################################
+
+	focus = {
+		id = OCC_private_enterprise
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10
+		x = 6
+		y = 0
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = OCC_civilian_1IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_civilian_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_civilian_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_civilian_1IC	
+			}
+		}
+	}
+
+	###########
+	### Left 1
+	###########
+
+	focus = {
+		id = OCC_financial_relief
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10
+		x = -3
+		y = 1
+
+		relative_position_id = OCC_private_enterprise
+
+		prerequisite = {
+			focus = OCC_private_enterprise
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_financial_relief_idea
+		}
+	}
+
+	focus = {
+		id = OCC_construction_improvement
+		icon = GFX_goal_generic_construction
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_financial_relief
+
+		prerequisite = {
+			focus = OCC_financial_relief
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_construction_improvement_idea
+		}
+	}
+
+	focus = {
+		id = OCC_open_minded
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_construction_improvement
+
+		prerequisite = {
+			focus = OCC_construction_improvement
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_open_minded_idea
+		}
+	}
+
+	###########
+	### Left 2
+	###########
+
+	focus = {
+		id = OCC_occitanian_urbanization
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10
+		x = -1
+		y = 1
+
+		relative_position_id = OCC_private_enterprise
+
+		prerequisite = {
+			focus = OCC_private_enterprise
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = OCC_infrastructure_o_1IC }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_infrastructure_o_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_infrastructure_o_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_infrastructure_o_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_infrastructure_o_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_sky_shield
+		icon = GFX_focus_generic_air_defense
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_occitanian_urbanization
+
+		prerequisite = {
+			focus = OCC_occitanian_urbanization
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = OCC_aa_1IC }
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}		
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = OCC_aa_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = OCC_aa_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_national_research_efforts
+		icon = GFX_focus_research
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_sky_shield
+
+		prerequisite = {
+			focus = OCC_sky_shield
+		}
+
+		completion_reward = { 
+			add_research_slot = 1
+		}
+	}
+
+	###########
+	### Right 1
+	###########
+
+	focus = {
+		id = OCC_quick_rearmament
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 10
+		x = 1
+		y = 1
+
+		relative_position_id = OCC_private_enterprise
+
+		prerequisite = {
+			focus = OCC_private_enterprise
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = OCC_military_1IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_military_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_military_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_maritime_industry
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_quick_rearmament
+
+		prerequisite = {
+			focus = OCC_quick_rearmament
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = OCC_dockyard_1IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_dockyard_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_dockyard_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_increased_spendings
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_maritime_industry
+
+		prerequisite = {
+			focus = OCC_maritime_industry
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = OCC_civilian_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_civilian_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_civilian_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_civilian_2IC	
+			}
+		}
+	}
+
+	###########
+	### Right 2
+	###########
+
+	focus = {
+		id = OCC_innovation_in_the_industrial_sector
+
+		icon = GFX_focus_generic_industry_1
+		cost = 10
+		x = 3
+		y = 1
+
+		relative_position_id = OCC_private_enterprise
+
+		prerequisite = {
+			focus = OCC_private_enterprise
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_industry_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_energized
+		icon = GFX_goal_generic_radar
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_innovation_in_the_industrial_sector
+
+		prerequisite = {
+			focus = OCC_innovation_in_the_industrial_sector
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_electric_bonus
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_digging_deeper_than_ever_before
+		icon = GFX_goal_generic_construction2
+		cost = 10
+		x = 0
+		y = 1
+
+		relative_position_id = OCC_energized
+
+		prerequisite = {
+			focus = OCC_energized
+		}
+
+		completion_reward = { 
+			add_tech_bonus = {
+				name = OCC_excavation_bonus
+				bonus = 1.0
+				uses = 2
+				technology = excavation1
+				technology = excavation2
+				technology = excavation3
+				technology = excavation4
+				technology = excavation5
+			}
+		}
+	}
+
+	###########
+	### Center
+	###########
+
+	focus = {
+		id = OCC_liberte_egalite_fraternite
+
+		icon = GFX_focus_focus_fra_revolution_utmost
+		cost = 10
+		x = 1
+		y = 1
+
+		relative_position_id = OCC_national_research_efforts
+
+		prerequisite = {
+			focus = OCC_open_minded
+		}
+
+		prerequisite = {
+			focus = OCC_national_research_efforts
+		}
+
+		prerequisite = {
+			focus = OCC_increased_spendings
+		}
+
+		prerequisite = {
+			focus = OCC_digging_deeper_than_ever_before
+		}
+
+		completion_reward = { 
+			add_ideas = OCC_liberte_egalite_fraternite_idea
+		}
+	}
+
+	####################################################################################
+	###	Navy Naval
+	####################################################################################
+	
+	focus = {
+		id = OCC_naval_rearmament
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 36
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			navy_experience = 25
+			every_state = {
+				limit = { has_state_flag = OCC_naval_rearmament_2NB }
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			21 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = OCC_naval_rearmament_2NB
+				}
+			}
+			14 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = OCC_naval_rearmament_2NB
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_colonial_naval_bases
+		icon = GFX_goal_generic_build_navy
+	 	prerequisite = { focus = OCC_naval_rearmament }
+		x = -3
+		y = 1
+		relative_position_id = OCC_naval_rearmament
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			459 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 1145
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_naval_bases
+				}
+			}
+			272 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 4948
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_naval_bases
+				}
+			}
+			539 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 5139
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_naval_bases
+				}
+			}
+			286 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = naval_base
+						level = 3
+						province = 4401
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_naval_bases
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_develop_colonial_dockyards
+		icon = GFX_goal_generic_construct_naval_dockyard
+	 	prerequisite = { focus = OCC_colonial_naval_bases }
+		x = 0
+		y = 1
+		relative_position_id = OCC_colonial_naval_bases
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			459 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_dockyards
+				}
+			}
+			272 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_dockyards
+				}
+			}
+			286 = {
+				if = {
+					limit = { is_controlled_by = ROOT }
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+					set_state_flag = OCC_colonial_dockyards
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_the_old_school
+		icon = GFX_focus_generic_navy_battleship2
+	 	prerequisite = { focus = OCC_naval_rearmament }
+	 	mutually_exclusive = { focus = OCC_the_young_school }
+		x = 0
+		y = 1
+		relative_position_id = OCC_naval_rearmament
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			random_owned_state = {
+				limit = {
+					is_core_of = ROOT
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_capital_ship_focus
+		icon = GFX_goal_generic_navy_battleship
+	 	mutually_exclusive = { focus = OCC_carrier_focus }
+	 	prerequisite = { focus = OCC_the_old_school }
+		x = -1
+		y = 1
+		relative_position_id = OCC_the_old_school
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_capital_ship_focus
+				bonus = 1.0
+				uses = 2
+				category = bb_tech
+				category = bc_tech
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_carrier_focus
+		icon = GFX_goal_generic_navy_carrier
+	 	mutually_exclusive = { focus = OCC_capital_ship_focus }
+	 	prerequisite = { focus = OCC_the_old_school }
+		x = 1
+		y = 1
+		relative_position_id = OCC_the_old_school
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_carrier_planes
+		icon = GFX_goal_generic_air_fighter
+
+	 	prerequisite = { focus = OCC_carrier_focus }
+		x = -1
+		y = 1
+		relative_position_id = OCC_carrier_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_carrier_focus
+				bonus = 1.0
+				uses = 2
+				category = naval_air
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_rush_the_richelieus
+		icon = GFX_focus_generic_cruiser2
+
+	 	prerequisite = { focus = OCC_capital_ship_focus }
+		x = 0
+		y = 2
+		relative_position_id = OCC_capital_ship_focus
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "OCC" 
+						version_name = "Richelieu Class"
+					}
+					requested_factories = 1
+					progress = 0.50
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = ship_hull_heavy_2
+						creator = "OCC" 
+						version_name = "Richelieu Class"
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = battleship_2
+						creator = "OCC" 
+					}
+					requested_factories = 1
+					progress = 0.50
+					amount = 1
+				}
+				add_equipment_production = {
+					equipment = {
+						type = battleship_2
+						creator = "OCC" 
+					}
+					requested_factories = 1
+					progress = 0.35
+					amount = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = OCC_prioritize_the_joffre
+		icon = GFX_goal_generic_navy_carrier
+
+	 	prerequisite = { focus = OCC_carrier_focus }
+		x = 0
+		y = 2
+		relative_position_id = OCC_carrier_focus
+		cost = 10
+
+		available_if_capitulated = no
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				custom_effect_tooltip = OCC_prioritize_the_joffre_tt
+				hidden_effect = {
+					create_equipment_variant = {
+						name = "Joffre Class"
+						type = ship_hull_carrier_1
+						name_group = FRA_CV_HISTORICAL
+						parent_version = 0
+						modules = {
+							fixed_ship_deck_slot_1 = ship_deck_space
+							fixed_ship_deck_slot_2 = ship_deck_space
+							fixed_ship_anti_air_slot = ship_anti_air_1
+							fixed_ship_radar_slot = empty
+							fixed_ship_engine_slot = carrier_ship_engine_2
+							fixed_ship_secondaries_slot = dp_ship_secondaries
+							front_1_custom_slot = empty
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_carrier_1
+							creator = "OCC" 
+							version_name = "Joffre Class"
+						}
+						requested_factories = 1
+						progress = 0.40
+						amount = 1
+					}
+				}	
+			}
+			else = {
+				add_equipment_production = {
+					equipment = {
+						type = carrier_2
+						creator = "OCC" 
+					}
+					requested_factories = 1
+					progress = 0.40
+					amount = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = OCC_the_young_school
+		icon = GFX_goal_generic_navy_cruiser
+	 	prerequisite = { focus = OCC_naval_rearmament }
+	 	mutually_exclusive = { focus = OCC_the_old_school }
+		x = 4
+		y = 1
+		relative_position_id = OCC_naval_rearmament
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = OCC_the_young_school
+		}
+	}
+
+	focus = {
+		id = OCC_undersea_combat
+		icon = GFX_goal_generic_navy_submarine
+	 	prerequisite = { focus = OCC_the_young_school }
+		x = -1
+		y = 1
+		relative_position_id = OCC_the_young_school
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = OCC_undersea_combat
+				bonus = 1.0
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_surface_combat
+		icon = GFX_focus_generic_destroyer
+	 	prerequisite = { focus = OCC_the_young_school }
+		x = 1
+		y = 1
+		relative_position_id = OCC_the_young_school
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = OCC_surface_combat
+				bonus = 2.0
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+	focus = {
+		id = OCC_improved_screen_ships
+		icon = GFX_goal_generic_navy_cruiser
+	 	prerequisite = { focus = OCC_surface_combat }
+	 	prerequisite = { focus = OCC_undersea_combat }
+		x = 0
+		y = 2
+		relative_position_id = OCC_surface_combat
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = OCC_improved_screen_ships
+				bonus = 2.0
+				uses = 1
+				category = cl_tech
+			}
+		}
+	}
+
+	
+
+	focus = {
+		id = OCC_naval_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+	 	prerequisite = { 
+	 		focus = OCC_prioritize_the_joffre
+	 		focus = OCC_rush_the_richelieus
+	 		focus = OCC_improved_screen_ships
+	 	}
+		x = 3
+		y = 1
+		relative_position_id = OCC_rush_the_richelieus
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+
+			add_tech_bonus = {
+				name = OCC_naval_doctrine
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	####################################################################################
+	###	Air
+	####################################################################################
+
+	focus = {
+		id = OCC_air_focus
+		icon = GFX_goal_generic_build_airforce
+		x = 48
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = air_focus_bypass_tt
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			air_experience = 25
+			every_state = {
+				limit = { has_state_flag = OCC_air_focus_2air }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_air_focus_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_air_focus_2air
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = air_base
+						size > 1
+					}
+				}
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = OCC_air_focus_2air
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		mutually_exclusive = { focus = OCC_bomber_focus }
+	 	prerequisite = { focus = OCC_air_focus }
+		x = -1
+		y = 1
+		relative_position_id = OCC_air_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_fighter_focus
+				bonus = 1.0
+				uses = 1
+				category = light_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_heavy_fighter_focus
+		icon = GFX_goal_generic_air_fighter2
+	 	prerequisite = { focus = OCC_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = OCC_fighter_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_heavy_fighter_focus
+				bonus = 1.0
+				uses = 2
+				category = cat_heavy_fighter
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		mutually_exclusive = { focus = OCC_fighter_focus }
+	 	prerequisite = { focus = OCC_air_focus }
+		x = 1
+		y = 1
+		relative_position_id = OCC_air_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_bomber_focus
+				bonus = 1.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_air_doctrine
+		icon = GFX_goal_generic_air_doctrine
+	 	prerequisite = { 
+	 		focus = OCC_fighter_focus 
+	 		focus = OCC_bomber_focus
+	 	}
+		x = 1
+		y = 1
+		relative_position_id = OCC_fighter_focus
+		cost = 10
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			air_experience = 50
+
+			add_tech_bonus = {
+				name = OCC_air_doctrine
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_heavy_bomber_focus
+		icon = GFX_goal_generic_occupy_start_war
+	 	prerequisite = { focus = OCC_bomber_focus }
+		x = 1
+		y = 1
+		relative_position_id = OCC_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_heavy_bomber_focus
+				bonus = 1.0
+				uses = 2
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = OCC_naval_bomber_focus
+		icon = GFX_goal_generic_air_naval_bomber
+	 	prerequisite = { focus = OCC_bomber_focus }
+		x = 3
+		y = 1
+		relative_position_id = OCC_bomber_focus
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = OCC_naval_bomber_focus
+				bonus = 1.0
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+
+
+}

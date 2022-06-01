@@ -1,0 +1,1146 @@
+ideas = {
+    political_advisor = {
+		
+		
+
+		OCCrene_massigli = {
+			
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			available = {
+				has_government = democratic
+			}
+			cost = 75 
+			traits = { hawk }
+
+			do_effect = {
+				
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCCgeorges_bonnet = {
+			
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			available = {
+				has_government = democratic
+			}
+			cost = 75 
+			traits = { appeaser }
+
+			do_effect = {
+				
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		OCCcharles_maurras = {
+			
+			picture = generic_political_advisor_europe_3
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			available = {
+				has_completed_focus = OCC_the_occitanian_way
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			visible = { has_dlc = "La Resistance" }
+			cost = 75 
+			traits = { national_integralist }
+
+			do_effect = {
+				
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCCphilippe_henriot = {
+			
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			visible = { has_dlc = "La Resistance" }
+			available = {
+				has_government = fascism
+			}
+			cost = 75 
+			traits = { propaganda_expert }
+
+			do_effect = {
+				
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		OCCpierre_pucheu = {
+			
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			available = {
+				not = { has_government = communism }
+			}
+			cost = 150 
+			traits = { technocrat }
+
+			do_effect = {
+				
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCC_gaston_henry_haye = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			picture = generic_political_advisor_europe_5
+			
+			traits = { silent_workhorse }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		OCC_jacques_duclos = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { backroom_backstabber }
+	
+			ai_will_do = {
+				factor = 0
+			}
+		}	
+
+		OCC_paul_baudouin = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			traits = { smooth_talking_charmer }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		OCC_vincent_auriol = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			available = { has_completed_focus = OCC_financial_relief }
+
+			
+			traits = { financial_expert }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCC_roger_salengro = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			available = { has_completed_focus = OCC_spanish_approach }
+
+			
+			traits = { compassionate_gentleman }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCC_zivony_peshkov = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+
+			available = {
+				has_completed_focus = OCC_mass_mobilisation
+			}
+			
+			picture = generic_army_europe_5
+			
+			traits = { war_industrialist }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		OCC_felix_gouin = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { captain_of_industry }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		OCC_charles_tillon = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+			
+			picture = generic_political_advisor_europe_3
+			
+			traits = { armaments_organizer }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+
+		OCC_paul_reynaud = {
+			
+			allowed = {
+				original_tag = "OCC"
+			}
+
+			picture = generic_political_advisor_europe_3
+			
+			traits = { quartermaster_general }
+	
+			on_add = {
+			}
+	
+			do_effect = {
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		OCC_maurice_gauche = {
+		
+			picture = generic_political_advisor_europe_3
+		
+			available = {
+				has_intelligence_agency = yes
+			}
+			
+			allowed = {
+				original_tag = OCC
+				has_dlc = "La Resistance" 
+			}
+			
+			traits = { head_of_intelligence }
+
+		}
+		
+	}
+		
+	# MILITARY
+	army_chief = {
+		
+		
+		OCC_maurice_gamelin = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			available = {
+				has_completed_focus = OCC_army_offense
+			}
+
+			cost = 50
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_maxime_weygand = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			available = {
+				has_completed_focus = OCC_army_defense
+			}
+
+			cost = 50
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCC_henri_marie_auguste_bineau = {
+			
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		OCC_pierre_alombert_goget = {
+			
+			picture = generic_army_europe_1
+
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}		
+		
+		OCC_alphonse_georges = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { army_chief_maneuver_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	navy_chief = {
+		
+		OCC_Francois_darlan = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_marcel_gensoul = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { navy_chief_naval_aviation_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_jean_marie_abrial = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+	}
+	air_chief = {
+			
+		OCC_joseph_vuillemin = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { air_chief_ground_support_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_robert_odic = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { air_chief_all_weather_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_philippe_fequant = {
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+		
+		OCC_rene_prioux = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_charles_huntziger = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { army_logistics_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_philippe_leclerc = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		OCC_alfred_heurtaux = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_martial_valin = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_jean_OCCncois_jannekeyn = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { air_tactical_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}	
+		
+		OCC_jean_de_laborde = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { navy_capital_ship_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_emile_muselier = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { navy_fleet_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		OCC_rene_emile_godfroy = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+
+			
+			traits = { navy_screen_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	tank_manufacturer = {
+
+		designer = yes
+	
+		# TECHNOLOGY
+		OCC_renault = {
+		
+			picture = renault
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+
+			traits = { heavy_tank_manufacturer }
+		}
+	
+		OCC_AMX = {
+		
+			picture = generic_tank_manufacturer_2
+
+			available = {
+				has_completed_focus = OCC_armored_warfare
+			}
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+
+			traits = { fast_tank_manufacturer }
+		}
+		OCC_hotchkiss = {
+		
+			picture = generic_tank_manufacturer_3
+
+			available = {
+				has_completed_focus = OCC_support_is_all
+			}
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+
+			traits = { infantry_tank_manufacturer }
+		}
+
+		OCC_APX = {
+			picture = OCC_atelier_puteaux
+			
+
+			available = {
+				
+			}
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+
+			traits = { medium_tank_manufacturer }
+		}
+		OCC_panhard = {
+			
+
+			available = {
+				
+			}
+
+						
+			allowed = {
+				original_tag = OCC
+				has_dlc = "La Resistance"
+			}
+						
+			research_bonus = {
+				armor = 0.15
+			}
+			
+
+			traits = { armored_car_manufacturer }
+		}
+	}
+	
+	materiel_manufacturer = {
+			
+		designer = yes
+		
+		OCC_somua = {
+		
+			allowed = {
+				original_tag = OCC
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+			
+			traits = { motorized_equipment_manufacturer }
+
+		}
+		
+		OCC_mas = {
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+			
+			traits = { infantry_equipment_manufacturer }
+		}
+	
+		OCC_schneider = {
+						
+			allowed = {
+				original_tag = OCC
+			}		
+			
+			research_bonus = {
+				artillery = 0.15
+			}
+			
+			traits = { artillery_manufacturer }
+		}
+	}
+	
+	aircraft_manufacturer = {
+			
+		designer = yes
+		
+		OCC_morane_saulnier = {
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		
+		OCC_bloch = {
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		
+		OCC_amiot = {
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		
+		OCC_levasseur = {
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				air_equipment = 0.1
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+		OCC_SNCAN = {
+			picture = OCC_sncan		
+			allowed = {
+				original_tag = OCC
+			}
+			visible = { has_completed_focus = OCC_sky_shield }	
+			
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
+		}
+		OCC_SNCAO = {
+			picture = OCC_sncao			
+			allowed = {
+				original_tag = OCC
+			}
+			visible = { has_completed_focus = OCC_sky_shield }	
+			
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			
+			traits = { medium_aircraft_manufacturer }
+		}
+		OCC_SNCASE = {
+			picture = OCC_sncase		
+			allowed = {
+				original_tag = OCC
+			}
+			visible = { has_completed_focus = OCC_sky_shield }	
+				
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			
+			traits = { light_aircraft_manufacturer }
+		}
+		OCC_SNCASO = {
+			picture = OCC_sncaso		
+			allowed = {
+				original_tag = OCC
+			}
+			visible = { has_completed_focus = OCC_sky_shield }	
+			
+			research_bonus = {
+				air_equipment = 0.2
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+		}
+		OCC_SNCAC = {
+			picture = OCC_sncac			
+			allowed = {
+				original_tag = OCC
+			}
+			visible = { has_completed_focus = OCC_sky_shield }	
+			
+			research_bonus = {
+				air_equipment = 0.3
+			}
+			
+			traits = { aircraft_manufacturer }
+		}
+		
+	}
+	naval_manufacturer = {
+
+		designer = yes
+		
+		OCC_fcm = {
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { mediterranean_naval_manufacturer }
+		}
+		OCC_aeb = {
+			picture = OCC_aeb		
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { convoy_escort_naval_manufacturer }
+		}
+		OCC_acl = {
+			picture = OCC_acl	
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+		OCC_acf = {
+			picture = OCC_acf			
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+			
+			traits = { raiding_fleet_naval_manufacturer }
+		}
+	}
+	
+	industrial_concern = {	
+		
+		OCC_famh = {
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				industry = 0.15
+			}
+			
+			traits = { industrial_concern }
+		}
+	}
+	
+	
+	theorist = {
+		OCC_charles_de_gaulle = {
+			ledger = army
+						
+			allowed = {
+				original_tag = OCC
+			}
+			available = {
+				has_completed_focus = OCC_the_ground
+			}
+			
+			cost = 75
+						
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { blitzkrieg_theorist }
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+
+					GER = { is_ai = yes }
+					date < 1939.1.1
+				}
+			}
+
+		}
+		
+		OCC_henri_giraud = {
+			ledger = army
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+
+					GER = { is_ai = yes }
+					date < 1939.1.1
+				}
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		OCC_louis_kahn = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+			cost = 250
+						
+			research_bonus = {
+				cat_fleet_in_being = 0.15
+			}
+			
+			traits = { grand_fleet_proponent }
+		}
+		
+		OCC_jean_decoux = {
+			ledger = navy
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+		
+		OCC_victor_denain = {
+			ledger = air
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+			cost = 250 
+			
+			research_bonus = {
+				cat_operational_integrity = 0.15
+			}
+			
+			traits = { assault_avaition }
+		}
+		
+		OCC_jean_marie_bergeret = {
+			ledger = air
+						
+			allowed = {
+				original_tag = OCC
+			}
+						
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		
+		OCC_frederic_irene_joliot_curie = {
+			ledger = army
+			
+			
+			allowed = {
+				original_tag = OCC
+			}
+			
+			
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}
+	}	
+}

@@ -1,0 +1,67 @@
+spriteTypes = {	
+	spriteType = { 
+		name = "GFX_unit_ultra_heavy_armor_icon_medium"				
+		textureFile = "gfx/interface/counters/divisions_large/unit_ultra_heavy_armor_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_ultra_heavy_tank_destroyer_brigade_icon_medium"				
+		textureFile = "gfx/interface/counters/divisions_large/unit_ultra_heavy_armor_at_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_ultra_heavy_sp_artillery_brigade_icon_medium"				
+		textureFile = "gfx/interface/counters/divisions_large/unit_ultra_heavy_armor_artillery_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+		noOfFrames = 2
+	}
+	spriteType = { 
+		name = "GFX_unit_ultra_heavy_sp_anti_air_brigade_icon_medium"				
+		textureFile = "gfx/interface/counters/divisions_large/unit_ultra_heavy_armor_antiair_icon.dds"  ## Thats the paradox shepe, but you can use any path and file naming you want
+		noOfFrames = 2
+	}
+
+
+
+	spriteType = { 
+		name = "GFX_unit_ultra_heavy_armor_icon_medium_white"						
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_unit_ultra_heavy_armor_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+
+	spriteType = {
+		name = "GFX_unit_ultra_heavy_armor_icon_small"
+		texturefile = "gfx/texticons/unit_ultra_heavy_armor_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_unit_ultra_heavy_tank_destroyer_brigade_icon_small"
+		texturefile = "gfx/texticons/unit_ultra_heavy_armor_AT_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_unit_ultra_heavy_sp_artillery_brigade_icon_small"
+		texturefile = "gfx/texticons/unit_ultra_heavy_armor_art_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_unit_ultra_heavy_sp_anti_air_brigade_icon_small"
+		texturefile = "gfx/texticons/unit_ultra_heavy_armor_AA_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2		
+	}
+	spriteType = {
+		name = "GFX_unit_airship_icon_small"
+		texturefile = "gfx/texticons/unit_airship_icon_small.dds"
+	}
+	spriteType = {
+		name = "GFX_unit_category_light_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_infantry_icon_small.dds"
+	}
+	
+	
+}

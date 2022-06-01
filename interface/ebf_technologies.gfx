@@ -1,0 +1,61 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_early_airship_medium"
+		texturefile = "gfx/interface/technologies/air/airship_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_airship1_medium"
+		texturefile = "gfx/interface/technologies/air/airship_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_airship2_medium"
+		texturefile = "gfx/interface/technologies/air/airship_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_advanced_light_tank_a_medium"
+		texturefile = "gfx/interface/technologies/advanced_light_tank.dds"
+	}
+	SpriteType = {
+		name = "GFX_rations_medium"
+		texturefile = "gfx/interface/technologies/rations_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_rations_a_medium"
+		texturefile = "gfx/interface/technologies/rations_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_rations_equipment_x_medium"
+		texturefile = "gfx/interface/technologies/rations_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_rations_equipment_x_y_medium"
+		texturefile = "gfx/interface/technologies/rations_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_at_munitions_equipment_medium"
+		texturefile = "gfx/interface/technologies/at_munitions_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_heavy_munitions_equipment_medium"
+		texturefile = "gfx/interface/technologies/heavy_munitions_equipment_0.dds"
+	}
+	SpriteType = {
+		name = "GFX_light_munitions_equipment_medium"
+		texturefile = "gfx/interface/technologies/light_munitions_equipment_0.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_main_battle_tank_a_medium"
+		texturefile = "gfx/interface/technologies/armor/main_battle_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_super_heavy_tank_a_medium"
+		texturefile = "gfx/interface/technologies/armor/super_heavy_tank2.dds"
+	}
+	SpriteType = {
+		name = "GFX_ultra_heavy_tank_medium"
+		texturefile = "gfx/interface/technologies/armor/ultra_heavy_tank.dds"
+	}
+
+}

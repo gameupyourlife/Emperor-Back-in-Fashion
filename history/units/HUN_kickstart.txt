@@ -1,0 +1,15 @@
+﻿
+units= {
+	fleet = {
+		name = "1. Imperiale Flotte"			
+		naval_base = 11584 # Toulon
+		task_force = {				
+			name = "1. Imperiale Task Force"			
+			location = 11584 # Toulon	
+			ship = { name = "Courbet" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = FRA version_name = "Courbet Class" } } }        
+			ship = { name = "Lynx" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+			ship = { name = "Tigre" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = FRA version_name = "Chacal Class" } } }
+		}								
+	}
+}
+	

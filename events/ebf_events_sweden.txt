@@ -1,0 +1,51 @@
+#is_ai = yes 
+
+add_namespace = ebf_sweden
+
+country_event = {
+	id = ebf_sweden.0
+	title = ebf_sweden.0.t 
+	desc = ebf_sweden.0.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = ebf_sweden.0.a
+	}
+}
+
+### Spirit after War
+country_event = {
+	id = ebf_sweden.1
+	title = ebf_sweden.1.t 
+	desc = ebf_sweden.1.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		SWE = {
+			controls_state = 111
+		}
+		tag = SWE
+		has_completed_focus = SWE_winter_war
+	}
+
+	immediate = {
+		add_ideas = SWE_forcefully_taken_2_idea
+	}
+
+	option = {
+		name = ebf_sweden.1.a
+	}
+}

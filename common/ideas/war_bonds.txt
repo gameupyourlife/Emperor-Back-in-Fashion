@@ -1,0 +1,93 @@
+# ideas = {
+
+# 	war_bonds = { 
+	
+# 		law = yes
+		
+# 		#Force Bonds
+# 		war_bonds_force = {
+# 		    available = {
+# 				NOT = {
+# 					has_government = democratic
+# 				}
+# 				has_war = yes
+# 			}
+			
+# 			modifier = {
+# 				stability_factor = -0.2
+# 				war_support_factor = 0.1
+# 				consumer_goods_factor = -0.1
+# 				political_power_factor = -0.2
+# 			}
+
+# 			level = 2
+			
+# 			cost = 100
+			
+# 			cancel_if_invalid = no
+			
+# 			ai_will_do = {
+#    				factor = 0.5
+# 				modifier = {
+# 				    OR = {
+# 					has_government = fascism
+# 					has_government = communism
+# 					}
+# 					factor = 1
+# 				}
+#    			}
+# 		}
+		
+# 		#Bonds Welcome
+# 		war_bonds_welcome = {
+		
+# 			available = {
+# 				has_war = yes
+# 			}
+		
+# 			modifier = {
+# 				stability_factor = -0.1
+# 				war_support_factor = 0.05
+# 				consumer_goods_factor = -0.05
+# 				political_power_factor = -0.1
+# 			}
+			
+# 			level = 1
+
+# 			cost = 100
+			
+# 			cancel_if_invalid = yes
+
+# 			ai_will_do = {
+#    				factor = 0.5
+
+#    				modifier = {
+# 					has_government = democratic
+# 					factor = 1
+# 				}
+#    			}
+# 		}
+		
+# 		#No Bonds
+# 		war_bonds_no = {
+# 			available = {
+# 				has_war = no
+# 			}
+
+# 			level = 0
+			
+# 			modifier = {
+# 				consumer_goods_factor = 0.0
+# 			}
+
+# 			cost = 100
+# 			default = yes
+# 			cancel_if_invalid = no
+
+# 			ai_will_do = {
+# 				factor = 0.5
+# 			}
+# 		}
+		
+# 	}
+# }

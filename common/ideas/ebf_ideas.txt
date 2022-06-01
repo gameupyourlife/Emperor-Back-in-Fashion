@@ -1,0 +1,246 @@
+ideas = {
+	country = {
+
+		AI_generic_manpower = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		AI_desperat_defense_1 = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				army_morale_factor = 0.05
+				max_dig_in_factor = 0.1
+			}
+		}
+
+		AI_desperat_defense_2 = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				army_morale_factor = 0.1
+				max_dig_in_factor = 0.2
+			}
+		}
+
+		AI_desperat_defense_3 = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.3
+				army_morale_factor = 0.15
+				max_dig_in_factor = 0.3
+			}
+		}
+
+
+		GER_imperial_defense_mod = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
+		}
+
+		
+		HOL_hidden_bonus_against_GER = {
+				
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.4
+				defense_bonus_against = 0.4
+				army_morale_factor = 0.1
+			}			
+		}
+
+		GER_raise_schaumweinsteuer_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				ship_hull_carrier = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_heavy = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_cruiser = {
+					build_cost_ic = -0.05 instant = yes
+				}
+				ship_hull_light = {
+					build_cost_ic = -0.05 instant = yes
+				}
+			}
+		}
+	}
+
+	economy = { 
+		law = yes
+		use_list_view = yes
+		sacrifice_the_civilians = {
+			
+			picture = "idea_sacrifice_the_civilians"
+			
+			available = {
+				has_war = yes
+				has_war_support > 0.8
+				surrender_progress > 0.1
+				NOT = { has_civil_war = yes }
+				any_enemy_country = {
+					ic_ratio = { 
+						tag = ROOT 
+						ratio > 0.6
+					}
+				}
+		
+				if = {
+					limit = {
+						original_tag = HUN
+						has_dlc = "Death or Dishonor"
+					}
+					NOT = { has_idea = HUN_treaty_of_triannon }
+				}
+				if = {
+					limit = {
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					has_war_support > 0.9
+					congress_high_support_trigger = yes
+				}
+				if = {
+					limit = {
+						original_tag = TUR
+						has_dlc = "Battle for the Bosporus" 
+					}
+					NOT = { 
+						OR = {
+							has_active_mission = TUR_etatism_crisis_1
+							has_active_mission = TUR_etatism_crisis_2
+							has_active_mission = TUR_etatism_crisis_3
+						}
+					}
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						tag = USA
+						has_completed_focus = USA_limited_intervention
+						has_defensive_war = no
+					}
+					USA_congress_large_opposition = yes
+				}
+			}
+			ai_will_do = {
+				   factor = 1
+		
+				modifier = {
+					factor = 25
+					#Prio this if nation has a lot of manpower compared to MIC
+					manpower_per_military_factory > 15000
+				}
+		
+				modifier = {
+					#Block  unless nation has a lot of manpower
+					factor = 0
+					manpower_per_military_factory <  7000
+				}
+		
+				
+				modifier = {
+					# never take this if we are on low conscription laws for safety
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+		
+				# Germany needs to be careful
+				modifier = {
+					factor = 0
+		
+					tag = GER
+					NOT = { has_tech = volkssturm }
+					has_war = yes
+					date < 1944.01.01
+				}
+				modifier = {
+					factor = 0
+		
+					tag = SOV
+					has_war = yes
+					OR = {
+						has_manpower < 2000000
+						NOT = {
+							OR = {
+								has_idea = all_adults_serve
+								has_idea = service_by_requirement
+							}
+						}
+					}									
+				}
+			   }
+			
+			cost = 150
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.01
+				conscription = -0.04
+				production_speed_arms_factory_factor = 0.5
+				conversion_cost_civ_to_mil_factor= -0.5
+				conversion_cost_mil_to_civ_factor = -0.5
+				MONTHLY_POPULATION = -0.90
+			}
+			
+			cancel_if_invalid = no
+		}
+	}	
+}

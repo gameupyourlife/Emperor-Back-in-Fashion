@@ -1,0 +1,8 @@
+# objectTypes = {
+
+# 	pdxmesh = {
+# 		name = "generic_airship_equipment_mesh"
+# 		file = "gfx/models/units/planes/generic_airship_equipment.mesh"
+# 		animation = { id = "idle" type = "bomber_default_idle_animation" }
+# 	}
+# }

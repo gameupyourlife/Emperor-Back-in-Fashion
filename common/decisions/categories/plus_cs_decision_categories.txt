@@ -1,0 +1,10 @@
+peace_options = {
+    icon = GFX_decision_category_generic_political_actions
+    available = {
+        has_war = yes
+    }
+}
+
+peace_treaty = {
+    icon = GFX_decision_category_generic
+}

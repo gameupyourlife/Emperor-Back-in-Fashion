@@ -1,0 +1,3 @@
+﻿l_english:
+  war_reparations:0 "War Reparations"
+  war_reparations_desc:0 "This country is currently paying war reparations to [?war_reps_to.GetNameDef]"

@@ -1,0 +1,50 @@
+equipments = {
+
+	rations_equipment = {
+		year = 1918
+
+		is_archetype = yes
+		picture = archetype_support_equipment
+		is_buildable = no
+		type = {
+			infantry
+			motorized
+		}
+		group_by = archetype
+		is_convertable = yes
+		interface_category = interface_category_land
+		
+		reliability = 0.8
+
+		#Space taken in convoy
+		lend_lease_cost = 0.1
+
+		build_cost_ic = 0.010
+		resources = {
+			grain = 4
+		}
+	}
+
+	rations_equipment_x = {
+		year = 1918	
+		visual_level = 0
+		archetype = rations_equipment
+		priority = 20	
+	}
+
+	rations_equipment_x_y = {
+		year = 1936
+		visual_level = 1
+		parent = rations_equipment_x
+		is_convertable = yes
+		reliability = 0.5
+
+		resources = {
+			grain = 5
+		}
+
+		archetype = rations_equipment
+		priority = 20	
+	}
+
+}

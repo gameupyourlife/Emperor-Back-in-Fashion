@@ -1,0 +1,29 @@
+
+state={
+	id=151
+	name="STATE_151"
+	manpower = 1854711
+	resources={
+		grain = 0
+		wood = 7
+	}
+	
+	state_category = city
+	
+
+	history={
+		owner = ITA
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+		}
+		victory_points = {
+			663 10 
+		}
+		add_core_of = ITA
+	}
+
+	provinces={
+		658 661 663 3641 3660 3662 9600 11601 11623 
+	}
+}

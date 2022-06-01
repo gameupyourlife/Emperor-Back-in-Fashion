@@ -1,0 +1,297 @@
+﻿l_english:
+SWE_call_the_elite_forces_tooltip:0 "Will spawn 4 seasoned units. If you have unlocked mountaineers they will be 14/4 mountaineers else they will be 14/4 infantrymen."
+
+##############
+
+SWE_start_recovery:0 "Start an Adventure"
+SWE_start_recovery_desc:0 "Recovery is the first Step for Domination"
+
+SWE_rebuild_nation:0 "Rebuild Nation"
+SWE_rebuild_nation_desc:0 "The rebuild of the Nation is a joint Effort of the whole Nation"
+
+SWE_wilhelm_werke:0 "Private Industry"
+SWE_wilhelm_werke_desc:0 "In order to pay respect to our Kaiser we have to build a new Industrial Complex"
+
+SWE_fund_the_prussian_acadamy:0 "Fund the Stokholm Acadamy"
+SWE_fund_the_prussian_acadamy_desc:0 "In order to keep our Position as technological Leader of Europe we have to increase spendings in the research Sektor"
+
+SWE_employ_more_staff:0 "Employ more Staaf"
+SWE_employ_more_staff_desc:0 "If we employ more Staff we have more Capabilities"
+
+SWE_imperial_research_ambitions:0 "Imperial Research Ambitions"
+SWE_imperial_research_ambitions_desc:0 "After we have build a solid industry foundation Research is our Number one Priority"
+
+SWE_improve_naval_sektor:0 "Improve Naval Sector"
+SWE_improve_naval_sektor_desc:0 "By improving our naval Sector we can gain Access to more production Capabilities"
+
+SWE_rebuild_navy:0 "Rebuild Navy"
+SWE_rebuild_navy:0 "A strong Navy means a strong Germany"
+
+SWE_raise_the_schaumweinsteuer:0 "Raise the taxes"
+SWE_raise_the_schaumweinsteuer_desc:0 "More Taxes more Navy"
+
+SWE_ask_porsche_for_support:0 "Ask the Private sector for Support"
+SWE_ask_porsche_for_support_desc:0 "The Private sector is a Factory which could build Tanks"
+
+SWE_expand_the_german_war_economy:0 "Expand the Swedish War Economy"
+SWE_expand_the_german_war_economy_desc:0 "We need a bigger War Economy"
+
+SWE_lessons_learned:0 "Lessons Learned"
+SWE_lessons_learned_desc:0 "We have our Lessons learned from WWI"
+
+SWE_investment_campain:0 "Investment Campain"
+SWE_investment_campain_desc:0 "A good Investment Campain could boost our Industry immense"
+
+SWE_reichs_autobahn:0 "The Autobahn"
+SWE_reichs_autobahn_desc:0 "The Autobahn is an important Factor for Troup Movments"
+
+SWE_increase_infrastructure_spendings:0 "Increase Infrastructure Spendings"
+SWE_increase_infrastructure_spendings_desc:0 "More Money for the construction of Infrastrukture could benefit in the long Run"
+
+SWE_search_for_resources:0 "Search for Resources"
+SWE_search_for_resources_desc:0 "In Germany should be more Resources available than current discovered. Let's look for them!"
+
+SWE_no_oil_found:0 "No oil found"
+SWE_no_oil_found:0 "We have not found any oil in Germany so we have to go for Synthetic Refineries"
+
+SWE_full_on_synthetics:0 "Full on Synthetics"
+SWE_full_on_synthetics_desc:0 "Lets focus completely on Syntehtics"
+
+SWE_wood_as_fuel:0 "Wood as Fuel?"
+SWE_wood_as_fuel_desc:0 "Could Wood work as Fuel?"
+
+SWE_decisons_should_be_made:0 "Decisions should be made"
+SWE_decisons_should_be_made_desc:0 "Everyone should make Decisions"
+
+SWE_decisons_have_to_be_made:0 "Decisions have been made"
+SWE_decisons_have_to_be_made_desc:0 "Everyone has to make Decisions"
+
+SWE_prioritize_navy:0 "Prioritize the Navy"
+SWE_prioritize_navy_desc:0 "The Navy has the most important Role in large scale War"
+
+SWE_the_german_naval_dream:0 "The german Naval Dream"
+SWE_the_german_naval_dream_desc:0 "Wilhelm II had always the Dream of a strong Germany Navy"
+
+SWE_prioritize_airforce:0 "Prioritize the Airforce"
+SWE_prioritize_navy_desc:0 "The Airforce has the most important Role in large scale War"
+
+SWE_the_imperial_luftwaffe:0 "The Imperial Luftwaffe"
+SWE_the_imperial_luftwaffe_desc:0 "The Imperial Luftwaffe is capable of dealing with all Problems"
+
+SWE_prioritize_army:0 "Prioritize the Army"
+SWE_prioritize_army_desc:0 "The Army has the most important Role in large scale War"
+
+SWE_the_german_war_machine:0 "The German War Machine"
+SWE_the_german_war_machine_desc:0 "The German Panzer Force is a true Statement of Power"
+
+SWE_the_prussian_way:0 "The Prussian Way"
+SWE_the_prussian_way_desc:0 "The Prussian way is the only Way"
+
+SWE_prepare_the_invasion_of_the_netherlands:0 "Prepare the Invasion of the Netherlands"
+SWE_prepare_the_invasion_of_the_netherlands_desc:0 "Netherland has a lot of Land and a weak Army. The perfect Target!"
+
+SWE_safe_the_new_land:0 "Secure the new Land"
+SWE_safe_the_new_land_desc:0 "We have to secure the new Land we have gained"
+
+SWE_integreat_the_new_land:0 "Integreat the new Land"
+SWE_integreat_the_new_land_desc:0 "After we have secured the new Land we can Integreat it"
+
+SWE_guarantee_self_autonomy:0 "Guarantee Self Autonomy"
+SWE_guarantee_self_autonomy:0 "We could guarantee Self Autonomy to the French Popuilation of the Netherlands"
+
+SWE_prussian_militarism:0 "Prussian Militarism"
+SWE_prussian_militarism_desc:0 "Prussia was always a militaristic Country"
+
+SWE_military_school_education:0 "Military School Education"
+SWE_military_school_education_desc:0 "A military school Education is a good Way to gain a better Military Force"
+
+SWE_military_upbringing:0 "Military Upbringing"
+SWE_military_upbringing_desc:0 "Military Upbringing is Tradition"
+
+SWE_defend_danzig:0 "Defend Danzig"
+SWE_defend_danzig_desc:0 "In Order to Defend Danzig we need a Bunker Line"
+
+SWE_reihnwacht:0 "Reihnwacht"
+SWE_reihnwacht_desc:0 "A Bunker Line at the Rhine could be Useful"
+
+SWE_reunite_german_lands:0 "Reunite German Lands"
+SWE_reunite_german_lands_desc:0 "We have to reunite our german Land"
+
+SWE_claim_Memel:0 "Demand Memel"
+SWE_claim_Memel_desc:0 "Memel was once German and it will be German in the Future"
+
+SWE_germanans_in_the_north:0 "Germans in the North"
+SWE_germanans_in_the_north:0 "We have to unify with our fellow Germans in the North"
+
+SWE_imperial_bulwark:0 "Imperial Bulwark"
+SWE_imperial_bulwark_desc:0 "We are a Bulwark"
+
+SWE_german_quality:0 "German Quality"
+SWE_german_quality_desc:0 "German Quality was and is a Statement"
+
+SWE_the_austrian_question:0 "The Austrian Question"
+SWE_the_austrian_question_desc:0 "Austria Hungary requires to be delt with"
+
+SWE_the_central_powers_ebf:0 "Central Powers"
+SWE_the_central_powers_ebf_desc:0 "We should remember the old days"
+
+SWE_the_brother_rivalry:0 "Brother Rivalry"
+SWE_the_brother_rivalry_desc:0 "We are the dominant German Power!"
+
+SWE_the_only_true_empire:0 "The only true Empire"
+SWE_the_only_true_empire_desc:0 "We are the only true Empire"
+
+SWE_military_expansion:0 "Military Expansion"
+SWE_military_expansion_desc:0 "Military Expansion is one way to great Power"
+
+SWE_army_innovations:0 "Army Innvoations"
+SWE_army_innovations_desc:0 "Innovation is the Way to Victory"
+
+SWE_armored_wave:0 "Armored Wave"
+SWE_armored_wave_desc:0 "Tanks are the Way to go!"
+
+SWE_german_airplanes:0 "Swedish Airplanes"
+SWE_german_airplanes_desc:0 "Airplanes could be useful"
+
+SWE_revenge_the_hindenburg:0 "Airships conquer the sky"
+SWE_revenge_the_hindenburg_desc:0 "The Hindenburg was a total Disaster, let's do it better"
+
+SWE_love_for_the_navy:0 "Love for the Navy"
+SWE_love_for_the_navy_desc:0 "Wilhelm II always loved the Navy"
+
+SWE_fleet_in_beeing:0 "Fleet in Beeing"
+SWE_fleet_in_beeing_desc:0 "A big Navy standing Navy is a good Navy"
+
+SWE_world_war_one_tactics:0 "World War One Tactics"
+SWE_world_war_one_tactics_desc:0 "Let's start at the Start"
+
+SWE_evolve_world_war_one_tactics:0 "Evolved World War One Tactics" 
+SWE_evolve_world_war_one_tactics_desc:0 "Make steps toward a Future"
+
+SWE_world_war_tow_tactics:0 "World War Tow Tactics"
+SWE_world_war_tow_tactics_desc:0 "And now we are here"
+
+SWE_industrial_revulotion:0 "Industrial Revolution"
+SWE_industrial_revulotion_desc:0 "A second Industrial Revolution"
+
+SWE_electronic_revulotion:0 "Electronic Revolution"
+SWE_electronic_revulotion_desc:0 "Electronics are the Future"
+
+SWE_wunderwaffe_v2:0 "Wunderwaffe V2"
+SWE_wunderwaffe_v2_desc:0 "A new Weapon might turn the outcome of a War"
+
+SWE_nukes:0 "Nukes!"
+SWE_nukes_desc:0 "A Nuke might be better than a V2"
+
+SWE_long_range_bomber:0 "Long Range Bomber"
+SWE_long_range_bomber_desc:0 "With the right Bombers we could bomb the USA"
+
+SWE_new_fuel_tanks:0 "New Fuel Tanks"
+SWE_new_fuel_tanks_desc:0 "With the right Tanks we coul drasticly increase our Range"
+
+SWE_the_one_and_only:0 "The One and Only"
+SWE_the_one_and_only_desc:0 "The Kaiserreich is the One and Only Empire"
+
+SWE_revive_the_kaiserreich_ebf:0 "Proclaime the Kaiserreich"
+SWE_revive_the_kaiserreich_ebf_desc:0 "Proclaime the Kaiserreich"
+
+SWE_imperial_defense:0 "Imperial Defense"
+SWE_imperial_defense_desc:0 "After the Proclamation of the Kaiserreich we shoul defend it"
+
+SWE_german_army:0 "German Army"
+SWE_german_army_desc:0 "A united German Army is Invincible"
+
+SWE_industrial_revitalisation:0 "Industrial Revitalisation"
+SWE_industrial_revitalisation_desc:0 "Our Industry is better than ever"
+
+SWE_schlieffen_plan:0 "Schlieffen Plan"
+SWE_schlieffen_plan_desc:0 "Let's try it one more Time"
+
+SWE_the_italian_traitors:0 "Italian Traitors"
+SWE_the_italian_traitors_desc:0 "We have to give them what they did to us"
+
+SWE_lets_go_further_south:0 "Go further South"
+SWE_lets_go_further_south_desc:0 "We have to go further South than ever before!"
+
+SWE_our_place_in_the_sun_ebf:0 "Our Place in the Sun"
+SWE_our_place_in_the_sun_ebf_desc:0 "We should Demand the Handing over of our Asian Colonies"
+
+SWE_demand_african_territory:0 "Demand African Territory"
+SWE_demand_african_territory_desc:0 "We want our African Colonies back!"
+
+SWE_secure_our_colonies:0 "Secure our Colonies"
+SWE_secure_our_colonies_desc:0 "After the Reclamation of our Colonies we need a better Naval Range to secure these"
+
+SWE_we_are_the_sun:0 "We are the Sun"
+SWE_we_are_the_sun_desc:0 "We are the Sun!"
+
+SWE_kaiser_gott_und_vaterland:0 "Für Kaiser, Gott und Vaterland"
+SWE_kaiser_gott_und_vaterland_desc:0 "We always wanted to do it, now we can do it"
+
+SWE_northern_willingness_to_fight:0 "Northern Willingness to fight!"
+SWE_northern_willingness_to_fight_desc:0 ""
+ 
+
+#TODO
+ SWE_the_monarchy_will_rise:0 "The Monarchy will rise"
+ SWE_the_monarchy_will_rise_desc:0 ""
+ SWE_rebuild_navy_desc:0 "Rebuild Navy"
+ SWE_no_oil_found_desc:0 ""
+ SWE_the_north_will_be_united:0 "The North will be united"
+ SWE_the_north_will_be_united_desc:0 ""
+ SWE_winter_war:0 "Winter War"
+ SWE_winter_war_desc:0 ""
+ SWE_appease_the_population:0 "Appease the Finnish population"
+ SWE_appease_the_population_desc:0 ""
+ SWE_proudly_swedish:0 "Proudly Swedish"
+ SWE_proudly_swedish_desc:0 ""
+ SWE_prepare_naval_invasion:0 "Prepare a Naval Invasion"
+ SWE_prepare_naval_invasion_desc:0 ""
+ SWE_weseruebung_reversed:0 "Weserübung Reversed"
+ SWE_weseruebung_reversed_desc:0 ""
+ SWE_defend_a_german_invasion:0 "Defend against a German Invasion"
+ SWE_defend_a_german_invasion_desc:0 ""
+ SWE_cold_resistance:0 "Cold Resistance"
+ SWE_cold_resistance_desc:0 ""
+ SWE_prepare_an_invasion_of_uk:0 "Prepare an Invasion of UK"
+ SWE_prepare_an_invasion_of_uk_desc:0 ""
+ SWE_ramp_up_produktion:0 "Ramp up Produktion"
+ SWE_ramp_up_produktion_desc:0 ""
+ SWE_decisive_battle:0 "Decisive Battle"
+ SWE_decisive_battle_desc:0 ""
+ SWE_starve_out_the_british:0 "Starve out the British"
+ SWE_starve_out_the_british_desc:0 ""
+ SWE_commence_mission:0 "Commence Mission"
+ SWE_commence_mission_desc:0 ""
+ SWE_three_northern_lights:0 "Three Northern Lights"
+ SWE_three_northern_lights_desc:0 ""
+ SWE_we_have_done_it:0 "We have done it!"
+ SWE_we_have_done_it_desc:0 ""
+ SWE_revive_the_northern_imperium:0 "Revive the Northern Imperium"
+ SWE_revive_the_northern_imperium_desc:0 ""
+ SWE_universal_conscription:0 "Universal Conscript"
+ SWE_universal_conscription_desc:0 ""
+ SWE_army_in_the_snow:0 "Army in the Snow"
+ SWE_army_in_the_snow_desc:0 ""
+ SWE_professional_army:0 "Professional Army"
+ SWE_professional_army_desc:0 ""
+ SWE_remove_germany:0 "Remove Germany from the Map"
+ SWE_remove_germany_desc:0 ""
+ SWE_french_on_the_retreat:0 "Frenche on the Retreat"
+ SWE_french_on_the_retreat_desc:0 ""
+ SWE_polands_end:0 "Polands End"
+ SWE_polands_end_desc:0 ""
+ SWE_be_prepared:0 "Be prepared"
+ SWE_be_prepared_desc:0 ""
+ SWE_the_royal_family:0 "The Royal Family"
+ SWE_the_royal_family_desc:0 ""
+ SWE_reformed_tax_policy:0 "Reformed Tax Policy"
+ SWE_reformed_tax_policy_desc:0 ""
+ SWE_and_now_it_is_time:0 "And now it is time..."
+ SWE_and_now_it_is_time_desc:0 ""
+ SWE_prepare_for_a_hard_time:0 "Prepare for a hard Time"
+ SWE_prepare_for_a_hard_time_desc:0 ""
+ SWE_reform_invasion_strategy:0 "Reform our Invasion Strategy"
+ SWE_reform_invasion_strategy_desc:0 ""
+ SWE_call_the_elite_forces:0 "Call the Elite Forces"
+ SWE_call_the_elite_forces_desc:0 ""

@@ -1,0 +1,2541 @@
+﻿focus_tree = {
+	id = polish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 200
+			tag = POL
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = POL_a_new_beginnning
+		icon = GFX_goal_generic_political_pressure
+		cost = 1
+		x = 3
+		y = 0
+		completion_reward = { 
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = POL_traditonal_way
+		icon = GFX_focus_generic_monarchy_1
+		cost = 1
+		x = -1
+		y = 1
+
+		available = {
+			always = no
+		}
+
+		mutually_exclusive = {
+			focus = POL_reform_our_thinking
+		}
+
+		relative_position_id = POL_a_new_beginnning
+		prerequisite = {
+			focus = POL_a_new_beginnning
+		}
+
+		completion_reward = { 
+			
+		}
+	}
+
+	focus = {
+		id = POL_reform_our_thinking
+		icon = GFX_focus_generic_soviet_politics
+		cost = 1
+		x = 1
+		y = 1
+
+		mutually_exclusive = {
+			focus = POL_traditonal_way
+		}
+
+		relative_position_id = POL_a_new_beginnning
+		prerequisite = {
+			focus = POL_a_new_beginnning
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_royalist_revolts_idea1
+			set_politics = {
+				ruling_party = communism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.6
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.4
+			}
+		}
+	}
+
+	#################################################################################################
+	### Reform our Thinking
+	#################################################################################################
+
+	focus = {
+		id = POL_the_beginning_of_a_new_life
+		icon = GFX_focus_generic_soviet_politics
+		cost = 10 # 
+		x = 30
+		y = 0
+
+		bypass = {
+			has_completed_focus = POL_reform_our_thinking
+		}
+
+		available = {
+			always = no
+		}
+
+		completion_reward = { 	
+			
+		}
+	}
+
+	focus = {
+		id = POL_prioritze_the_worker
+		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_the_beginning_of_a_new_life
+		prerequisite = {
+			focus = POL_the_beginning_of_a_new_life
+		}
+
+		completion_reward = { 	
+			add_political_power = 150
+		}
+	}
+
+	###################################################################################################################
+	####### Industrie
+	###################################################################################################################
+
+	focus = {
+		id = POL_new_communist_way_of_life
+		icon = GFX_goal_support_communism
+		cost = 10 # 
+		x = -16
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_prioritze_the_worker
+		prerequisite = {
+			focus = POL_prioritze_the_worker
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_civilian_1IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+					
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_civilian_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_civilian_1IC
+			}
+		}
+	}
+
+	#################
+	# Civs1
+	#################
+
+	focus = {
+		id = POL_prefabricated_buildings
+		icon = GFX_goal_generic_soviet_construction
+		cost = 10 # 
+		x = -5
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_new_communist_way_of_life
+		prerequisite = {
+			focus = POL_new_communist_way_of_life
+		}
+
+		mutually_exclusive = {
+			focus = POL_workers_fleet
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_prefabricated_buildings_idea
+		}
+	}
+
+	focus = {
+		id = POL_just_the_bare_minimum
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_prefabricated_buildings
+		prerequisite = {
+			focus = POL_prefabricated_buildings
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_just_the_bare_minimum_idea
+		}
+	}
+
+	focus = {
+		id = POL_the_glory_of_the_communism
+		icon = GFX_goal_support_communism
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_just_the_bare_minimum
+		prerequisite = {
+			focus = POL_just_the_bare_minimum
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_civilian_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_civilian_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_civilian_2IC
+			}
+		}
+	}
+
+	#################
+	# Fleet
+	#################
+
+	focus = {
+		id = POL_workers_fleet
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 10 # 
+		x = -3
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_new_communist_way_of_life
+		prerequisite = {
+			focus = POL_new_communist_way_of_life
+		}
+
+		mutually_exclusive = {
+			focus = POL_prefabricated_buildings
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_dockyard_1IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_dockyard_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_dockyard_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = POL_dominate_the_navy
+		icon = GFX_goal_generic_navy_battleship
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_workers_fleet
+		prerequisite = {
+			focus = POL_workers_fleet
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_dominate_the_navy_idea
+		}
+	}
+
+	focus = {
+		id = POL_ahoi
+		icon = GFX_goal_generic_build_navy
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_dominate_the_navy
+		prerequisite = {
+			focus = POL_dominate_the_navy
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_dockyard_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_dockyard_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_dockyard_2IC
+			}
+		}
+	}
+
+	#################
+	# Infra, AA, Building Slot
+	#################
+
+	focus = {
+		id = POL_supply_chain
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10 # 
+		x = -1
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_new_communist_way_of_life
+		prerequisite = {
+			focus = POL_new_communist_way_of_life
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_infrastructure_o_1IC }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_o_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_o_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_o_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_o_1IC
+			}
+		}
+	}
+
+	focus = {
+		id = POL_urbanize_the_country
+		icon = GFX_goal_reichsautobahn
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_supply_chain
+		prerequisite = {
+			focus = POL_supply_chain
+		}
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_infrastructure_2IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}	
+			every_state = {
+				limit = { has_state_flag = POL_infrastructure_o_2IC }
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}		
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_2IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_o_2IC
+			}
+		}
+	}
+
+	focus = {
+		id = POL_defend_the_sky
+		icon = GFX_focus_generic_air_defense
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_urbanize_the_country
+		prerequisite = {
+			focus = POL_urbanize_the_country
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_aa_1IC }
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+			}		
+		}
+
+		completion_reward = { 	
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = POL_aa_1IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = anti_air_building
+						size > 3
+						include_locked = yes
+					}
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = POL_aa_1IC
+			}
+			10 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 4
+					instant_build = yes
+				}
+				set_state_flag = POL_aa_1IC
+			}
+		}
+	}
+
+	#################
+	# Civs2
+	#################
+
+	focus = {
+		id = POL_expropriation
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 10 # 
+		x = 1
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_new_communist_way_of_life
+		prerequisite = {
+			focus = POL_new_communist_way_of_life
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_civilian_3IC }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_civilian_3IC
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				set_state_flag = POL_civilian_3IC
+			}
+		}
+	}
+
+	focus = {
+		id = POL_the_four_year_plan_ebf
+		icon = GFX_goal_generic_production
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_expropriation
+		prerequisite = {
+			focus = POL_expropriation
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_the_four_year_plan_idea
+		}
+	}
+
+	focus = {
+		id = POL_limited_consumergoods
+		icon = GFX_goal_generic_consumer_goods
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_the_four_year_plan_ebf
+		prerequisite = {
+			focus = POL_the_four_year_plan_ebf
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_limited_consumergoods_idea
+		}
+	}
+
+	#################
+	# Resources
+	#################
+
+	focus = {
+		id = POL_russian_resources
+		icon = GFX_goal_generic_all_resource
+		cost = 10 # 
+		x = 3
+		y = 1
+
+		available = {
+			has_full_control_of_state = 246
+			has_full_control_of_state = 243
+		}
+
+		relative_position_id = POL_new_communist_way_of_life
+		prerequisite = {
+			focus = POL_new_communist_way_of_life
+		}
+
+		completion_reward = { 	
+			add_resource = {
+				type = aluminium
+				amount = 12
+				state = 246
+			}
+			add_resource = {
+				type = tungsten
+				amount = 12
+				state = 243
+			}
+		}
+	}
+
+	focus = {
+		id = POL_exploit_the_mines
+		icon = GFX_goal_generic_construction2
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_russian_resources
+		prerequisite = {
+			focus = POL_russian_resources
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_exploit_the_mines_idea
+		}
+	}
+
+	focus = {
+		id = POL_communist_worker_spirit
+		icon = GFX_focus_por_workers_of_iberia
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_exploit_the_mines
+		prerequisite = {
+			focus = POL_exploit_the_mines
+		}
+
+		completion_reward = { 	
+			add_ideas = POL_communist_worker_spirit_idea
+		}
+	}
+
+	#################
+	# Research
+	#################
+
+	focus = {
+		id = POL_karl_marx_reseach_foundation
+		icon = GFX_focus_research
+		cost = 10 # 
+		x = 5
+		y = 1
+
+		available = {
+		}
+
+		relative_position_id = POL_new_communist_way_of_life
+		prerequisite = {
+			focus = POL_new_communist_way_of_life
+		}
+
+		completion_reward = { 	
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = POL_the_soviet_way_of_life
+		icon = GFX_focus_generic_socialist_science
+		cost = 10 # 
+		x = 0
+		y = 1
+
+		available = {
+			has_full_control_of_state = 214
+			has_full_control_of_state = 351
+			has_full_control_of_state = 264
+			has_full_control_of_state = 244
+			has_full_control_of_state = 263
+			has_full_control_of_state = 246
+			has_full_control_of_state = 247
+			has_full_control_of_state = 248
+			has_full_control_of_state = 210
+			has_full_control_of_state = 207
+			has_full_control_of_state = 206
+			has_full_control_of_state = 241
+			has_full_control_of_state = 243
+			has_full_control_of_state = 224
+			has_full_control_of_state = 205
+			has_full_control_of_state = 242
+			has_full_control_of_state = 246
+			
+			has_full_control_of_state = 137
+			has_full_control_of_state = 196
+			has_full_control_of_state = 200
+			has_full_control_of_state = 197
+			has_full_control_of_state = 192
+			has_full_control_of_state = 203
+			has_full_control_of_state = 202
+			has_full_control_of_state = 193
+			has_full_control_of_state = 259
+			has_full_control_of_state = 226
+			has_full_control_of_state = 227
+			has_full_control_of_state = 221
+			has_full_control_of_state = 228
+			has_full_control_of_state = 240
+			has_full_control_of_state = 225
+			has_full_control_of_state = 220
+			has_full_control_of_state = 222
+			has_full_control_of_state = 260
+			has_full_control_of_state = 258
+			has_full_control_of_state = 223
+			has_full_control_of_state = 219
+			has_full_control_of_state = 254
+			has_full_control_of_state = 253
+			has_full_control_of_state = 252
+			has_full_control_of_state = 256
+			has_full_control_of_state = 249
+			has_full_control_of_state = 250
+			has_full_control_of_state = 251
+			has_full_control_of_state = 255
+			has_full_control_of_state = 239
+			has_full_control_of_state = 401
+			has_full_control_of_state = 652
+			has_full_control_of_state = 257
+		}
+
+		relative_position_id = POL_karl_marx_reseach_foundation
+		prerequisite = {
+			focus = POL_karl_marx_reseach_foundation
+		}
+
+		completion_reward = { 	
+			add_research_slot = 1
+		}
+	}
+
+	###################################################################################################################
+	####### Political
+	###################################################################################################################
+
+	focus = {
+		id = POL_unite_the_peoples
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_prioritze_the_worker
+
+		prerequisite = { 	focus = POL_prioritze_the_worker }
+		
+		available = {
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	#################
+	# War, Prussia
+	#################
+
+	focus = {
+		id = POL_the_new_way_of_war
+		icon = GFX_goal_generic_attack_allies
+		x = -4
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_unite_the_peoples
+
+		prerequisite = { 	focus = POL_unite_the_peoples }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = POL_the_new_way_of_war_idea
+		}
+	}
+
+	focus = {
+		id = POL_speed_is_key
+		icon = GFX_goal_generic_army_tanks
+		x = -2
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_the_new_way_of_war
+
+		prerequisite = { 	focus = POL_the_new_way_of_war }
+		
+		available = {
+		}
+
+		complete_tooltip = {
+			effect_tooltip = {
+				
+			}
+		}
+
+		completion_reward = {
+			add_ideas = POL_speed_is_key_idea
+		}
+	}
+
+	focus = {
+		id = POL_prepare_an_invasion_of_prussia
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_the_new_way_of_war
+
+		prerequisite = { 	focus = POL_the_new_way_of_war }
+		
+		available = {
+		}
+
+		complete_tooltip = {
+			every_state = {
+				limit = { has_state_flag = POL_aa_2IC }
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+			}	
+			every_state = {
+				limit = { has_state_flag = POL_air_base_1IC }
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+			}	
+			every_state = {
+				limit = { has_state_flag = POL_infrastructure_3IC }
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = { 	
+			87 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_3IC
+				set_state_flag = POL_aa_2IC
+			}
+			98 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_3IC
+				set_state_flag = POL_aa_2IC
+			}
+			90 = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_3IC
+				set_state_flag = POL_aa_2IC
+			}
+			10 = {
+				add_building_construction = {
+					type = air_base
+					level = 5
+					instant_build = yes
+				}
+				set_state_flag = POL_air_base_1IC
+			}
+			88 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_3IC
+			}
+			97 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = POL_infrastructure_3IC
+			}
+		}
+	}
+
+	focus = {
+		id = POL_intel_for_the_win
+		icon = GFX_goal_generic_production2
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_prepare_an_invasion_of_prussia
+
+		prerequisite = { 	focus = POL_prepare_an_invasion_of_prussia }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = POL_intel_for_the_win_idea
+		}
+	}
+
+	focus = {
+		id = POL_breake_the_silence
+		icon = GFX_goal_FNG_artillery_tactics
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_intel_for_the_win
+
+		prerequisite = { 	focus = POL_intel_for_the_win }
+		
+		available = {
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = GER
+				type = take_state_focus
+				generator = { 762 86 85 }
+			}
+		}
+	}
+
+	focus = {
+		id = POL_move_on
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_breake_the_silence
+
+		prerequisite = { 	focus = POL_breake_the_silence }
+		
+		available = {
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = OCC
+				type = annex_everything
+			}
+		}
+	}
+
+	#################
+	# War, Prussia
+	#################
+
+	focus = {
+		id = POL_supress_the_royalist_revolts
+		icon = GFX_goal_continuous_suppression
+		x = -2
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_unite_the_peoples
+
+		prerequisite = { 	focus = POL_unite_the_peoples }
+		
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POL_royalist_revolts_idea1
+				add_idea = POL_royalist_revolts_idea2
+			}
+		}
+	}
+
+	focus = {
+		id = POL_communist_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_supress_the_royalist_revolts
+
+		prerequisite = { 	focus = POL_supress_the_royalist_revolts }
+		
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POL_royalist_revolts_idea2
+				add_idea = POL_royalist_revolts_idea3
+			}
+		}
+	}
+
+	focus = {
+		id = POL_subsditute_the_opposition
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_communist_propaganda
+
+		prerequisite = { 	focus = POL_communist_propaganda }
+		
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POL_royalist_revolts_idea3
+				add_idea = POL_royalist_revolts_idea4
+			}
+		}
+	}
+
+	focus = {
+		id = POL_they_are_convinced
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_subsditute_the_opposition
+
+		prerequisite = { 	focus = POL_subsditute_the_opposition }
+		
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POL_royalist_revolts_idea4
+				add_idea = POL_royalist_revolts_idea5
+			}
+		}
+	}
+
+	#################
+	# Boni
+	#################
+
+	focus = {
+		id = POL_polish_revanchism_ebf
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_unite_the_peoples
+
+		prerequisite = { 	focus = POL_unite_the_peoples }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = POL_polish_revangeism_idea
+		}
+	}
+
+	focus = {
+		id = POL_defend_our_own
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_polish_revanchism_ebf
+
+		prerequisite = { 	focus = POL_polish_revanchism_ebf }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = POL_defend_our_own_idea
+		}
+	} 	
+
+	#################
+	# War, Russia
+	#################
+
+	focus = {
+		id = POL_belarussian_membership
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_unite_the_peoples
+
+		prerequisite = { 	focus = POL_unite_the_peoples }
+		
+		available = {
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = BLR
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = POL_secure_the_krim
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_belarussian_membership
+
+		prerequisite = { 	focus = POL_belarussian_membership }
+		
+		available = {
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = UKR
+				type = annex_everything
+			}
+		}
+	}
+
+	#################
+	# Integration of the new Land
+	#################
+
+	focus = {
+		id = POL_financal_support
+		icon = GFX_goal_generic_consumer_goods
+		x = 4
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_unite_the_peoples
+
+		prerequisite = { 	focus = POL_unite_the_peoples }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = POL_financal_support_idea
+				days = 180
+			}
+		}
+	}
+
+	focus = {
+		id = POL_first_steps
+		icon = GFX_goal_anschluss
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_financal_support
+
+		prerequisite = { 	focus = POL_financal_support }
+		
+		available = {
+			has_full_control_of_state = 214
+			has_full_control_of_state = 351
+			has_full_control_of_state = 264
+			has_full_control_of_state = 244
+			has_full_control_of_state = 263
+			has_full_control_of_state = 246
+			has_full_control_of_state = 247
+			has_full_control_of_state = 248
+			has_full_control_of_state = 210
+		}
+
+		completion_reward = {
+			add_state_core = 214
+			add_state_core = 351
+			add_state_core = 264
+			add_state_core = 244
+			add_state_core = 263
+			add_state_core = 246
+			add_state_core = 247
+			add_state_core = 248
+			add_state_core = 210
+		}
+	}
+
+	focus = {
+		id = POL_second_steps
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_first_steps
+
+		prerequisite = { 	focus = POL_first_steps }
+		
+		available = {
+			has_full_control_of_state = 214
+			has_full_control_of_state = 351
+			has_full_control_of_state = 264
+			has_full_control_of_state = 244
+			has_full_control_of_state = 263
+			has_full_control_of_state = 246
+			has_full_control_of_state = 247
+			has_full_control_of_state = 248
+			has_full_control_of_state = 210
+			has_full_control_of_state = 207
+			has_full_control_of_state = 206
+			has_full_control_of_state = 241
+			has_full_control_of_state = 243
+			has_full_control_of_state = 224
+			has_full_control_of_state = 205
+			has_full_control_of_state = 242
+			has_full_control_of_state = 246
+			has_full_control_of_state = 137
+			has_full_control_of_state = 196
+		}
+
+		completion_reward = {
+			add_state_core = 214
+			add_state_core = 351
+			add_state_core = 264
+			add_state_core = 244
+			add_state_core = 263
+			add_state_core = 246
+			add_state_core = 247
+			add_state_core = 248
+			add_state_core = 210
+			add_state_core = 207
+			add_state_core = 206
+			add_state_core = 241
+			add_state_core = 243
+			add_state_core = 224
+			add_state_core = 205
+			add_state_core = 242
+			add_state_core = 246
+			add_state_core = 137
+			add_state_core = 196
+		}
+	}
+
+	focus = {
+		id = POL_finals_steps
+		icon = GFX_goal_generic_national_unity
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_second_steps
+
+		prerequisite = { 	focus = POL_second_steps }
+		
+		available = {
+			has_full_control_of_state = 214
+			has_full_control_of_state = 351
+			has_full_control_of_state = 264
+			has_full_control_of_state = 244
+			has_full_control_of_state = 263
+			has_full_control_of_state = 246
+			has_full_control_of_state = 247
+			has_full_control_of_state = 248
+			has_full_control_of_state = 210
+			has_full_control_of_state = 207
+			has_full_control_of_state = 206
+			has_full_control_of_state = 241
+			has_full_control_of_state = 243
+			has_full_control_of_state = 224
+			has_full_control_of_state = 205
+			has_full_control_of_state = 242
+			has_full_control_of_state = 246
+			has_full_control_of_state = 137
+			has_full_control_of_state = 196
+			has_full_control_of_state = 200
+			has_full_control_of_state = 197
+			has_full_control_of_state = 192
+			has_full_control_of_state = 203
+			has_full_control_of_state = 202
+			has_full_control_of_state = 193
+			has_full_control_of_state = 259
+			has_full_control_of_state = 226
+			has_full_control_of_state = 227
+			has_full_control_of_state = 221
+			has_full_control_of_state = 228
+			has_full_control_of_state = 240
+			has_full_control_of_state = 225
+			has_full_control_of_state = 220
+			has_full_control_of_state = 222
+			has_full_control_of_state = 260
+			has_full_control_of_state = 258
+			has_full_control_of_state = 223
+			has_full_control_of_state = 219
+			has_full_control_of_state = 254
+			has_full_control_of_state = 253
+			has_full_control_of_state = 252
+			has_full_control_of_state = 256
+			has_full_control_of_state = 249
+			has_full_control_of_state = 250
+			has_full_control_of_state = 251
+			has_full_control_of_state = 255
+			has_full_control_of_state = 239
+			has_full_control_of_state = 401
+			has_full_control_of_state = 652
+			has_full_control_of_state = 257
+		}
+
+		completion_reward = {
+			add_state_core = 214
+			add_state_core = 351
+			add_state_core = 264
+			add_state_core = 244
+			add_state_core = 263
+			add_state_core = 246
+			add_state_core = 247
+			add_state_core = 248
+			add_state_core = 210
+			add_state_core = 207
+			add_state_core = 206
+			add_state_core = 241
+			add_state_core = 243
+			add_state_core = 224
+			add_state_core = 205
+			add_state_core = 242
+			add_state_core = 246
+			add_state_core = 137
+			add_state_core = 196
+			add_state_core = 200
+			add_state_core = 197
+			add_state_core = 192
+			add_state_core = 203
+			add_state_core = 202
+			add_state_core = 193
+			add_state_core = 259
+			add_state_core = 226
+			add_state_core = 227
+			add_state_core = 221
+			add_state_core = 228
+			add_state_core = 240
+			add_state_core = 225
+			add_state_core = 220
+			add_state_core = 222
+			add_state_core = 260
+			add_state_core = 258
+			add_state_core = 223
+			add_state_core = 219
+			add_state_core = 254
+			add_state_core = 253
+			add_state_core = 252
+			add_state_core = 256
+			add_state_core = 249
+			add_state_core = 250
+			add_state_core = 251
+			add_state_core = 255
+			add_state_core = 239
+			add_state_core = 401
+			add_state_core = 652
+			add_state_core = 257
+		}
+	}
+
+	focus = {
+		id = POL_the_real_new_way
+		icon = GFX_focus_generic_join_comintern
+		x = 3
+		y = 2
+		cost = 10 # 0
+
+		relative_position_id = POL_they_are_convinced
+
+		prerequisite = { 	focus = POL_they_are_convinced }
+		prerequisite = { 	focus = POL_finals_steps }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	###################################################################################################################
+	####### Army Inovations, Air...
+	###################################################################################################################
+
+	focus = {
+		id = POL_military_expansion
+		icon = GFX_goal_generic_army_doctrines
+		x = 16
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_prioritze_the_worker
+
+		prerequisite = { 	focus = POL_prioritze_the_worker }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	#################
+	# Armor, Tank
+	#################
+
+	focus = {
+		id = POL_army_innovations
+		icon = GFX_goal_generic_axis_build_infantry
+		x = -4
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_military_expansion
+
+		prerequisite = { 	focus = POL_military_expansion }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_tech_bonus
+				bonus = 1.0
+				uses = 2
+				category = infantry_tech
+			}
+		}
+	}
+
+	focus = {
+		id = POL_armored_wave
+		icon = GFX_goal_generic_army_tanks
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_army_innovations
+
+		prerequisite = { 	focus = POL_army_innovations }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	#################
+	# Airplanes
+	#################
+
+	focus = {
+		id = POL_polish_airplanes
+		icon = GFX_goal_generic_air_production
+		x = -2
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_military_expansion
+
+		prerequisite = { 	focus = POL_military_expansion }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = air_equipment_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = POL_try_something_new
+		icon = GFX_focus_generic_air_defense
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_polish_airplanes
+
+		prerequisite = { 	focus = POL_polish_airplanes }
+		
+		available = {
+		}
+
+		completion_reward = {
+			#WIP wenn die zepeline existieren dafür
+			add_tech_bonus = {
+				name = air_doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+
+	#################
+	# Navy
+	#################
+
+	focus = {
+		id = POL_love_for_the_navy
+		icon = GFX_focus_generic_navy_battleship2
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_military_expansion
+
+		prerequisite = { 	focus = POL_military_expansion }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_equipment_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = POL_fleet_in_beeing
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_love_for_the_navy
+
+		prerequisite = { 	focus = POL_love_for_the_navy }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_doctrine_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	#################
+	# Infantry, Artillerie
+	#################
+
+	focus = {
+		id = POL_world_war_one_tactics
+		icon = GFX_goal_generic_army_artillery2
+		x = 2
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_military_expansion
+
+		prerequisite = { 	focus = POL_military_expansion }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = POL_evolve_world_war_one_tactics
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_world_war_one_tactics
+
+		prerequisite = { 	focus = POL_world_war_one_tactics }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 2
+				category = cat_anti_tank
+			}
+			add_tech_bonus = {
+				name = artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = POL_world_war_tow_tactics
+		icon = GFX_focus_generic_army_tanks2
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_evolve_world_war_one_tactics
+
+		prerequisite = { 	focus = POL_evolve_world_war_one_tactics }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 2.0
+				uses = 1
+				category = armor
+			}
+		}
+	}
+
+	########################
+	#Elektronik and Indutrie
+	########################
+
+	focus = {
+		id = POL_industrial_revulotion
+		icon = GFX_goal_generic_construction
+		x = 4
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_military_expansion
+
+		prerequisite = { 	focus = POL_military_expansion }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industry_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = POL_electronic_revulotion
+		icon = GFX_goal_generic_radar
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_industrial_revulotion
+
+		prerequisite = { 	focus = POL_industrial_revulotion }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = electronics_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	#################
+	# Special Weapons, Rockets, Nukes
+	#################
+
+	focus = {
+		id = POL_wunderwaffe_v2
+		icon = GFX_focus_rocketry
+		x = -1
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_try_something_new
+
+		prerequisite = { 	focus = POL_armored_wave focus = POL_try_something_new focus = POL_fleet_in_beeing }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = rocketry_bonus
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
+	}
+
+	focus = {
+		id = POL_nukes
+		icon = GFX_focus_wonderweapons
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_wunderwaffe_v2
+
+		prerequisite = { 	focus = POL_wunderwaffe_v2 }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
+	}
+
+	#################
+	# More Airplanes
+	#################
+
+	focus = {
+		id = POL_short_range_bomber
+		icon = GFX_goal_generic_air_bomber
+		x = 1
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_try_something_new
+
+		prerequisite = { 	focus = POL_armored_wave focus = POL_try_something_new focus = POL_fleet_in_beeing }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 2.0
+				uses = 1
+				category = tactical_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = POL_long_range_bomber
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		cost = 10 # 0
+
+		relative_position_id = POL_short_range_bomber
+
+		prerequisite = { 	focus = POL_short_range_bomber }
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = tactical_bomber_bonus
+				bonus = 3.0
+				uses = 1
+				category = cat_strategic_bomber
+			}
+		}
+	}
+
+	
+	###################################################################################################################
+	####### Soviet Union
+	###################################################################################################################
+
+	focus = {
+		id = POL_footsteps_of_the_soviet_union
+		icon = GFX_focus_generic_soviet_politics
+		x = 56
+		y = 0
+		cost = 10 # 0
+
+		bypass = {
+			has_completed_focus = POL_long_range_bomber
+		}
+		
+		available = {
+			always = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = POL_soviet_worker_ethos
+		icon = GFX_focus_prc_agrarian_socialism
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_footsteps_of_the_soviet_union
+		prerequisite = {
+			focus = POL_footsteps_of_the_soviet_union
+		}
+
+		bypass = {
+
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_soviet_worker_ethos_idea
+		}
+	}
+
+	#################
+	# Wargoals
+	#################
+
+	focus = {
+		id = POL_integreate_the_northern_lands
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = -2
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_soviet_worker_ethos
+		prerequisite = {
+			focus = POL_soviet_worker_ethos
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = FIN
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = POL_the_baltic_are_ours
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_integreate_the_northern_lands
+		prerequisite = {
+			focus = POL_integreate_the_northern_lands
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = LIT
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = EST
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = DEN
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = POL_save_the_balcans
+		icon = GFX_focus_usa_focus_on_europe
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_the_baltic_are_ours
+		prerequisite = {
+			focus = POL_the_baltic_are_ours
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+			}
+			create_wargoal = {
+				target = BUL
+				type = annex_everything
+			}
+		}
+	}
+
+	#################
+	# Army Boni
+	#################
+
+	focus = {
+		id = POL_human_wave
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_soviet_worker_ethos
+		prerequisite = {
+			focus = POL_soviet_worker_ethos
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_human_wave_idea
+		}
+	}
+
+	focus = {
+		id = POL_workers_army
+		icon = GFX_focus_generic_royal_wedding
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_human_wave
+		prerequisite = {
+			focus = POL_human_wave
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_workers_army_idea
+		}
+	}
+
+	focus = {
+		id = POL_soviet_idol
+		icon = GFX_focus_ger_great_red_menace
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_workers_army
+		prerequisite = {
+			focus = POL_workers_army
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_soviet_idol_idea
+		}
+	}
+
+	#################
+	# Building Boni
+	#################
+
+	focus = {
+		id = POL_the_eight_year_plan
+		icon = GFX_goal_generic_workers_democracy
+		x = 2
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_soviet_worker_ethos
+		prerequisite = {
+			focus = POL_soviet_worker_ethos
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_the_eight_year_plan_idea
+		}
+	}
+
+	focus = {
+		id = POL_time_for_innovations
+		icon = GFX_focus_research2
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_the_eight_year_plan
+		prerequisite = {
+			focus = POL_the_eight_year_plan
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_time_for_innovations_idea
+		}
+	}
+
+	focus = {
+		id = POL_fight_in_the_air
+		icon = GFX_goal_generic_air_production
+		x = 0
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_time_for_innovations
+		prerequisite = {
+			focus = POL_time_for_innovations
+		}
+
+		bypass = {
+			
+		}
+		
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = POL_fight_in_the_air_idea
+		}
+	}
+
+	#################
+	# Great Bonus
+	#################
+
+	focus = {
+		id = POL_final_greatness
+		icon = GFX_focus_eng_imperial_federation
+		x = 2
+		y = 1
+		cost = 10 # 0
+		
+		relative_position_id = POL_save_the_balcans
+		prerequisite = { focus = POL_save_the_balcans }
+		prerequisite = { focus = POL_soviet_idol }
+		prerequisite = { focus = POL_fight_in_the_air }
+
+		bypass = {
+			
+		}
+		
+		available = {
+			has_full_control_of_state = 651
+			has_full_control_of_state = 399
+			has_full_control_of_state = 400
+			has_full_control_of_state = 397
+			has_full_control_of_state = 398
+			has_full_control_of_state = 573
+			has_full_control_of_state = 572
+			has_full_control_of_state = 653
+			has_full_control_of_state = 262
+			has_full_control_of_state = 581
+			has_full_control_of_state = 580
+			has_full_control_of_state = 579
+			has_full_control_of_state = 582
+
+			has_full_control_of_state = 265
+			has_full_control_of_state = 217
+			has_full_control_of_state = 245
+			has_full_control_of_state = 218
+			has_full_control_of_state = 234
+			has_full_control_of_state = 238
+			has_full_control_of_state = 237
+			has_full_control_of_state = 236
+			has_full_control_of_state = 232
+			has_full_control_of_state = 233
+			has_full_control_of_state = 231
+			has_full_control_of_state = 230
+			has_full_control_of_state = 229
+
+			has_full_control_of_state = 214
+			has_full_control_of_state = 351
+			has_full_control_of_state = 264
+			has_full_control_of_state = 244
+			has_full_control_of_state = 263
+			has_full_control_of_state = 246
+			has_full_control_of_state = 247
+			has_full_control_of_state = 248
+			has_full_control_of_state = 210
+			has_full_control_of_state = 207
+			has_full_control_of_state = 206
+			has_full_control_of_state = 241
+			has_full_control_of_state = 243
+			has_full_control_of_state = 224
+			has_full_control_of_state = 205
+			has_full_control_of_state = 242
+			has_full_control_of_state = 246
+			has_full_control_of_state = 137
+			has_full_control_of_state = 196
+			has_full_control_of_state = 200
+			has_full_control_of_state = 197
+			has_full_control_of_state = 192
+			has_full_control_of_state = 203
+			has_full_control_of_state = 202
+			has_full_control_of_state = 193
+			has_full_control_of_state = 259
+			has_full_control_of_state = 226
+			has_full_control_of_state = 227
+			has_full_control_of_state = 221
+			has_full_control_of_state = 228
+			has_full_control_of_state = 240
+			has_full_control_of_state = 225
+			has_full_control_of_state = 220
+			has_full_control_of_state = 222
+			has_full_control_of_state = 260
+			has_full_control_of_state = 258
+			has_full_control_of_state = 223
+			has_full_control_of_state = 219
+			has_full_control_of_state = 254
+			has_full_control_of_state = 253
+			has_full_control_of_state = 252
+			has_full_control_of_state = 256
+			has_full_control_of_state = 249
+			has_full_control_of_state = 250
+			has_full_control_of_state = 251
+			has_full_control_of_state = 255
+			has_full_control_of_state = 239
+			has_full_control_of_state = 401
+			has_full_control_of_state = 652
+			has_full_control_of_state = 257
+
+		}
+
+		completion_reward = {
+			set_cosmetic_tag = POL_soviet_union
+			add_state_core = 582
+			add_state_core = 651
+			add_state_core = 399
+			add_state_core = 400
+			add_state_core = 397
+			add_state_core = 398
+			add_state_core = 573
+			add_state_core = 572
+			add_state_core = 653
+			add_state_core = 262
+			add_state_core = 581
+			add_state_core = 580
+			add_state_core = 579
+
+			add_state_core = 265
+			add_state_core = 217
+			add_state_core = 245
+			add_state_core = 218
+			add_state_core = 234
+			add_state_core = 238
+			add_state_core = 237
+			add_state_core = 236
+			add_state_core = 232
+			add_state_core = 233
+			add_state_core = 231
+			add_state_core = 230
+			add_state_core = 229
+		}
+	}
+
+}

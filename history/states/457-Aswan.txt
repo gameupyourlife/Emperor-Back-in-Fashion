@@ -1,0 +1,32 @@
+state=
+{
+	id=457
+	name="STATE_457" # Arabian Desert
+	manpower = 2194
+	
+	resources={
+		steel=100 # was: 4
+		aluminium=50
+		oil=75
+		rubber=85
+	}
+
+	state_category = wasteland
+	
+	history = {
+		owner = SAU #
+add_core_of = SAU # ENG
+		buildings = {
+			infrastructure = 1
+		}
+
+		victory_points = {
+			12002 1
+		}
+
+		add_core_of = EGY
+	}
+	provinces={
+		1080 4068 4910 5069 7156 9957 10126 12002 12889 
+	}
+}

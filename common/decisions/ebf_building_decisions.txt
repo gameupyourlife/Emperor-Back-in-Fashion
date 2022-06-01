@@ -1,0 +1,396 @@
+political_actions = {
+	coal_shortage = {
+	
+		icon = coal
+
+		available = {
+			check_variable = { resource@coal > 0}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		activation = {
+			NOT = {
+				check_variable = { var_coal_shortage > 0 }
+			}
+
+			check_variable = { resource@coal < 0}
+			any_controlled_state = {
+				steel_mill > 0
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					steel_mill > 0
+				}
+				remove_building = {
+					type = steel_mill
+					level = 1
+				}
+				add_building_construction = {
+					type = steel_mill_inactive
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { resource@coal < 0}
+				}
+				set_variable = {
+					var = var_coal_shortage
+					value = 1
+				}
+			}
+		}
+	}
+
+	coal_shortage2 = {
+	
+		icon = coal
+
+		available = {
+			check_variable = { resource@coal > 0}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		activation = {
+			check_variable = { var_coal_shortage = 1 }
+			check_variable = { resource@coal < 0}
+			any_controlled_state = {
+				steel_mill > 0
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					steel_mill > 0
+				}
+				remove_building = {
+					type = steel_mill
+					level = 1
+				}
+				add_building_construction = {
+					type = steel_mill_inactive
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_variable = {
+				var = var_coal_shortage
+				value = 2
+			}
+		}
+	}
+
+	coal_shortage3 = {
+	
+		icon = coal
+
+		available = {
+			check_variable = { resource@coal > 0}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		activation = {
+			check_variable = { var_coal_shortage = 2 }
+			check_variable = { resource@coal < 0}
+			any_controlled_state = {
+				steel_mill > 0
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					steel_mill > 0
+				}
+				remove_building = {
+					type = steel_mill
+					level = 1
+				}
+				add_building_construction = {
+					type = steel_mill_inactive
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_variable = {
+				var = var_coal_shortage
+				value = 0
+			}
+		}
+	}
+
+	#####################################################################
+
+	uran_shortage = {
+	
+		icon = uran
+
+		available = {
+			check_variable = { resource@uran > 0}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		activation = {
+			NOT = {
+				check_variable = { var_uran_shortage > 0 }
+			}
+
+			check_variable = { resource@uran < 0}
+			any_controlled_state = {
+				nuclear_reactor > 0
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					nuclear_reactor > 0
+				}
+				remove_building = {
+					type = nuclear_reactor
+					level = 1
+				}
+				add_building_construction = {
+					type = nuclear_reactor_inactive
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					check_variable = { resource@uran < 0}
+				}
+				set_variable = {
+					var = var_uran_shortage
+					value = 1
+				}
+			}
+		}
+	}
+
+	uran_shortage2 = {
+	
+		icon = uran
+
+		available = {
+			check_variable = { resource@uran > 0}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		activation = {
+			check_variable = { var_uran_shortage = 1 }
+			check_variable = { resource@uran < 0}
+			any_controlled_state = {
+				nuclear_reactor > 0
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					nuclear_reactor > 0
+				}
+				remove_building = {
+					type = nuclear_reactor
+					level = 1
+				}
+				add_building_construction = {
+					type = nuclear_reactor_inactive
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_variable = {
+				var = var_uran_shortage
+				value = 2
+			}
+		}
+	}
+
+	uran_shortage3 = {
+	
+		icon = uran
+
+		available = {
+			check_variable = { resource@uran > 0}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+		activation = {
+			check_variable = { var_uran_shortage = 2 }
+			check_variable = { resource@uran < 0}
+			any_controlled_state = {
+				nuclear_reactor > 0
+			}
+			hidden_trigger = {
+				is_ai = no
+			}
+		}
+
+		is_good = no
+		days_mission_timeout = 7
+		
+		timeout_effect = {
+			random_controlled_state = {
+				limit = {
+					nuclear_reactor > 0
+				}
+				remove_building = {
+					type = nuclear_reactor
+					level = 1
+				}
+				add_building_construction = {
+					type = nuclear_reactor_inactive
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_variable = {
+				var = var_uran_shortage
+				value = 0
+			}
+		}
+	}
+
+	############################################################
+
+	reactivate_steel_mill = {
+	
+		icon = steel
+
+		available = {
+			check_variable = { resource@coal > 11 }    
+
+			any_controlled_state ={
+				steel_mill_inactive > 0
+				is_core_of = ROOT
+			}
+		}
+
+		visible = {
+			any_controlled_state ={
+				steel_mill_inactive > 0
+				is_core_of = ROOT
+			}
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			random_controlled_state={
+				limit={
+					steel_mill_inactive > 0
+					is_core_of = ROOT
+				}
+				hidden_effect={
+					remove_building = {
+						type = steel_mill_inactive
+						level = 1
+					}
+					add_building_construction = {
+						type = steel_mill
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+
+	reactivate_nuclear_reaktor = {
+	
+		icon = steel
+
+		available = {
+			check_variable = { resource@uran > 0 }    
+
+			any_controlled_state ={
+				nuclear_reactor_inactive > 0
+				is_core_of = ROOT
+			}
+		}
+
+		visible = {
+			any_controlled_state ={
+				nuclear_reactor_inactive > 0
+				is_core_of = ROOT
+			}
+		}
+
+		fire_only_once = no
+
+		cost = 0
+
+		complete_effect = {
+			random_controlled_state={
+				limit={
+					nuclear_reactor_inactive > 0
+					is_core_of = ROOT
+				}
+
+				hidden_effect={
+					remove_building = {
+						type = nuclear_reactor_inactive
+						level = 1
+					}
+					add_building_construction = {
+						type = nuclear_reactor
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1000
+		}
+	}
+}

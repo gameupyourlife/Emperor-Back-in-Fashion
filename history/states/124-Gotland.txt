@@ -1,0 +1,27 @@
+state=
+{
+	id=124
+	name="STATE_124"
+	manpower = 56988
+	resources={
+		grain = 2
+		wood = 0
+	}
+	state_category = small_island
+	
+	history=
+	{
+		owner = DEN
+		add_core_of = SWE
+		add_core_of = DEN
+		buildings = {
+			infrastructure = 6
+			408 = {
+				naval_base = 1
+			}
+		}
+	}
+	provinces={
+		408 6258
+	}
+}

@@ -1,0 +1,1304 @@
+# ideas = {
+
+# 	tank_manufacturer = {
+	
+# 		designer = yes
+		
+# 		medium_tank_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				armor = 0.15
+# 			}
+			
+# 			traits = { medium_tank_manufacturer }
+			
+# 			modifier = {
+# 			}
+# 		}
+		
+# 		heavy_tank_manufacturer = {
+
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				armor = 0.15
+# 			}
+			
+# 			traits = { heavy_tank_manufacturer }
+
+# 			ai_will_do = {
+# 				factor = 10
+# 			}
+
+# 		}
+		
+# 		fast_tank_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				armor = 0.15
+# 			}
+			
+# 			traits = { fast_tank_manufacturer }
+			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}
+		
+# 		tank_manufacturer = {
+						
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+			
+# 			research_bonus = {
+# 				armor = 0.15
+# 			}
+			
+# 			traits = { tank_manufacturer }
+# 		}
+# 	}
+	
+# 	naval_manufacturer = {
+		
+# 		designer = yes
+		
+# 		convoy_escort_naval_manufacturer = {
+			
+# 			allowed = {
+# 			}
+						
+# 			research_bonus = {
+# 				naval_equipment = 0.15
+# 			}
+			
+# 			traits = { convoy_escort_naval_manufacturer }
+
+# 		}
+		
+# 		pacific_fleet_naval_manufacturer = {
+			
+# 			allowed = {
+# 			}	
+			
+# 			research_bonus = {
+# 				naval_equipment = 0.15
+# 			}
+			
+# 			traits = { pacific_fleet_naval_manufacturer }
+# 		}
+		
+# 		atlantic_fleet_naval_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				naval_equipment = 0.15
+# 			}
+
+# 			traits = { atlantic_fleet_naval_manufacturer }
+			
+# 		}
+		
+# 		coastal_defence_naval_manufacturer = {
+			
+# 			allowed = {
+# 			}
+			
+# 			research_bonus = {
+# 				naval_equipment = 0.15
+# 			}
+			
+# 			traits = { coastal_defence_naval_manufacturer }
+# 		}	
+		
+# 		raiding_fleet_naval_manufacturer = {
+						
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				naval_equipment = 0.15
+# 			}
+						
+# 			traits = { raiding_fleet_naval_manufacturer }
+			
+# 		}
+		
+# 		battlefleet_designer = {
+						
+# 			allowed = {
+# 			}
+									
+# 			research_bonus = {
+# 				naval_equipment = 0.15
+# 			}
+			
+# 			traits = { battlefleet_designer }
+
+# 		}
+# 	}
+	
+# 	aircraft_manufacturer = {
+			
+# 		designer = yes
+		
+# 		light_aircraft_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+						
+# 			research_bonus = {
+# 				air_equipment = 0.15
+# 			}
+			
+# 			traits = { light_aircraft_manufacturer }
+			
+# 		}
+		
+# 		CAS_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}		
+
+# 			research_bonus = {
+# 				air_equipment = 0.15
+# 			}
+			
+# 			traits = { CAS_manufacturer } 
+			
+# 		}	
+		
+# 		medium_aircraft_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+						
+# 			research_bonus = {
+# 				air_equipment = 0.15
+# 			}
+			
+# 			traits = { medium_aircraft_manufacturer }
+			
+# 			modifier = {
+# 			}
+# 		}
+		
+# 		heavy_aircraft_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				air_equipment = 0.15
+# 			}
+			
+# 			traits = { heavy_aircraft_manufacturer }
+			
+# 		}
+		
+# 		naval_aircraft_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				air_equipment = 0.15
+# 			}
+			
+# 			traits = { naval_aircraft_manufacturer }
+			
+# 		}	
+
+# 		fuel_efficient_aircraft_manufacturer = {
+			
+# 			allowed = {
+# 			}
+		
+# 			research_bonus = {
+# 				air_equipment = 0.15
+# 			}
+			
+# 			traits = { fuel_efficient_aircraft_manufacturer }
+# 		}
+# 	}
+	
+# 	materiel_manufacturer = {
+			
+# 		designer = yes
+		
+# 		infantry_equipment_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+						
+# 			research_bonus = {
+# 				infantry_weapons = 0.15
+# 			}
+			
+# 			traits = { infantry_equipment_manufacturer }
+			
+# 		}
+		
+# 		motorized_equipment_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+
+# 			research_bonus = {
+# 				motorized_equipment = 0.15
+# 			}
+			
+# 			traits = { motorized_equipment_manufacturer }
+		
+# 		}
+		
+# 		artillery_manufacturer = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				artillery = 0.15
+# 			}
+			
+# 			traits = { artillery_manufacturer }
+
+# 		}
+		
+# 		support_equipment_manufacturer = {
+			
+# 			allowed = {
+# 			}
+				
+# 			research_bonus = {
+# 				support_tech = 0.10
+# 			}
+			
+# 			traits = { support_equipment_manufacturer }
+			
+# 		}
+# 	}
+	
+# 	industrial_concern = {
+				
+# 		industrial_concern = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				industry = 0.15
+# 			}
+			
+# 			traits = { industrial_concern }
+			
+# 		}
+		
+# 		electronics_concern = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+		
+# 			research_bonus = {
+# 				electronics = 0.15
+# 			}
+			
+# 			traits = { electronics_concern }
+			
+# 		}
+		
+# 		construction_company = {
+		
+# 			allowed = {
+# 			}
+			
+# 			research_bonus = {
+# 			}
+			
+# 			traits = { construction_company }
+			
+# 		}
+		
+# 		refinery_concern = {
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				synth_resources = 0.1
+# 				industry = 0.05
+# 			}
+			
+# 			traits = { refinery_concern }
+			
+# 		}
+		
+# 	}
+	
+# 	theorist = {	
+	
+# 		grand_battle_plan_expert = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_grand_battle_plan = 0.15
+# 			}
+			
+# 			traits = { grand_battle_plan_expert }
+# 		}
+		
+# 		military_theorist = {
+# 			ledger = army
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+						
+# 			research_bonus = {
+# 				land_doctrine = 0.10
+# 			}
+			
+# 			traits = { military_theorist }
+
+# 		}
+		
+		
+# 		naval_theorist = {
+# 			ledger = navy
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				naval_doctrine = 0.10
+# 			}
+			
+# 			traits = { naval_theorist }
+# 		}
+		
+# 		air_warfare_theorist = {
+# 			ledger = air
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				air_doctrine = 0.10
+# 			}
+			
+# 			traits = { air_warfare_theorist }
+# 		}
+		
+# 		victory_thFugh_airpower = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_strategic_destruction = 0.15
+# 			}
+			
+# 			traits = { victory_through_airpower }
+# 		}
+				
+# 		blitzkrieg_theorist = {
+# 			ledger = army
+			
+# 			available = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+						
+# 			research_bonus = {
+# 				land_doctrine = 0.10
+# 			}
+			
+# 			traits = { blitzkrieg_theorist }
+
+# 		}
+		
+# 		council_of_theorists = {
+# 			ledger = army
+							
+# 			allowed = {
+# 			}
+
+# 			research_bonus = {
+# 				land_doctrine = 0.05
+# 				naval_doctrine = 0.05
+# 				air_doctrine = 0.05
+# 			}
+			
+# 			traits = { council_of_theorists }
+# 		}
+		
+# 		superior_firepower_expert = {
+# 			ledger = army
+			
+			
+# 			allowed = {
+				
+# 			}
+			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_superior_firepower = 0.15
+# 			}
+			
+# 			traits = { superior_firepower_expert }
+# 		}
+		
+# 		mobile_warfare_expert = {
+# 			ledger = army
+			
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_mobile_warfare = 0.15
+# 			}
+			
+# 			traits = { mobile_warfare_expert }
+# 		}
+		
+# 		close_air_support_proponent = {
+# 			ledger = air
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_battlefield_support = 0.15
+# 			}
+			
+# 			traits = { close_air_support_proponent }
+# 		}
+		
+# 		dive_bomber = {
+# 			ledger = air
+
+			
+# 			allowed = {
+# 				NOT = { OR = { tag = GER } }
+# 			}
+			
+# 			research_bonus = {
+# 				air_doctrine = 0.10
+# 			}
+			
+# 			traits = { dive_bomber }
+# 		}
+		
+# 		assault_avaition = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_operational_integrity = 0.15
+# 			}
+			
+# 			traits = { assault_avaition }
+# 		}
+		
+# 		mass_assault_expert = {
+# 			ledger = army
+			
+			
+# 			allowed = {
+# 			}
+			
+# 			cost = 250
+			
+# 			research_bonus = {
+# 				cat_mass_assault = 0.15
+# 			}
+			
+# 			traits = { mass_assault_expert }
+# 		}
+# 	}
+	
+# 	army_chief = {
+		
+# 		army_chief_offensive = {
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_chief_offensive_2 }
+			
+# 		}
+		
+# 		army_chief_defensive = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_chief_defensive_2 }
+			
+# 		}
+		
+# 		army_chief_maneuver = {
+			
+# 			allowed = {
+# 			}
+						
+# 			traits = { army_chief_maneuver_2 }
+			
+# 		}	
+
+# 		army_chief_morale = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_chief_morale_2 }
+			
+# 		}
+		
+# 		army_chief_organizational = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_chief_organizational_2 }
+			
+# 		}
+		
+# 		army_chief_drill = {
+			
+# 			allowed = {
+# 			}
+	
+# 			traits = { army_chief_drill_2 }
+			
+# 		}
+		
+# 		army_chief_planning = {
+		
+# 			allowed = {
+# 			}
+
+# 			traits = { army_chief_planning_2 }
+			
+# 		}
+		
+# 		army_chief_reform = {
+			
+# 			allowed = {
+# 			}
+
+# 			traits = { army_chief_reform_2 }
+			
+# 		}
+		
+# 		army_chief_old_guard = {
+			
+# 			allowed = {
+# 			}
+
+# 			traits = { army_chief_old_guard }
+
+# 		}
+# 	}
+	
+# 	navy_chief = {
+
+# 		maneuver = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_chief_maneuver_2 }
+			
+# 		}
+		
+# 		decisive_battle = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_chief_decisive_battle_2 }
+# 		}
+		
+# 		naval_aviation = {
+			
+# 			allowed = {
+# 			}
+
+# 			traits = { navy_chief_naval_aviation_2 }
+			
+# 		}
+		
+# 		commerce_raiding = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_chief_commerce_raiding_2 }
+			
+# 		}
+		
+# 		reform = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_chief_reform_2 }
+			
+# 		}
+		
+# 		old_guard = {
+			
+# 			allowed = {
+# 			}
+
+# 			traits = { navy_chief_old_guard }
+			
+# 		}
+# 	}
+	
+# 	air_chief = {
+
+# 		air_reform = {
+			
+# 			allowed = {
+# 			}
+		
+# 			traits = { air_chief_reform_2 }
+		
+# 		}
+		
+# 		night_operations = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_chief_night_operations_2 }
+			
+# 		}
+		
+# 		air_safety = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_chief_safety_2 }
+			
+# 		}
+		
+# 		ground_support = {
+
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_chief_ground_support_2 }
+			
+# 		}
+		
+# 		all_weather = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_chief_all_weather_2 }
+			
+# 		}
+		
+# 		pilot_training = {
+		
+# 			allowed = {
+# 			}
+
+# 			cost = 50
+
+# 			equipment_bonus = {
+# 				fighter_equipment = {
+# 					instant = yes
+# 					fuel_consumption = -0.1
+# 				}
+# 				heavy_fighter_equipment = {
+# 					instant = yes
+# 					fuel_consumption = -0.1
+# 				}
+# 			}
+
+# 			traits = { air_pilot_training_2 }
+			
+# 		}
+		
+# 		combat_training = {
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_air_combat_training_2 }
+			
+# 		}
+# 	}
+	
+# 	high_command = {
+
+# 		army_regrouping = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_regrouping_2 }
+			
+# 		}
+		
+# 		logistics = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_logistics_2 }
+			
+# 		}
+		
+# 		infantry = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_infantry_2 }
+			
+# 		}
+	
+# 		air_superiority = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_air_superiority_2 }
+			
+# 		}
+		
+# 		bomber_interception = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_bomber_interception_2 }
+			
+# 		}
+		
+# 		naval_strike = {
+# 			ledger = navy
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_naval_strike_2 }
+			
+# 			ai_will_do = {
+# 				factor = 1
+# 			}
+# 		}	
+		
+# 		amphibious_assault = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_amphibious_assault_2 }
+			
+# 		}
+		
+# 		screen = {
+# 			ledger = navy
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_screen_2 }
+			
+# 		}	
+
+# 		commando = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_commando_2 }
+			
+# 		}
+
+# 		concealment = {
+# 			ledger = army
+
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_concealment_2 }
+			
+# 		}
+
+# 		fleet_logistics = {
+# 			ledger = navy
+
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_fleet_logistics_2 }
+			
+# 		}
+
+# 		artillery = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_artillery_2 }
+			
+# 		}
+
+# 		entrenchment = {
+# 			ledger = army
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_entrenchment_2 }
+			
+# 		}
+
+# 		close_air_support = {
+# 			ledger = air
+			
+# 			picture = SPR_anarchist_council
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_close_air_support_2 }
+			
+# 		}
+		
+# 		strategic_bombing = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_strategic_bombing_2 }
+			
+# 		}
+		
+# 		tactical_bombing = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_tactical_bombing_2 }
+			
+# 		}
+		
+# 		naval_air_defense = {
+# 			ledger = navy
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_naval_air_defense_2 }
+			
+# 		}
+		
+# 		carrier = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_carrier_2 }
+			
+# 		}
+		
+# 		armored = {
+# 			ledger = army
+
+# 			allowed = {
+# 			}
+			
+# 			traits = { army_armored_2 }
+			
+# 		}
+		
+# 		airborne = {
+# 			ledger = air
+
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_airborne_2 }
+			
+# 		}
+		
+# 		cavalry = {
+# 			ledger = army
+			
+			
+# 			allowed = {
+# 			}
+# 			traits = { army_cavalry_2 }
+			
+# 		}	
+		
+# 		air_combat_training = {
+# 			ledger = air
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { air_air_combat_training_2 }
+			
+# 		}
+		
+# 		capital_ship = {
+# 			ledger = navy
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { navy_capital_ship_2 }
+			
+# 		}
+# 	}
+	
+# 	political_advisor = {
+
+# 		silent_workhorse = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = silent_workhorse
+# 						limit = 2
+# 					} 
+# 				} 
+# 			}
+			
+# 			traits = { silent_workhorse }
+# 		}
+
+# 		backroom_backstabber = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = backroom_backstabber
+# 						limit = 2
+# 					} 
+# 				} 
+# 			}
+			
+# 			traits = { backroom_backstabber }
+# 		}
+
+# 		war_industrialist = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = war_industrialist
+# 						limit = 2
+# 					} 
+# 				} 
+# 			}
+			
+# 			traits = { war_industrialist }
+
+# 		}
+
+# 		armaments_organizer = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = armaments_organizer
+# 						limit = 2
+# 					} 
+# 				} 
+# 			}
+			
+# 			traits = { armaments_organizer }
+# 		}
+
+# 		quartermaster = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = quartermaster_general
+# 						limit = 2
+# 					} 
+# 				} 
+# 			}
+			
+# 			traits = { quartermaster_general }
+
+# 		}
+
+# 		prince_of_terror = {
+		
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = princess_of_terror
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { princess_of_terror }
+
+# 		}
+
+# 		red_suffragette = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = red_suffragette
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { red_suffragette }
+
+# 		}
+		
+# 		code_cracker = {
+		
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = mastermind_code_cracker
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { mastermind_code_cracker }
+
+# 		}
+	
+# 		captain_of_industry = {
+				
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = captain_of_industry
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { captain_of_industry }
+# 		}
+		
+# 		leftist_freemason = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = leftist_freemason
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { leftist_freemason }
+
+# 		}
+
+# 		gran_carabinero = {
+
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = gran_carabinero
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { gran_carabinero }
+# 		}
+
+# 		education_reformer = {
+
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = education_reformer
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { education_reformer }
+# 		}
+
+# 		collectivization_specialist = {
+
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = collectivization_specialist
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { collectivization_specialist }
+
+# 		}
+# 		economist = {
+		
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = economist
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { economist }
+			
+# 		}
+# 		editor = {
+		
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = editor
+# 						limit = 2
+# 					} 
+# 				}
+				
+# 			}
+			
+# 			traits = { editor }
+# 		}
+		
+
+# 		compassionate_gentleman = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = compassionate_gentleman
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { compassionate_gentleman }
+# 		}
+
+# 		smooth_talking = {
+			
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = smooth_talking_charmer
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { smooth_talking_charmer }
+# 		}
+
+# 		head_of_intelligence = {
+		
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = head_of_intelligence
+# 						limit = 2
+# 					} 
+# 				}
+# 				has_intelligence_agency = yes
+# 			}
+			
+# 			allowed = {
+# 			}
+			
+# 			traits = { head_of_intelligence }
+
+# 		}
+		
+# 		fortification_engineer = {
+
+# 			allowed = {
+# 				NOT = {
+# 					has_available_idea_with_traits = {
+# 						idea = fortification_engineer
+# 						limit = 2
+# 					} 
+# 				}
+# 			}
+			
+# 			traits = { fortification_engineer }
+
+# 		}
+# 	}
+# }

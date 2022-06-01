@@ -1,0 +1,139 @@
+ideas = {
+	country = {
+		ENG_increase_mora_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.02
+				army_org_regain = 0.05
+				army_org_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_prepare_against_submarine_warfare_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_new_and_efficient_building_methods_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				local_resources_factor = 0.15
+				global_building_slots_factor = 0.2
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_navy_and_airforce_cooperation_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				carrier = {
+					carrier_size = 0.25
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					air_range = 0.1
+					instant = yes
+				}
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_naval_dominance_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			equipment_bonus = {
+				capital_ship = {
+					armor_value = 0.1
+					hg_attack = 0.1
+					
+				}
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_new_form_of_patriotism_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				conscription = 0.03
+				army_org_factor = 0.05
+				army_org_regain = 0.005
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_british_grenadiers_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_english_worker_spirit_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+
+		ENG_increased_construction_fundings_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+			picture = generic_research_bonus
+		}
+	}
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=553
+	name="STATE_553"
+	manpower = 1104000
+	
+	state_category = town
+	resources = {
+		grain = 016
+		wood = 0
+		coal = 0
+	}
+	history={
+		owner = SAU #
+add_core_of = SAU # FRA
+		victory_points = {
+			792 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 5
+			792 = {
+				naval_base = 3
+			}
+		}
+
+		add_core_of = LEB
+	}
+
+	provinces={
+		792 1108 11919 
+	}
+}

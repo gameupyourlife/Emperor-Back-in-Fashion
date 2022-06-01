@@ -1,0 +1,124 @@
+ai_defense_ebf = {
+
+	ai_defense0 = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			is_ai = yes
+			surrender_progress < 0.11
+			OR = {
+				has_idea = AI_desperat_defense_1
+				has_idea = AI_desperat_defense_2
+				has_idea = AI_desperat_defense_3
+			}
+ 
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+
+		visible = {
+			is_ai = yes
+		}
+
+		complete_effect = {
+			ROOT = { remove_ideas  = AI_desperat_defense_1 }
+			ROOT = { remove_ideas = AI_desperat_defense_2 }
+			ROOT = { remove_ideas = AI_desperat_defense_3 }
+		}
+	}
+
+	ai_defense1 = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			is_ai = yes
+			surrender_progress > 0.10
+			surrender_progress < 0.50
+			has_war = yes
+
+			NOT = {
+				has_idea = AI_desperat_defense_1
+			}
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+
+		visible = {
+			is_ai = yes
+		}
+
+		complete_effect = {
+			ROOT = { add_ideas  = AI_desperat_defense_1 }
+			ROOT = { remove_ideas = AI_desperat_defense_2 }
+			ROOT = { remove_ideas = AI_desperat_defense_3 }
+		}
+	}
+
+	ai_defense2 = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			is_ai = yes 
+			surrender_progress > 0.49
+			surrender_progress < 0.80
+			has_war = yes
+
+			NOT = {
+				has_idea = AI_desperat_defense_2
+			}
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+
+		visible = {
+			is_ai = yes
+		}
+
+		complete_effect = {
+			ROOT = { add_ideas  = AI_desperat_defense_2 }
+			ROOT = { remove_ideas = AI_desperat_defense_1 }
+			ROOT = { remove_ideas = AI_desperat_defense_3 }
+		}
+	}
+
+	ai_defense3 = {
+
+		icon = ger_reichskommissariats
+
+		available = {
+			is_ai = yes 
+			surrender_progress > 0.79
+
+			NOT = {
+				has_idea = AI_desperat_defense_3
+			}
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 1000
+		}
+
+		visible = {
+			is_ai = yes
+		}
+
+		complete_effect = {
+			ROOT = { add_ideas  = AI_desperat_defense_3 }
+			ROOT = { remove_ideas = AI_desperat_defense_1 }
+			ROOT = { remove_ideas = AI_desperat_defense_2 }
+		}
+	}
+}

@@ -1,0 +1,281 @@
+#is_ai = yes 
+
+add_namespace = ebf_hungary
+
+country_event = {
+	id = ebf_hungary.0
+	title = ebf_hungary.0.t 
+	desc = ebf_hungary.0.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = ebf_hungary.0.a
+	}
+}
+
+
+### Hungary contacts Italy to cede land
+country_event = {
+	id = ebf_hungary.1
+	title = ebf_hungary.1.t 
+	desc = ebf_hungary.1.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		
+	}
+
+	### cede all requestet land
+	option = {
+		name = ebf_hungary.1.a
+
+		ai_chance = {
+			factor = 40
+		}
+		3 = {
+			if = {
+				limit = { is_owned_by = ITA }
+				add_core_of = HUN
+				HUN = {
+					set_state_owner = 3
+				}
+			}
+		}
+		158 = {
+			if = {
+				limit = { is_owned_by = ITA }
+				add_core_of = HUN
+				HUN = {
+					set_state_owner = 158
+				}
+			}
+		}
+		151 = {
+			if = {
+				limit = { is_owned_by = ITA }
+				add_core_of = HUN
+				HUN = {
+					set_state_owner = 151
+				}
+			}
+		}
+		159 = {
+			if = {
+				limit = { is_owned_by = ITA }
+				add_core_of = HUN
+				HUN = {
+					set_state_owner = 159
+				}
+			}
+		}
+	}
+
+	### prpose a further compromise
+	option = {
+		name = ebf_hungary.1.b
+		ai_chance = {
+			factor = 20
+		}
+		HUN = {
+			country_event = ebf_hungary.2
+		}
+	}
+
+	### cede NO requestet land (War?)
+	option = {
+		name = ebf_hungary.1.c
+		ai_chance = {
+			factor = 10
+		}
+		HUN = {
+			create_wargoal = {
+				target = ITA
+				type = annex_everything
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ebf_hungary.2
+	title = ebf_hungary.2.t 
+	desc = ebf_hungary.2.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	is_triggered_only = yes
+
+	trigger = {
+		
+	}
+
+	immediate = {
+		
+	}
+
+	### settle on compromise
+	option = {
+		name = ebf_hungary.2.a
+		151 = {
+			if = {
+				limit = { is_owned_by = ITA }
+				add_core_of = HUN
+				HUN = {
+					set_state_owner = 151
+				}
+			}
+		}
+		159 = {
+			if = {
+				limit = { is_owned_by = ITA }
+				add_core_of = HUN
+				HUN = {
+					set_state_owner = 159
+				}
+			}
+		}
+	}
+
+	### war will fix it
+	option = {
+		name = ebf_hungary.2.b
+		HUN = {
+			create_wargoal = {
+				target = ITA
+				type = annex_everything
+			}
+		}
+	}
+}
+
+### Spirit after War
+country_event = {
+	id = ebf_hungary.3
+	title = ebf_hungary.3.t 
+	desc = ebf_hungary.3.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		HUN = {
+			controls_state = 161
+			has_government = neutrality
+		}
+		tag = HUN
+		has_completed_focus = HUN_all_of_italy_is_ours
+	}
+
+	immediate = {
+		add_ideas = HUN_italian_resistance_idea
+	}
+
+	option = {
+		name = ebf_hungary.3.a
+	}
+}
+
+
+### Split Italy witg Occ
+country_event = {
+	id = ebf_hungary.4
+	title = ebf_hungary.4.t 
+	desc = ebf_hungary.4.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	### accept
+	option = {
+		name = ebf_hungary.4.a
+		HUN = {
+			country_event = ebf_hungary.5
+			create_wargoal = {
+				target = ITA
+				type = annex_everything
+			}
+		}
+		create_wargoal = {
+			target = ITA
+			type = annex_everything
+		}
+	}
+
+	### decline
+	option = {
+		name = ebf_hungary.4.b
+		HUN = {
+			country_event = ebf_hungary.6
+		}
+	}
+}
+
+country_event = {
+	id = ebf_hungary.5
+	title = ebf_hungary.5.t 
+	desc = ebf_hungary.5.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ebf_hungary.5.a
+	}
+}
+
+country_event = {
+	id = ebf_hungary.6
+	title = ebf_hungary.6.t 
+	desc = ebf_hungary.6.d 
+	picture = GFX_report_event_election_vote
+	hidden = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	trigger = {
+	}
+
+	immediate = {
+
+	}
+
+	option = {
+		name = ebf_hungary.6.a
+		create_wargoal = {
+			target = ITA
+			type = annex_everything
+		}
+	}
+}

@@ -1,0 +1,1379 @@
+peace_options = {
+    conditional_surrender = {
+        icon = GFX_decision_generic_form_nation
+        cost = 0
+        target_trigger = {
+            has_war_with = FROM
+            NOT = {
+                civilwar_target = FROM
+            }
+            FROM = {
+                OR = {
+                    AND = {
+                        is_in_faction = yes
+                        is_major = yes
+                    }
+                    is_in_faction = no
+                }
+                is_puppet = no
+            }
+        }
+
+        days_re_enable = 30
+
+        visible = {
+            has_war_with = FROM
+            NOT = {
+                civilwar_target = FROM
+            }
+            FROM = {
+                OR = {
+                    AND = {
+                        is_in_faction = yes
+                        is_major = yes
+                    }
+                    is_in_faction = no
+                }
+                is_puppet = no
+            }
+        }
+        
+        available = {
+            NOT = {
+                has_country_flag = plus_cs_waiting_response
+            }
+            has_war_with = FROM
+            has_capitulated = no
+            is_puppet = no
+            NOT = {
+                civilwar_target = FROM
+            }
+            surrender_progress > 0.1
+            FROM = {
+                OR = {
+                    AND = {
+                        is_in_faction = yes
+                        is_major = yes
+                    }
+                    is_in_faction = no
+                }
+                is_puppet = no
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = plus_cs_waiting_response
+            FROM = {
+                country_event = { id = plus_cs.2 hours = 12 }
+            }
+            effect_tooltip = {
+                random_list = {
+                    1 = {
+                        if = {
+                            limit = {
+                                FROM = {
+                                    is_faction_leader = no
+                                }
+                            }
+                            FROM = {
+                                unlock_decision_category_tooltip = peace_treaty
+                            }
+                        }
+                        else = {
+                            every_country = {
+                                limit = {
+                                    is_in_faction_with = FROM
+                                    has_war_with = ROOT
+                                }
+                                unlock_decision_category_tooltip = peace_treaty
+                            }
+                        }
+                        modifier = {
+                            factor = 0.75
+                            always = yes
+                        }
+                        modifier = {
+                            factor = var:FROM.surrender_progress
+                            always = yes
+                        }
+                        modifier = {
+                            add = 1
+                            always = yes
+                        }
+                        modifier = {
+                            factor = 2
+                            has_global_flag = plus_cs_easy_surrender_mode
+                        }
+                    }
+                    1 = {
+                        modifier = {
+                            factor = var:FROM.has_war_support
+                        }
+                        modifier = {
+                            add = 1
+                            always = yes
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 1
+            modifier = {
+                factor = var:THIS.has_war_support
+                factor = -10
+                add = 10
+                set_temp_variable = { sp = var:THIS.surrender_progress }
+                multiply_temp_variable = { sp = 10 }
+                add = var:sp
+            }
+        }
+    }
+
+    white_peace = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        cost = 0
+        target_trigger = {
+            has_war_with = FROM
+            FROM = {
+                is_puppet = no
+            }
+        }
+
+        days_re_enable = 90
+
+        visible = {
+            has_war_with = FROM
+            NOT = {
+                civilwar_target = FROM
+            }
+            is_puppet = no
+            has_capitulated = no
+            FROM = {
+                has_capitulated = no
+                is_puppet = no
+            }
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = plus_cs_waiting_response
+            }
+            has_war_with = FROM
+            has_capitulated = no
+            is_puppet = no
+            FROM = {
+                has_capitulated = no
+                #num_of_controlled_states > 1
+                is_puppet = no
+            }
+        }
+
+        complete_effect = {
+            set_country_flag = plus_cs_waiting_response
+            FROM = {
+                country_event = { id = plus_cs.4 hours = 12 }
+            }
+            effect_tooltip = {
+                random_list = {
+                    1 = {
+                        white_peace = FROM
+                        modifier = {
+                            factor = 2
+                            always = yes
+                        }
+                        modifier = {
+                            factor = var:FROM.surrender_progress
+                            always = yes
+                        }
+                        modifier = {
+                            add = 1
+                            always = yes
+                        }
+                        modifier = {
+                            factor = 2
+                            has_global_flag = plus_cs_easy_surrender_mode
+                        }
+                    }
+                    1 = {
+                        modifier = {
+                            factor = var:FROM.has_war_support
+                            always = yes
+                        }
+                        modifier = {
+                            add = 1
+                            always = yes
+                        }
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 1
+            modifier = {
+                factor = var:THIS.has_war_support
+                factor = -15
+                add = 15
+                set_temp_variable = { sp = var:THIS.surrender_progress }
+                multiply_temp_variable = { sp = 10 }
+                add = var:sp
+            }
+        }
+    }
+
+    ceasefire = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        cost = 0
+        target_trigger = {
+            always = no
+            has_war_with = FROM
+            FROM = {
+                is_puppet = no
+            }
+        }
+
+        days_re_enable = 14
+
+        visible = {
+            always = no
+            has_war_with = FROM
+            is_puppet = no
+            has_capitulated = no
+            FROM = {
+                has_capitulated = no
+                is_puppet = no
+            }
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = plus_cs_waiting_response
+            }
+            has_war_with = FROM
+            FROM = {
+                has_capitulated = no
+                is_puppet = no
+            }
+        }
+
+        complete_effect = {
+            #FROM = {
+            #    country_event = { id = plus_cs.7 hours = 12 }
+            #}
+            set_temp_variable = { a = 1 }
+            var:global.province_controllers^var:a = {
+                add_political_power = 1
+            }
+            for_each_loop = {
+                array = var:global.province_controllers
+                add_to_temp_array = {
+                    array = cont
+                    value = var:v
+                    index = var:i
+                }
+            }
+            white_peace = FROM
+            set_truce = {
+                target = FROM
+                days = 14
+            }
+            for_each_loop = {
+                array = var:cont
+                index = in
+                if = {
+                    limit = {
+                        NOT = {
+                            check_variable = { var:v = var:global.province_controllers^var:in }
+                        }
+                    }
+                    add_political_power = 1
+                    log = "[?in] [?v.GetName]"
+                    add_to_array = {
+                        array = t_prov_scopes@FROM
+                        value = var:v
+                    }
+                    add_to_array = {
+                        array = t_prov_indexes@FROM
+                        value = var:in
+                    }
+                }
+                var:v = {
+                    set_province_controller = var:in
+                }
+            }
+            set_variable = { truce@FROM = 1 }
+            set_variable = { FROM.truce@ROOT = 1 }
+            every_other_country = {
+                limit = {
+                    check_variable = { ROOT.t_prov_scopes@THIS^num > 0 }
+                }
+                log = "FROM IS [?FROM.GetName]"
+                for_each_loop = {
+                    array = var:ROOT.t_prov_scopes@THIS
+                    var:v = {
+                        set_province_controller = var:ROOT.t_prov_indexes@THIS^var:i
+                    }
+                }
+            }
+        }
+    }
+
+    propose_peace = {
+        icon = GFX_decision_eng_trade_unions_support
+        cost = 0
+        target_trigger = {
+            has_war_with = FROM
+            FROM = {
+                is_puppet = no
+            }
+        }
+
+        days_re_enable = 90
+
+        visible = {
+            has_war_with = FROM
+            NOT = {
+                civilwar_target = FROM
+            }
+            is_puppet = no
+            has_capitulated = no
+            FROM = {
+                has_capitulated = no
+                is_puppet = no
+            }
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = plus_cs_waiting_response
+            }
+            has_war_with = FROM
+            check_variable = { 
+                var = vp@FROM
+                value = 0
+                compare = greater_than_or_equals
+            }
+            FROM = {
+                has_capitulated = no
+                surrender_progress > 0.1
+                #num_of_controlled_states > 1
+                is_puppet = no
+            }
+            set_temp_variable = { pct = 0 }
+            FROM = {
+                all_owned_state = {
+                    add_to_temp_variable = { pct = THIS.state_strategic_value }
+                }
+            }
+            set_temp_variable = { p = vp@FROM }
+            divide_temp_variable = { p = pct }
+        }
+
+        complete_effect = {
+            set_country_flag = plus_cs_waiting_response
+            FROM = {
+                country_event = { id = plus_cs.1 hours = 12 }
+            }
+            effect_tooltip = {
+                random_list = {
+                    1 = {
+                        unlock_decision_category_tooltip = peace_treaty
+                        modifier = {
+                            factor = var:FROM.surrender_progress
+                            always = yes
+                        }
+                        modifier = {
+                            add = 1
+                            always = yes
+                        }
+                        modifier = {
+                            factor = 2
+                            has_global_flag = plus_cs_easy_surrender_mode
+                        }
+                    }
+                    1 = {
+                        modifier = {
+                            factor = var:FROM.has_war_support
+                            always = yes
+                        }
+                        modifier = {
+                            add = 1
+                            always = yes
+                        }
+                    }
+                }
+            }
+        }
+        ai_will_do = {
+            base = 1
+            modifier = {
+                factor = var:THIS.has_war_support
+                factor = -80
+                add = 80
+            }
+        }
+    }
+}
+
+peace_treaty = {
+    ceasefire_end = {
+        icon = GFX_decision_hol_exchange_intelligence_data
+        target_trigger = {
+            FROM = {
+                check_variable = { truce@ROOT = 1 }
+            }
+        }
+        visible = {
+            FROM = {
+                check_variable = { truce@ROOT = 1 }
+            }
+        }
+        fire_only_once = yes
+        is_good = yes
+        selectable_mission = no
+        days_mission_timeout = 14
+        war_with_target_on_timeout = yes
+
+        targeted_modifier = {
+            political_power_gain = 0.25
+        }
+
+        activation = {
+            always = yes
+        }
+
+        available = {
+            always = no
+        }
+
+        timeout_effect = {
+            every_other_country = {
+                limit = {
+                    check_variable = { ROOT.t_prov_scopes@THIS^num > 0 }
+                }
+                log = "FROM IS [?FROM.GetName]"
+                for_each_loop = {
+                    array = var:ROOT.t_prov_scopes@THIS
+                    log = "DAILY"
+                    log = "[?ROOT.t_prov_indexes@THIS^i]"
+                    log = "[?v.GetName]"
+                    var:v = {
+                        set_province_controller = var:ROOT.t_prov_indexes@THIS^var:i
+                    }
+                }
+            }
+            if = {
+                limit = {
+                    check_variable = { original_tag = FROM.original_tag }
+                }
+                declare_war_on = {
+                    target = FROM
+                    type = civil_war
+                }
+                add_civil_war_target = FROM
+            }
+            else = {
+                declare_war_on = {
+                    target = FROM
+                    type = annex_everything
+                }
+            }
+            set_variable = { truce@FROM = 0 }
+            set_variable = { FROM.truce@ROOT = 0 }
+        }
+    }
+
+    peace_war_reparations = {
+        icon = GFX_decision_hol_attract_foreign_investors
+        fire_only_once = yes
+        #days_remove = 720
+        target_trigger = {
+            always = no
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+
+        available = {
+            check_variable = { FROM.wr_payments < 2 }
+            set_temp_variable = { pts = og_vp@FROM }
+            multiply_temp_variable = { pts = 0.17 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM
+                value = pts
+                compare = greater_than_or_equals
+            }
+            FROM = {
+                exists = yes
+                num_of_civilian_factories > 5
+                num_of_military_factories > 7
+            }
+        }
+
+        complete_effect = {
+            set_temp_variable = { pts = og_vp@FROM }
+            multiply_temp_variable = { pts = 0.17 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            subtract_from_variable = { vp@FROM = pts }
+            add_to_variable = { FROM.wr_payments = 1 }
+            custom_effect_tooltip = peace_war_reparations_cost
+            FROM = {
+                activate_targeted_decision = {
+                    target = ROOT
+                    decision = peace_pay_war_reparations
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10
+            modifier = {
+                add = 10
+                check_variable = { num_of_civilian_factories < FROM.num_of_civilian_factories }
+            }
+            modifier = {
+                add = 10
+                check_variable = { num_of_military_factories < FROM.num_of_military_factories }
+            }
+            modifier = {
+                factor = 2
+                FROM = {
+                    is_major = yes
+                }
+            }
+        }
+    }
+
+    peace_pay_war_reparations = {
+        icon = GFX_decision_hol_attract_foreign_investors
+        cost = 0
+        fire_only_once = yes
+        days_remove = 720
+        activation = { always = yes }
+
+        is_good = no
+        selectable_mission = no
+
+        target_trigger = {
+            always = no
+        }
+
+        days_mission_timeout = 100
+        targeted_modifier = { 
+            tag = FROM 
+            cic_to_target_factor = 0.14 
+            mic_to_target_factor = 0.2
+        }
+
+        remove_effect = {
+            subtract_from_variable = { wr_payments = 1 }
+        }
+    }
+
+    peace_disarm = {
+        icon = GFX_decision_generic_prepare_civil_war
+        cost = 0
+        fire_only_once = yes
+        #days_remove = 720
+        target_trigger = {
+            always = no
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+
+        available = {
+            set_temp_variable = { pts = og_vp@FROM }
+            divide_temp_variable = { pts = 5 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM
+                value = pts
+                compare = greater_than_or_equals
+            }
+            FROM = {
+                exists = yes
+                NOT = {
+                    has_idea = peace_disarmed_nation
+                    has_idea = peace_civilian_economy
+                }
+            }
+        }
+
+        complete_effect = {
+            set_temp_variable = { pts = og_vp@FROM }
+            divide_temp_variable = { pts = 5 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            subtract_from_variable = { vp@FROM = pts }
+            custom_effect_tooltip = peace_war_reparations_cost
+            FROM = {
+                add_timed_idea = {
+                    idea = peace_disarmed_nation
+                    days = 720
+                }
+                add_timed_idea = {
+                    idea = peace_civilian_economy
+                    days = 720
+                }
+            }
+        }
+
+        ai_will_do = {
+            base = 10
+            modifier = {
+                add = 30
+                FROM = {
+                    is_major = yes
+                }
+            }
+            modifier = {
+                factor = 2
+                strength_ratio = {
+                    tag = FROM
+                    ratio > 1
+                }
+            }
+        }
+    }
+
+    peace_take_state = {
+        icon = GFX_decision_hol_draw_up_staff_plans
+        cost = 0
+        state_target = yes
+        on_map_mode = map_only
+        target_trigger = {
+            always = no
+            check_variable = { FROM.state_taken = 0 }
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+        fire_only_once = yes
+
+        available = {
+            check_variable = { FROM.state_taken = 0 }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = var:pts
+                compare = greater_than_or_equals
+            }
+        }
+
+        complete_effect = {
+            custom_effect_tooltip = peace_take_state_cost
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            subtract_from_variable = { vp@FROM.owner = pts }
+            transfer_state = FROM
+            set_variable = { FROM.state_taken = 1 }
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_take_state
+            }
+        }
+
+        timeout_effect = {
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_take_state
+            }
+        }
+
+        ai_will_do = {
+            base = 40
+
+            modifier = {
+                factor = 0
+                FROM = {
+                    NOT = {
+                        any_neighbor_state = {
+                            is_owned_by = ROOT
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 4
+                FROM = {
+                    OR = {
+                        is_core_of = ROOT
+                        is_claimed_by = ROOT
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 2
+                FROM = {
+                    is_coastal = yes
+                    NOT = {
+                        is_core_of = FROM.owner
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 4
+                FROM = {
+                    all_neighbor_state = {
+                        is_owned_by = ROOT
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 2
+                FROM = {
+                    NOT = {
+                        any_neighbor_state = {
+                            is_owned_by = FROM.owner
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 2
+                FROM = {
+                    is_in_home_area = no
+                }
+            }
+
+            modifier = {
+                factor = 2
+                is_major = no
+            }
+
+            modifier = {
+                factor = 1.25
+                FROM = {
+                    is_coastal = yes
+                }
+            }
+        }
+    }
+
+    peace_puppet = {
+        icon = GFX_decision_generic_civil_support
+        cost = 0
+        state_target = yes
+        on_map_mode = map_only
+        target_trigger = {
+            always = no
+            check_variable = { FROM.state_taken = 0 }
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+
+        visible = {
+            check_variable = { FROM.state_taken = 0 }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 2 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+            FROM = {
+                is_core_of = FROM.owner
+            }
+        }
+
+        available = {
+            has_rule = can_puppet
+            is_puppet = no
+            check_variable = { FROM.state_taken = 0 }
+            FROM = {
+                is_core_of = FROM.owner
+            }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 2 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+        }
+
+        complete_effect = {
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 2 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            custom_effect_tooltip = peace_puppet_cost
+            subtract_from_variable = { vp@FROM.owner = pts }
+            if = {
+                limit = {
+                    any_country = {
+                        original_tag = FROM.owner
+                        is_puppet_of = ROOT
+                    }
+                }
+                random_country = {
+                    limit = {
+                        original_tag = FROM.owner
+                        is_puppet_of = ROOT
+                    }
+                    transfer_state = FROM
+                }
+            }
+            else = {
+                create_dynamic_country = {
+                    original_tag = FROM.owner
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_elections = yes
+                            }
+                        }
+                        set_politics = {
+                            ruling_party = var:ROOT.current_party_ideology_group
+                            elections_allowed = yes
+                        }
+                    }
+                    else = {
+                        set_politics = {
+                            ruling_party = var:ROOT.current_party_ideology_group
+                            elections_allowed = no
+                        }
+                    }
+                    set_political_party = {
+                        ideology = var:ROOT.current_party_ideology_group
+                        popularity = 60
+                    }
+                    set_cosmetic_tag = FROM.owner
+                    reserve_dynamic_country = yes
+                    ROOT = {
+                        puppet = PREV
+                        PREV = {
+                            transfer_state = FROM
+                        }
+                    }
+                }
+            }
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_puppet
+            }
+        }
+
+        timeout_effect = {
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_puppet
+            }
+        }
+
+        ai_will_do = {
+            base = 1
+            modifier = {
+                factor = 0
+                any_country = {
+                    original_tag = FROM.owner
+                    is_puppet_of = ROOT
+                    FROM = {
+                        NOT = {
+                            any_neighbor_state = {
+                                is_owned_by = PREV.PREV
+                            }
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 10
+                FROM = {
+                    NOT = {
+                        any_neighbor_state = {
+                            is_owned_by = ROOT
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 20
+                FROM = {
+                    any_neighbor_state = {
+                        is_owned_by = ROOT
+                    }
+                    any_neighbor_state = {
+                        owner = {
+                            is_major = yes
+                            NOT = {
+                                tag = ROOT
+                                is_in_faction_with = ROOT
+                            }
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                set_temp_variable = { cnt = 0 }
+                any_country = {
+                    limit = {
+                        original_tag = FROM
+                    }
+                    add_to_temp_variable = { cnt = 1 }
+                }
+                set_temp_variable = { pct = 1 }
+                divide_temp_variable = { pct = cnt }
+                factor = var:pct
+                always = yes
+            }
+
+            modifier = {
+                factor = 0.1
+                any_of_scopes = {
+                    array = var:global.countries
+                    OR = {
+                        exists = no
+                        is_puppet_of = ROOT
+                    }
+                    FROM = {
+                        is_core_of = PREV
+                    }
+                }
+            }
+        }
+    }
+
+    peace_set_dmz = {
+        icon = GFX_decision_border_war
+        cost = 0
+        state_target = yes
+        on_map_mode = map_only
+        target_trigger = {
+            always = no
+            check_variable = { FROM.state_taken = 0 }
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+
+        available = {
+            check_variable = { FROM.state_taken = 0 }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+        }
+
+        complete_effect = {
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            custom_effect_tooltip = peace_puppet_cost
+            subtract_from_variable = { vp@FROM.owner = pts }
+            FROM = {
+                set_demilitarized_zone = yes
+            }
+            set_variable = { FROM.state_taken = 1 }
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_set_dmz
+            }
+        }
+
+        timeout_effect = {
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_set_dmz
+            }
+        }
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 10
+                FROM = {
+                    any_neighbor_state = {
+                        is_owned_by = ROOT
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 0
+                FROM = {
+                    any_neighbor_state = {
+                        owner = {
+                            is_puppet_of = ROOT
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    peace_liberate = {
+        icon = GFX_decision_generic_nationalism
+        cost = 0
+        state_target = yes
+        on_map_mode = map_only
+        target_trigger = {
+            always = no
+            check_variable = { FROM.state_taken = 0 }
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+
+        visible = {
+            is_puppet = no
+            check_variable = { FROM.state_taken = 0 }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+            any_of_scopes = {
+                array = var:global.countries
+                OR = {
+                    exists = no
+                    AND = {
+                        is_puppet_of = ROOT
+                        NOT = {
+                            original_tag = FROM.owner
+                        }
+                    }
+                }
+                FROM = {
+                    is_core_of = PREV
+                }
+            }
+        }
+
+        available = {
+            is_puppet = no
+            check_variable = { FROM.state_taken = 0 }
+            any_of_scopes = {
+                array = var:global.countries
+                OR = {
+                    exists = no
+                    AND = {
+                        is_puppet_of = ROOT
+                        NOT = {
+                            original_tag = FROM.owner
+                        }
+                    }
+                }
+                FROM = {
+                    is_core_of = PREV
+                }
+            }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+        }
+
+        complete_effect = {
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 2 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            custom_effect_tooltip = peace_puppet_cost
+            subtract_from_variable = { vp@FROM.owner = pts }
+            if = {
+                limit = {
+                    any_country = {
+                        is_puppet_of = ROOT
+                        NOT = {
+                            original_tag = FROM.owner
+                        }
+                        FROM = {
+                            is_core_of = PREV
+                        }
+                    }
+                }
+                random_country = {
+                    limit = {
+                        is_puppet_of = ROOT
+                        FROM = {
+                            is_core_of = PREV
+                        }
+                    }
+                    transfer_state = FROM
+                }
+            }
+            else = {
+                random_scope_in_array = {
+                    array = var:global.countries
+                    limit = {
+                        exists = no
+                        FROM = {
+                            is_core_of = PREV
+                        }
+                    }
+                    transfer_state = FROM
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_rule = can_puppet
+                            }
+                        }
+                        ROOT = {
+                            puppet = PREV
+                        }
+                    }
+                    if = {
+                        limit = {
+                            ROOT = {
+                                has_elections = yes
+                            }
+                        }
+                        set_politics = {
+                            ruling_party = var:ROOT.current_party_ideology_group
+                            elections_allowed = yes
+                        }
+                    }
+                    else = {
+                        set_politics = {
+                            ruling_party = var:ROOT.current_party_ideology_group
+                            elections_allowed = no
+                        }
+                    }
+                }
+            }
+            set_variable = { FROM.state_taken = 1 }
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_liberate
+            }
+        }
+
+        timeout_effect = {
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_liberate
+            }
+        }
+
+        ai_will_do = {
+            base = 1
+
+            modifier = {
+                factor = 0
+                any_country = {
+                    is_puppet_of = ROOT
+                    FROM = {
+                        is_core_of = PREV
+                    }
+                }
+                NOT = {
+                    any_country = {
+                        is_puppet_of = ROOT
+                        FROM = {
+                            any_neighbor_state = {
+                                is_owned_by = PREV.PREV
+                            }
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 10
+                FROM = {
+                    NOT = {
+                        any_neighbor_state = {
+                            is_owned_by = ROOT
+                        }
+                    }
+                }
+            }
+
+            modifier = {
+                factor = 20
+                FROM = {
+                    any_neighbor_state = {
+                        is_owned_by = ROOT
+                    }
+                    any_neighbor_state = {
+                        owner = {
+                            is_major = yes
+                            NOT = {
+                                tag = ROOT
+                                is_in_faction_with = ROOT
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    peace_claim = {
+        icon = GFX_decision_infiltrate_state
+        cost = 0
+        state_target = yes
+        on_map_mode = map_only
+        target_trigger = {
+            always = no
+            check_variable = { FROM.state_taken = 0 }
+        }
+        is_good = yes
+        selectable_mission = yes
+        days_mission_timeout = 30
+
+        visible = {
+            check_variable = { FROM.state_taken = 0 }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+        }
+
+        available = {
+            check_variable = { FROM.state_taken = 0 }
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            check_variable = {
+                var = vp@FROM.owner
+                value = pts
+                compare = greater_than_or_equals
+            }
+            FROM = {
+                NOT = {
+                    OR = {
+                        is_claimed_by = ROOT
+                        is_core_of = ROOT
+                    }
+                }
+            }
+        }
+
+        complete_effect = {
+            set_temp_variable = { pts = FROM.state_strategic_value }
+            divide_temp_variable = { pts = 4 }
+            round_temp_variable = pts
+            clamp_temp_variable = {
+                var = pts
+                min = 1
+            }
+            custom_effect_tooltip = peace_puppet_cost
+            subtract_from_variable = { vp@FROM.owner = pts }
+            ROOT = {
+                add_state_claim = FROM
+            }
+            
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_claim
+            }
+        }
+
+        timeout_effect = {
+            remove_targeted_decision = {
+                target = FROM
+                decision = peace_claim
+            }
+        }
+
+        ai_will_do = {
+            base = 0
+            modifier = {
+                add = 10
+                FROM = {
+                    any_neighbor_state = {
+                        is_owned_by = ROOT
+                    }
+                }
+            }
+            modifier = {
+                factor = 1.25
+                is_coastal = yes
+            }
+        }
+    }
+}
