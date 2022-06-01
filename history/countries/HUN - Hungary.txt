@@ -257,10 +257,9 @@ create_country_leader = {
 }
 
 
-create_corps_commander = {
-	name = "Géza Lakatos"
-	gfx = GFX_Portrait_hungary_geza_lakatos
-	traits = {  }
+create_field_marshal = {
+	name = "Barta Lovász"
+	traits = { defensive_doctrine urban_assault_specialist old_guard }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 2
@@ -269,45 +268,78 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Iván Hindy"
-	gfx = GFX_Portrait_hungary_ivan_hindy
-	traits = {  trickster }
-	skill = 4
+	name = "János Zentai"
+	traits = { trait_cautious armor_officer }
+	skill = 3
 	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Pista Albert"
+	traits = { trickster armor_officer brilliant_strategist trait_engineer }
+	skill = 4
+	#id = 5
+	attack_skill = 2
 	defense_skill = 4
-	planning_skill = 2
+	planning_skill = 3
 	logistics_skill = 4
 }
 
 create_corps_commander = {
-	name = "Károly Beregfy"
-	gfx = GFX_Portrait_hungary_karoly_beregfy
-	traits = { }
-	skill = 1
-	attack_skill = 1
-	defense_skill = 1
-	planning_skill = 1
-	logistics_skill = 1
+	name = "Misi Sarka"
+	traits = { harsh_leader trait_cautious }
+	skill = 4
+	#id = 9
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 2
 }
 
 create_corps_commander = {
-	name = "Lajos Veress"
-	gfx = GFX_Portrait_hungary_lajos_veress
-	traits = { armor_officer }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
+	name = "Alex Szarka"
+	traits = { infantry_officer }
+	skill = 3
+	#id = 21
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
 }
 
-create_field_marshal = {
-	name = "Ferenc Feketehalmy-Czeydner"
-	gfx = GFX_Portrait_hungary_ferenc_feketehalmy_czeydner
-	traits = { }
-	skill = 2
-	attack_skill = 2
+create_corps_commander = {
+	name = "Izsák Hegedűs"
+	traits = { armor_officer career_officer trait_cautious }
+	skill = 4
+	#id = 25
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "Gál Sarkozy"
+
+	traits = { naval_lineage battleship_adherent }
+	skill = 4
+	#id = 27
+	attack_skill = 3
+	defense_skill = 4
+	maneuvering_skill = 3
+	coordination_skill = 3
+}
+
+create_navy_leader = {
+	name = "Peti Vadas"
+	traits = { gentlemanly navy_career_officer superior_tactician }
+	skill = 3
+	#id = 31
+	attack_skill = 4
 	defense_skill = 1
-	planning_skill = 2
-	logistics_skill = 2
+	maneuvering_skill = 1
+	coordination_skill = 4
 }

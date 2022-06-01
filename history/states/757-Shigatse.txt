@@ -21,4 +21,6 @@ add_core_of = SIK # TIB
 		add_core_of = TIB
 
 	}
+
+	local_supplies=0.0 
 }

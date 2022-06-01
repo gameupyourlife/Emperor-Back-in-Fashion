@@ -39,7 +39,7 @@ ideas = {
 				conscription = -0.005
 				stability_factor = -0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_oppression
 		}
 
 		HUN_economic_deficit_idea = {
@@ -53,7 +53,7 @@ ideas = {
 				production_speed_buildings_factor = -0.1
 				stability_factor = -0.15
 			}
-			picture = generic_research_bonus
+			picture = usa_great_depression
 		}
 
 		HUN_adjust_taxes_idea = {
@@ -67,7 +67,7 @@ ideas = {
 				political_power_gain = 0.2
 				stability_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = tur_balkan_central_bank_wealthy_greece
 		}
 
 		HUN_invest_in_the_future_idea = {
@@ -93,7 +93,7 @@ ideas = {
 			modifier = {
 				production_speed_dockyard_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_the_london_naval_treaty
 		}
 
 		HUN_see_to_the_west_idea = {
@@ -133,7 +133,7 @@ ideas = {
 				}
 			}
 
-			picture = generic_research_bonus
+			picture = generic_navy_bonus
 		}
 
 		HUN_see_to_the_east_idea = {
@@ -165,7 +165,7 @@ ideas = {
 					instant = yes
 				}
 			}
-			picture = generic_research_bonus
+			picture = generic_sea_focused_navy
 		}
 
 		HUN_italian_resistance_idea = {
@@ -179,7 +179,7 @@ ideas = {
 				conscription = -0.01
 				stability_factor = -0.1
 			}
-			picture = generic_research_bonus
+			picture = chi_war_of_resistance2
 		}
 
 		HUN_future_idea = {
@@ -193,7 +193,7 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 				experience_gain_army_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_industrial_concern_1
 		}
 
 		HUN_no_support_idea = {
@@ -272,7 +272,7 @@ ideas = {
 				production_speed_buildings_factor = 0.1
 				consumer_goods_factor = -0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_goods_red_bonus
 		}
 
 		HUN_march_to_war_and_march_fast_idea = {
@@ -285,7 +285,7 @@ ideas = {
 			modifier = {
 				army_speed_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = prc_the_long_march
 		}
 
 		HUN_fuer_kaiser_gott_und_vaterland_idea = {
@@ -300,7 +300,7 @@ ideas = {
 				army_morale_factor = 0.05
 				army_defence_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_victors_of_ww1
 		}
 
 		HUN_the_imperial_army_idea = {
@@ -314,7 +314,7 @@ ideas = {
 				experience_gain_army_factor = 0.1
 				army_attack_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = eng_imperial_conscription
 		}
 
 		HUN_the_army_of_the_future_idea = {
@@ -328,7 +328,7 @@ ideas = {
 				land_reinforce_rate = 0.1
 				research_speed_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = chi_army_corruption3
 		}
 
 		HUN_a_place_for_the_emperor_idea = {
@@ -341,7 +341,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = ROM_carol_ii_greed
 		}
 
 		HUN_gold_for_the_palace_idea = {
@@ -355,7 +355,7 @@ ideas = {
 				fuel_gain_factor = 0.1
 				local_resources_factor = 0.2
 			}
-			picture = generic_research_bonus
+			picture = SPR_seize_the_gold_reserves
 		}
 
 		HUN_our_pride_idea = {
@@ -369,7 +369,7 @@ ideas = {
 				political_power_factor = 0.2
 				war_support_weekly = 0.02
 			}
-			picture = generic_research_bonus
+			picture = FRA_scw_intervention_republicans_focus
 		}
 
 		HUN_we_will_win_idea = {
@@ -386,7 +386,7 @@ ideas = {
 				conscription = 0.04
 				consumer_goods_factor = -0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_reserve_divisions
 		}
 
 		HUN_autarky_ebf_idea = {
@@ -399,7 +399,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = generic_exploit_mines
 		}
 	}
 }

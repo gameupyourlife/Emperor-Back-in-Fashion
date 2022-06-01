@@ -15,7 +15,7 @@ add_core_of = JAP # MAN
 		add_core_of = MAN
 		add_core_of = PRC
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 
 		}
 
@@ -26,4 +26,6 @@ add_core_of = JAP # MAN
 	}
 	manpower=5224174
 	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
 }

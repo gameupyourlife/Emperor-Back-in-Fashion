@@ -21,15 +21,14 @@ add_core_of = PRC # SHX
 			1519 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			arms_factory = 2
 			industrial_complex = 2
 		}
 
 		1938.10.25 = {
 			#remove_core_of = SHX
-			owner = PRC #
-add_core_of = PRC # PRC
+			owner = PRC
 			controller = JAP
 			PRC = {
 				set_province_controller = 1034
@@ -42,4 +41,6 @@ add_core_of = PRC # PRC
 	provinces={
 		1027 1034 1180 1203 1438 1519 1531 1575 4074 4174 4469 4538 4634 7571 10367 10421 10480 10507 12078 12300 12344 12432 
 	}
+
+	local_supplies=0.0 
 }

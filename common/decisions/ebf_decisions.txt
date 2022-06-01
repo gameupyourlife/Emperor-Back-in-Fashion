@@ -151,48 +151,48 @@ EBF_ideas_decision = {
 
 
 
-	auto_log_industry = {
-		days_remove = 0
-		visible = {
-			is_ai = no
-		}
-		allowed = {
+	# auto_log_industry = {
+	# 	days_remove = 0
+	# 	visible = {
+	# 		is_ai = no
+	# 	}
+	# 	allowed = {
 			
-		}
-		available = {
-			always = no
-		}
-		activation = {
-			is_ai = no
-		}
-		days_mission_timeout = 363
-		is_good = yes
-		timeout_effect = {
-			every_country = {
-				limit = {
-					is_ai = no
-				}
-				set_variable = { Civs = num_of_civilian_factories }
-				set_variable = { Mils = num_of_military_factories }
-				set_variable = { Dock = num_of_naval_factories }
-				if = {
-					limit = {
-						NOT = {
-							check_variable = { Date > 1936 }
-						}
-					}
-					set_variable = { Date = 1937 }
-				}
-				else = {
-					add_to_variable = { Date = 1 }
-				}
-				#set_variable = { DATE = GetDateString }
-				print_variables = {
-					file = Industry_Sims
-					text = Test Run
-					var_list = { Date Civs Mils Dock }
-				}
-			}
-		}
-	}
+	# 	}
+	# 	available = {
+	# 		always = no
+	# 	}
+	# 	activation = {
+	# 		is_ai = no
+	# 	}
+	# 	days_mission_timeout = 363
+	# 	is_good = yes
+	# 	timeout_effect = {
+	# 		every_country = {
+	# 			limit = {
+	# 				is_ai = no
+	# 			}
+	# 			set_variable = { Civs = num_of_civilian_factories }
+	# 			set_variable = { Mils = num_of_military_factories }
+	# 			set_variable = { Dock = num_of_naval_factories }
+	# 			if = {
+	# 				limit = {
+	# 					NOT = {
+	# 						check_variable = { Date > 1936 }
+	# 					}
+	# 				}
+	# 				set_variable = { Date = 1937 }
+	# 			}
+	# 			else = {
+	# 				add_to_variable = { Date = 1 }
+	# 			}
+	# 			#set_variable = { DATE = GetDateString }
+	# 			print_variables = {
+	# 				file = Industry_Sims
+	# 				text = Test Run
+	# 				var_list = { Date Civs Mils Dock }
+	# 			}
+	# 		}
+	# 	}
+	# }
 }

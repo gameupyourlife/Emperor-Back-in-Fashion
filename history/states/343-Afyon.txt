@@ -25,7 +25,7 @@ state={
 			3856 3
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 		}
 		add_core_of = TUR
@@ -34,4 +34,6 @@ state={
 	provinces={
 		856 981 3856 3983 6877 6945 9878 10041 11796 11831 11907 
 	}
+
+	local_supplies=0.0 
 }

@@ -17,7 +17,7 @@ add_core_of = UKR # SOV
 			9461 1
 		}
 		buildings = {
-			infrastructure = 5
+			infrastructure = 3 #was: 5
 		}
 		add_core_of = SOV
 		add_core_of = UKR
@@ -26,4 +26,6 @@ add_core_of = UKR # SOV
 	provinces={
 		523 547 570 6505 6519 9446 9461 9476 11487 11513 
 	}
+
+	local_supplies=0.0 
 }

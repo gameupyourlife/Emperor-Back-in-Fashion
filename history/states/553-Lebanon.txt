@@ -17,7 +17,7 @@ add_core_of = SAU # FRA
 			792 5 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			industrial_complex = 1
 			air_base = 5
 			792 = {
@@ -31,4 +31,6 @@ add_core_of = SAU # FRA
 	provinces={
 		792 1108 11919 
 	}
+
+	local_supplies=0.0 
 }

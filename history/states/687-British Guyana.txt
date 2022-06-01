@@ -21,7 +21,7 @@ add_core_of = VEN # ENG
 			4982 1
 		}
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			4982 = {
 				naval_base = 1
 			}
@@ -31,4 +31,6 @@ add_core_of = VEN # ENG
 	provinces={
 		4982 8107 12716 
 	}
+
+	local_supplies=5.0 
 }

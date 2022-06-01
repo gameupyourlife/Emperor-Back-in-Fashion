@@ -17,7 +17,7 @@ state={
 		owner = PAN #
 add_core_of = PAN # GUA
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 2 
 			air_base = 1
@@ -39,4 +39,6 @@ add_core_of = PAN # GUA
 		4991 10842 10886 13085 
 	}
 	
+
+	local_supplies=0.0 
 }

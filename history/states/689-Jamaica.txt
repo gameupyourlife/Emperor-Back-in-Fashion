@@ -13,7 +13,7 @@ add_core_of = CUB # ENG
 			12304 1 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			12304 = {
 				naval_base = 1
 			}
@@ -21,4 +21,6 @@ add_core_of = CUB # ENG
 	}
 	
 	provinces={ 12304 12477 }
+
+	local_supplies=0.0 
 }

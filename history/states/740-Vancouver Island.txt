@@ -10,7 +10,7 @@ state={
 		owner = USA #
 add_core_of = USA # CAN
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 		}
 		add_core_of = CAN
 	}
@@ -19,4 +19,6 @@ add_core_of = USA # CAN
 		7259 1214 12259 12272 1420 
 	}
 	
+
+	local_supplies=0.0 
 }

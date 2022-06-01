@@ -16,7 +16,7 @@ state={
 		owner = ANG #
 add_core_of = ANG # BEL
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 
 		}
 		add_core_of = COG
@@ -27,4 +27,6 @@ add_core_of = ANG # BEL
 	}
 	manpower=2366783
 	buildings_max_level_factor=1.000
+
+	local_supplies=2.0 
 }

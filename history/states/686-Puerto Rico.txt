@@ -13,7 +13,7 @@ add_core_of = CUB # USA
 			1440 1 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			industrial_complex = 1
 			air_base = 4
 			1440 = {
@@ -26,4 +26,6 @@ add_core_of = CUB # USA
 	provinces={
 		1440 4155 
 	}
+
+	local_supplies=0.0 
 }

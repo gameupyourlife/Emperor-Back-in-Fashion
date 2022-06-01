@@ -3292,6 +3292,89 @@ focus_tree = {
 	}
 
 	focus = {
+		id = HUN_negotiate_with_sri_lanka
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 1
+		y = 1
+		relative_position_id = HUN_south_expansion
+		prerequisite = {
+			focus = HUN_south_expansion
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+
+		completion_reward = {
+			add_opinion_modifier = { 
+				target = SRL 
+				modifier = large_increase 
+			}
+			SRL = {
+				add_opinion_modifier = { 
+					target = HUN 
+					modifier = large_increase 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_sign_the_contract
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 1
+		relative_position_id = HUN_negotiate_with_sri_lanka
+		prerequisite = {
+			focus = HUN_negotiate_with_sri_lanka
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+
+
+		cost = 10
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+
+		completion_reward = {
+			transfer_state = 422
+
+			add_opinion_modifier = { 
+				target = SRL 
+				modifier = large_increase 
+			}
+			SRL = {
+				add_opinion_modifier = { 
+					target = HUN 
+					modifier = large_increase 
+				}
+			}
+
+			diplomatic_relation = { 
+				country = SRL
+				relation = non_aggression_pact 
+			}
+		}
+	}
+
+	focus = {
 		id = HUN_the_winner_is_weak
 		icon = GFX_focus_generic_strike_at_democracy1
 		x = 0

@@ -16,7 +16,7 @@ add_core_of = UKR # SOV
 			11670 10 
 		}
 		buildings = {
-			infrastructure = 5
+			infrastructure = 3 #was: 5
 			industrial_complex = 1
 			air_base = 6
 			11670 ={
@@ -33,7 +33,9 @@ add_core_of = UKR # SOV
 		}
 	}
 
-	provinces={
-		741 754 3575 3738 3757 9698 9714 11670 11703 
+	provinces = {
+		  3575 3738 9698 9714 11670 11703 
 	}
+
+	local_supplies = 6.0 
 }

@@ -13,7 +13,7 @@ state=
 		}
 		owner = COR
 		buildings = {
-			infrastructure = 6
+			infrastructure = 3 #was: 6
 			air_base = 1
 			9793 = {
 				naval_base = 2
@@ -28,4 +28,6 @@ state=
 	provinces=
 	{
 7114 9793 9845 	}
+
+	local_supplies=0.0 
 }

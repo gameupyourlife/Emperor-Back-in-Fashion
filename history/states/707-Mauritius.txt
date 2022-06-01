@@ -9,7 +9,7 @@ state={
 		owner = MAD #
 add_core_of = MAD # ENG
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			13018 = {
 				naval_base = 1
 			}
@@ -19,4 +19,6 @@ add_core_of = MAD # ENG
 	provinces={
 		13018 
 	}
+
+	local_supplies=0.0 
 }

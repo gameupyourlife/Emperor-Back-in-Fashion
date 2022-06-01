@@ -625,7 +625,7 @@ set_technology = {
 
 
 create_field_marshal = {
-	name = "Mincho Atanasov"
+	name = "Lyudmil Georgiev"
 	traits = { defensive_doctrine urban_assault_specialist old_guard }
 	skill = 3
 	attack_skill = 3
@@ -635,7 +635,7 @@ create_field_marshal = {
 }
 
 create_corps_commander = {
-	name = "Krastio Grigorov"
+	name = "Parvan Zhivkov"
 	traits = { trait_cautious armor_officer }
 	skill = 3
 	attack_skill = 3
@@ -645,7 +645,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Simeon Ignatov"
+	name = "Boyan Dragomirov"
 	traits = { trickster armor_officer brilliant_strategist trait_engineer }
 	skill = 4
 	#id = 5
@@ -656,7 +656,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Toma Danailov"
+	name = "Haralampi Stefanov"
 	traits = { harsh_leader trait_cautious }
 	skill = 4
 	#id = 9
@@ -667,7 +667,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Gavril Bozhidarov"
+	name = "Nedyalko Andreev"
 	traits = { infantry_officer }
 	skill = 3
 	#id = 21
@@ -678,7 +678,7 @@ create_corps_commander = {
 }
 
 create_corps_commander = {
-	name = "Ignat Vantchev"
+	name = "Vlado Radkov"
 	traits = { armor_officer career_officer trait_cautious }
 	skill = 4
 	#id = 25
@@ -689,7 +689,7 @@ create_corps_commander = {
 }
 
 create_navy_leader = {
-	name = "Danail Bakalov"
+	name = "Yanko Haralampiev"
 
 	traits = { naval_lineage battleship_adherent }
 	skill = 4
@@ -701,7 +701,7 @@ create_navy_leader = {
 }
 
 create_navy_leader = {
-	name = "Angel Boyadzhiev"
+	name = "Viktor Tomov"
 	traits = { gentlemanly navy_career_officer superior_tactician }
 	skill = 3
 	#id = 31

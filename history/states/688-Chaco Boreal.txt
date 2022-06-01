@@ -18,7 +18,7 @@ state={
 		owner = ARG  #
 add_core_of = ARG # PAR
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 		}
 		add_core_of = PAR
 		add_core_of = BOL
@@ -27,4 +27,6 @@ add_core_of = ARG # PAR
 	provinces={
 		2195 2209 5165 8203 10973 
 	}
+
+	local_supplies=0.0 
 }

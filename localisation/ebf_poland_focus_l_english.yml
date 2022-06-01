@@ -5,7 +5,7 @@
  POL_traditonal_way:0 "Traditional Way"
  POL_traditonal_way_desc:0 "A traditional Approache could be the best one"
  POL_reform_our_thinking:0 "Reform our Thinking"
- POL_reform_our_thinking_desc:0 "A reformed Approache could be the best one"
+ POL_reform_our_thinking_desc:0 "A reformed Approache could be the best one. \n §RIf not dealt with in time a royalist revolution will take place!§!"
  POL_the_beginning_of_a_new_life:0 "Beginning of a new Life"
  POL_the_beginning_of_a_new_life_desc:0 "Beginning of a new Life"
  POL_prioritze_the_worker:0 "Prioritize the Worker"
@@ -159,3 +159,5 @@
  POL_final_greatness_desc:0 "We have achieved it!"
  POL_speed_is_key:0 "Speed is Key"
  POL_final_greatness_desc:0 "We have gained knowledge - Speed is Key"
+
+ POL_reform_our_thinking_tt:1 "§RIf not dealt with in time a royalist revolution will take place!§! \n\n"

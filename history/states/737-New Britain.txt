@@ -12,7 +12,7 @@ state={
 		add_core_of = PNG
 		owner = PNG #
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			air_base = 1
 			7251 = {
 				naval_base = 5
@@ -41,4 +41,6 @@ state={
 	manpower=345640
 	buildings_max_level_factor=1
 	state_category="rural"
+
+	local_supplies=0.0 
 }

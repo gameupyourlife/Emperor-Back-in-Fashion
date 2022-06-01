@@ -11,6 +11,16 @@ GER_reichskommissariats_ebf = {
 	}
 }
 
+POL_royalist_civil_war_ebf = {
+	allowed = {
+		original_tag = POL
+	}
+
+	visible = {
+		original_tag = POL
+	}
+}
+
 ai_defense_ebf = {
 	
 	allowed = {

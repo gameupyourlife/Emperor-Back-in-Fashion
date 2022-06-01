@@ -35,4 +35,6 @@ add_core_of = PRC # XSM
 		}
 
 	}
+
+	local_supplies=0.0 
 }

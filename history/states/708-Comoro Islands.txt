@@ -10,7 +10,7 @@ state={
 add_core_of = MAD # FRA
 		add_core_of = MAD
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			13072 = {
 				naval_base = 1
 			}
@@ -20,4 +20,6 @@ add_core_of = MAD # FRA
 	provinces={
 		13072 
 	}
+
+	local_supplies=0.0 
 }

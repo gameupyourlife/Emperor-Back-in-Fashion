@@ -1,0 +1,39 @@
+POL_royalist_civil_war_ebf = {
+	POL_imminent_royalist_civil_war = {
+	
+		icon = coal
+
+		available = {
+			has_completed_focus = POL_reform_our_thinking
+			original_tag = POL
+			NOT = {
+				has_country_flag = POL_impening_civil_war_flag_ebf
+			}
+		}
+
+		activation = {
+			has_completed_focus = POL_reform_our_thinking
+			original_tag = POL
+			has_country_flag = POL_impening_civil_war_flag_ebf
+		}
+
+		is_good = no
+		days_mission_timeout = 10
+		
+		timeout_effect = {
+			hidden_effect = {
+				set_capital = 10
+				start_civil_war = {
+					ruling_party = communism
+					ideology = neutrality
+					size = 0.5
+					capital = 11
+					states = { 11 189 188 784 96 95 94 204 194 201 198 199 89 91 93 }
+				}
+
+				clr_country_flag = POL_impening_civil_war_flag_ebf
+			}
+			custom_effect_tooltip = POL_royalist_civil_war_tt
+		}
+	}
+}

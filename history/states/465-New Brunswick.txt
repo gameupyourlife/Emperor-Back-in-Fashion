@@ -14,7 +14,7 @@ state={
 		owner = USA #
 add_core_of = USA # CAN
 		buildings = {
-			infrastructure = 5
+			infrastructure = 3 #was: 5
 			industrial_complex = 2
 			4285 = {
 				naval_base = 2
@@ -26,4 +26,6 @@ add_core_of = USA # CAN
 	provinces={
 		634 1424 4285 4342 4362 4432 7379 12289 
 	}
+
+	local_supplies=0.0 
 }

@@ -8,7 +8,7 @@ state={
 		owner = SRL #
 add_core_of = SRL # ENG
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			12251 = {
 				naval_base = 2
 
@@ -19,4 +19,6 @@ add_core_of = SRL # ENG
 	provinces={
 		10321 12251 
 	}
+
+	local_supplies=0.0 
 }

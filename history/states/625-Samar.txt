@@ -9,7 +9,7 @@ state=
 	{
 		owner = MAL
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 		}
 		add_core_of = PHI
 		add_core_of = MAL
@@ -17,4 +17,6 @@ state=
 	provinces={
 		1224 1311 1340 4269 4373 
 	}
+
+	local_supplies=0.0 
 }

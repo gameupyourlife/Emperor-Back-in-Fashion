@@ -58,7 +58,7 @@ ideas = {
 				}
 			}
 
-			picture = idea_chi_wargaming_division
+			picture = chi_wargaming_division
 		}
 
 		GER_increase_infrastructure_spendings_idea = {
@@ -72,7 +72,7 @@ ideas = {
 				production_speed_infrastructure_factor = 0.2
 			}
 
-			picture = idea_generic_build_infrastructure
+			picture = generic_build_infrastructure
 		}
 
 		GER_searched_for_resources = {
@@ -137,7 +137,7 @@ ideas = {
 				}
 			}
 
-			picture = idea_generic_acquire_tanks
+			picture = generic_acquire_tanks
 		}
 
 		GER_the_german_naval_dream_idea = {
@@ -291,7 +291,7 @@ ideas = {
 				navy_max_range_factor = 0.1
 			}
 
-			picture = idea_por_colonial_assimilation
+			picture = por_colonial_assimilation
 		}
 		
 		GER_industrial_revitalisation_idea = {
@@ -306,7 +306,7 @@ ideas = {
 				industrial_capacity_dockyard = 0.075
 			}
 
-			picture = idea_man_five_year_plan_industry
+			picture = man_five_year_plan_industry
 		}
 
 		GER_new_fuel_tanks_idea = {
@@ -320,7 +320,7 @@ ideas = {
 				air_range_factor = 0.2
 			}
 
-			picture = idea_generic_air_research
+			picture = generic_air_research
 		}
 
 		GER_german_army_idea = {
@@ -355,6 +355,24 @@ ideas = {
 			picture = air_support_focus
 		}
 
+		GER_imperial_defense_mod = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			
+
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
+		}
 
 	}
 }

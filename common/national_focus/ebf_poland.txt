@@ -65,6 +65,7 @@
 		}
 
 		completion_reward = { 	
+			custom_effect_tooltip = POL_reform_our_thinking_tt
 			add_ideas = POL_royalist_revolts_idea1
 			set_politics = {
 				ruling_party = communism
@@ -77,6 +78,9 @@
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.4
+			}
+			hidden_effect = {
+				set_country_flag = POL_impening_civil_war_flag_ebf
 			}
 		}
 	}
@@ -1253,6 +1257,10 @@
 				remove_idea = POL_royalist_revolts_idea1
 				add_idea = POL_royalist_revolts_idea2
 			}
+			add_days_mission_timeout = {
+				mission = POL_imminent_royalist_civil_war
+				days = 140
+			}
 		}
 	}
 
@@ -1274,6 +1282,10 @@
 			swap_ideas = {
 				remove_idea = POL_royalist_revolts_idea2
 				add_idea = POL_royalist_revolts_idea3
+			}
+			add_days_mission_timeout = {
+				mission = POL_imminent_royalist_civil_war
+				days = 140
 			}
 		}
 	}
@@ -1297,6 +1309,10 @@
 				remove_idea = POL_royalist_revolts_idea3
 				add_idea = POL_royalist_revolts_idea4
 			}
+			add_days_mission_timeout = {
+				mission = POL_imminent_royalist_civil_war
+				days = 140
+			}
 		}
 	}
 
@@ -1319,6 +1335,7 @@
 				remove_idea = POL_royalist_revolts_idea4
 				add_idea = POL_royalist_revolts_idea5
 			}
+			clr_country_flag = POL_impening_civil_war_flag_ebf
 		}
 	}
 

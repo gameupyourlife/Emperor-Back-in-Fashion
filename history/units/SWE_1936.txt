@@ -1,5 +1,5 @@
 ﻿division_template = {
-	name = "Arméfördelning"			# Infantry Division - Planned formation for mobilization of divisions, 1937-1940
+	name = "Inf"			
 	division_names_group = SWE_INF_01
 
 	regiments = {
@@ -15,13 +15,13 @@
 		infantry = { x = 1 y = 4 }
 	}
 	support = {
-		artillery = { x = 0 y = 0 }  # Regiment of 155mm howitzers, 105mm arty
+		artillery = { x = 0 y = 0 }  
 		engineer = { x = 0 y = 1 }   
-		recon = { x = 0 y = 2 }      # Recon consisted of ACs, motorcycle inf, cavalry
 	}
 }
+
 division_template = {
-	name = "Kavalleribrigaden"  	# Cavalry Brigade
+	name = "Cav"  	# Cavalry Brigade
 	division_names_group = SWE_CAV_01
 
 	regiments = {
@@ -37,247 +37,264 @@ division_template = {
 	}
 }
 
-division_template = {
-	name = " Pansarregemente"  	
-	division_names_group = SWE_ARM_01
-
-	regiments = {
-		light_armor = { x = 0 y = 0 }
-		light_armor = { x = 0 y = 1 }
-		light_armor = { x = 0 y = 2 }
-		light_armor = { x = 0 y = 3 }
-		light_armor = { x = 0 y = 4s }
-	}
-	support = {
-		recon = { x = 0 y = 0 }      # Recon consisted of ACs, motorcycle inf, cavalry
-	}
-}
-division_template = {
-	name = "Militärområde"			# Garrison Force
-	division_names_group = SWE_GAR_01
-	# For reserve and independent regiments, lower experience and equipment
-	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 1 y = 2 }
-	}
-	priority = 0
-}
-
 units = {
-	######## LAND UNITS ########
-	##### Högkvarteret #####
-	# Southern Military District
-	division = { # "I. Arméfördelning"
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11160 # Kristianstad
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
-	division = { # "I. Arméfördelning"
+
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11160 # Kristianstad
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
-	division = { # "I. Arméfördelning"
+
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11160 # Kristianstad
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
-	division = { # "I. Arméfördelning"
+
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11160 # Kristianstad
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
-	division = { # "I. Arméfördelning"
+
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11160 # Kristianstad
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
-	division = { # "I. Arméfördelning"
+
+	division = {
 		division_name = {
 			is_name_ordered = yes
 			name_order = 1
 		}
-		location = 11160 # Kristianstad
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
-	
+
 	division = {
-		name = "Södra Militärområde"
-		location = 11160 # Kristianstad
-		division_template = "Militärområde"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0 # 0.3
-
-	}
-	# Northern Military District
-	division = { # "VI. Arméfördelning"
 		division_name = {
 			is_name_ordered = yes
-			name_order = 6
+			name_order = 1
 		}
-		location = 11148 # Osterund
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
+		start_equipment_factor = 1.0
 	}
+
 	division = {
-		name = "Norra Militärområde"
-		location = 11148 # Osterund
-		division_template = "Militärområde"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0 # 0.3
-	}
-	# Western Military District
-	division = { # "III. Arméfördelning"
 		division_name = {
 			is_name_ordered = yes
-			name_order = 3
+			name_order = 1
 		}
-		location = 3375 # Skövde
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-
+		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "Västra Militärområde"
-		location = 3375 # Skovde
-		division_template = "Militärområde"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0 # 0.3
-
-	}
-	# Eastern Military District
-	division = { # "IV. Arméfördelning"
 		division_name = {
 			is_name_ordered = yes
-			name_order = 4
+			name_order = 1
 		}
-		location = 6050 #Stockholm
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
+		start_equipment_factor = 1.0
 	}
-	division = {
-		name = "Kavalleribrigaden"
-		location = 6050 #Stockholm
-		division_template = "Kavalleribrigaden"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
 
-	}
 	division = {
-		name = "Östra Militärområde"
-		location = 6050 #Stockholm
-		division_template = "Militärområde"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0 # 0.3
-	}
-	# Upper Northern Military District
-	division = { # "V. Arméfördelning"
 		division_name = {
 			is_name_ordered = yes
-			name_order = 5
+			name_order = 1
 		}
-		location = 9186 # Boden
-		division_template = "Arméfördelning"
+		location = 6050 
+		division_template = "Inf"
 		start_experience_factor = 0.3
-		start_equipment_factor = 1.0 # 0.3
-	}
-	division = {
-		name = "Övre Norrland Militärområde"
-		location = 9186 # Boden
-		division_template = "Militärområde"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0 # 0.3
+		start_equipment_factor = 1.0
 	}
 
 	division = {
-		name = "Gotlands Militärområde"
-		location = 3229 # Gotland
-		division_template = "Militärområde"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1.0 # 0.3
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
-}
 
-### Flygvapnet ###
-air_wings = {
-	141 = {
-		# 1. Bombflyggruppen -- Hawker Harts
-		CAS_equipment_1 = {
-			owner = "SWE" 
-			amount = 100
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
 		}
-		# 5. Jaktflyggruppen -- Bristol Bulldogs, Svenska Jaktfalks, Centrala Malmslatts
-		fighter_equipment_0 =  {
-			owner = "SWE" 
-			amount = 200
-		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
-	140 = {
-		# 2. Torpedflyggruppen -- Heinkel HD 16s
-		cv_nav_bomber_equipment_1 =  {
-			owner = "SWE" 
-			amount = 100
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
 		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
-}
 
-### Starting Production ###
-instant_effect = {
-	add_equipment_production = {
-		equipment = {
-			type = infantry_equipment_1
-			creator = "SWE"
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
 		}
-		requested_factories = 1
-		progress = 0.77
-		efficiency = 100
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
-	add_equipment_production = {
-		equipment = {
-			type = support_equipment_1
-			creator = "SWE"
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
 		}
-		requested_factories = 1
-		progress = 0.21
-		efficiency = 100
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
+	}
+
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6050 
+		division_template = "Inf"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1.0
 	}
 }

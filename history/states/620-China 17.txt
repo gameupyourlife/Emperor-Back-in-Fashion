@@ -22,7 +22,7 @@ state={
 		1938.10.25 = {
 			buildings = {
 				industrial_complex = 3
-				infrastructure = 6
+				infrastructure = 3 #was: 6
 				air_base = 2
 				arms_factory = 2
 
@@ -48,4 +48,6 @@ state={
 	manpower=25541600
 	buildings_max_level_factor=1.000
 	state_category=city
+
+	local_supplies=2.0 
 }

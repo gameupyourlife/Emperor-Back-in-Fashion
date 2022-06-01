@@ -21,7 +21,7 @@ state={
 		
 			arms_factory = 1
 			industrial_complex = 2
-			infrastructure = 3
+			infrastructure = 2
 			dockyard = 1
 			fuel_silo = 1
 
@@ -36,4 +36,6 @@ state={
 	provinces={
 		998 7102 7217 10015 10032 
 	}
+
+	local_supplies=0.0 
 }

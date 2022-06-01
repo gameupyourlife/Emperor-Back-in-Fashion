@@ -9,7 +9,7 @@ state= {
 		owner = ARG  #
 add_core_of = ARG # ENG
 		buildings = {
-			infrastructure = 2
+			infrastructure = 1
 			12960 = {
 				naval_base = 1
 			}
@@ -17,4 +17,6 @@ add_core_of = ARG # ENG
 		add_claim_by = ARG
 	}
 	provinces= { 12960 }
+
+	local_supplies=0.0 
 }

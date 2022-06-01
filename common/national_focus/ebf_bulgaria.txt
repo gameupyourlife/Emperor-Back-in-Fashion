@@ -31,7 +31,7 @@
 		}
 		relative_position_id = BUL_the_future_awaits
 
-		cost = 10
+		cost = 1
 		x = -1
 		y = 1
 		
@@ -53,7 +53,7 @@
 		}
 		relative_position_id = BUL_the_future_awaits
 
-		cost = 10
+		cost = 1
 		x = 1
 		y = 1
 
@@ -537,7 +537,7 @@
 		}
 
 		completion_reward = {
-			add_ideas = GER_new_fuel_tanks_idea
+			add_ideas = BUL_new_fuel_tanks_idea
 		}
 	}
 
@@ -633,7 +633,7 @@
 		}
 
 		completion_reward = {
-			add_ideas = GER_fund_the_prussian_acadamy_idea
+			add_ideas = BUL_the_race_has_begun_idea
 		}
 	}
 
@@ -1079,7 +1079,7 @@
 
 
 		completion_reward = {
-			add_ideas = GER_increase_infrastructure_spendings_idea
+			add_ideas = BUL_secure_delivery_routes_idea
 		}
 	}
 
@@ -1811,7 +1811,7 @@
 		cost = 10
 
 		bypass = {
-			has_completed_focus = GER_the_only_true_empire
+		
 		}
 		
 		available = {
@@ -1864,7 +1864,7 @@
 		}
 
 		completion_reward = {
-			add_ideas = GER_imperial_defense_mod
+			add_ideas = BUL_defend_the_new_empire_idea
 		}
 	}
 
@@ -2072,5 +2072,5 @@
 			add_ideas = BUL_now_we_can_ascend_idea
 		}
 	}
-
+	
 }

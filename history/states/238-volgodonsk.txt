@@ -14,7 +14,7 @@ state={
 		owner = GEO #
 add_core_of = GEO # SOV
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 		}
 		add_core_of = SOV
 		victory_points = {
@@ -23,6 +23,8 @@ add_core_of = GEO # SOV
 	}
 
 	provinces={
-		426 775 3417 3443 3464 3587 3777 3779 6417 6468 6490 6765 6796 9415 9581 11400 11403 11416 
+		426 775 3417 3443 3464 3587 3777 3779 6417 6468 6490 6765 6796 9415 9581 11400 11403 
 	}
+
+	local_supplies=0.0 
 }

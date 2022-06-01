@@ -9,7 +9,7 @@ state={
 		owner = CUB #
 add_core_of = CUB # ENG
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			11350 = {
 				naval_base = 1
 			}
@@ -22,4 +22,6 @@ add_core_of = CUB # ENG
 	provinces={
 		379 11106 11350 13009 
 	}
+
+	local_supplies=4.0 
 }

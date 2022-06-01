@@ -16,7 +16,7 @@ ideas = {
 					instant = yes
 				}
 			}
-			picture = generic_research_bonus
+			picture = generic_navy_bonus
 		}	
 
 		BUL_subsidize_the_bulgarian_industry_idea = {
@@ -29,7 +29,7 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.1
 			}
-			picture = generic_research_bonus
+			picture = SPR_relocate_the_gold_reserves
 		}
 
 		BUL_lion_from_the_south_idea = {
@@ -43,7 +43,7 @@ ideas = {
 				army_attack_factor = 0.05
 				land_reinforce_rate = 0.03
 			}
-			picture = generic_research_bonus
+			picture = generic_tank_manufacturer_1
 		}
 
 		BUL_investment_campain_idea = {
@@ -56,7 +56,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = tur_balkan_central_bank_wealthy_greece
 		}
 
 		BUL_integration_mess_idea1 = {
@@ -70,7 +70,7 @@ ideas = {
 				war_support_factor = -0.1
 				surrender_limit = -0.1
 			}
-			picture = generic_research_bonus
+			picture = chi_wargaming_division
 		}
 
 		BUL_integration_mess_idea2 = {
@@ -85,7 +85,7 @@ ideas = {
 				war_support_factor = -0.1
 				surrender_limit = -0.2
 			}
-			picture = generic_research_bonus
+			picture = chi_wargaming_division
 		}
 
 		BUL_integration_mess_idea3 = {
@@ -101,7 +101,7 @@ ideas = {
 				war_support_factor = -0.1
 				surrender_limit = -0.4
 			}
-			picture = generic_research_bonus
+			picture = chi_wargaming_division
 		}
 
 		BUL_military_pride_idea = {
@@ -115,7 +115,7 @@ ideas = {
 				army_org_Factor = 0.1
 				army_defence_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_reserve_divisions
 		}
 
 		BUL_supplement_pride_with_boom_idea = {
@@ -128,7 +128,7 @@ ideas = {
 			modifier = {
 				nuclear_production_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = combined_bomber_offensive
 		}
 
 		BUL_indoctrination_from_childhood_on_idea = {
@@ -143,7 +143,7 @@ ideas = {
 				research_speed_factor = 0.05
 				production_factory_max_efficiency_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_army_war_college
 		}
 
 		BUL_exclame_the_bulgarian_prussia_idea = {
@@ -158,7 +158,7 @@ ideas = {
 				stability_factor = 0.1
 				war_support_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = bul_prussia_of_the_balkans
 		}
 
 		BUL_new_military_tactics_idea = {
@@ -173,7 +173,7 @@ ideas = {
 				dig_in_speed_factor = 0.1
 				army_defence_factor  = 0.1
 			}
-			picture = generic_research_bonus
+			picture = eng_imperial_conscription
 		}
 
 		BUL_airforce_like_a_pro_idea = {
@@ -188,7 +188,7 @@ ideas = {
 				air_agility_factor = 0.02
 				air_attack_factor = 0.05
 			}
-			picture = generic_research_bonus
+			picture = generic_air_payment
 		}
 
 		BUL_a_second_revolution_idea = {
@@ -202,7 +202,7 @@ ideas = {
 				production_factory_max_efficiency_factor = 0.1
 				production_factory_efficiency_gain_factor = 0.1
 			}
-			picture = generic_research_bonus
+			picture = man_five_year_plan_industry
 		}
 
 		BUL_new_conscription_law_idea = {
@@ -216,7 +216,7 @@ ideas = {
 				conscription = 0.025
 				mobilization_speed = 0.1
 			}
-			picture = generic_research_bonus
+			picture = eng_imperial_conscription
 		}
 
 		BUL_mass_mob_idea = {
@@ -232,7 +232,7 @@ ideas = {
 				mobilization_speed = 0.2
 				conscription = 0.025
 			}
-			picture = generic_research_bonus
+			picture = tfv_can_conscription_crisis
 		}
 
 		BUL_intervene_in_the_war_idea = {
@@ -245,7 +245,7 @@ ideas = {
 			modifier = {
 				send_volunteers_tension = -0.5
 			}
-			picture = generic_research_bonus
+			picture = chi_war_of_resistance3
 		}
 
 		BUL_now_we_can_ascend_idea = {
@@ -261,7 +261,67 @@ ideas = {
 				war_support_weekly = 0.001
 				political_power_gain = 0.2
 			}
+			picture = FRA_national_mobilization_focus
+		}
+
+		BUL_the_race_has_begun_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				research_speed_factor = 0.05
+			}
 			picture = generic_research_bonus
+		}
+
+		BUL_secure_delivery_routes_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+			}
+
+			picture = generic_build_infrastructure
+		}
+
+		BUL_new_fuel_tanks_idea = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				air_range_factor = 0.2
+			}
+
+			picture = generic_air_research
+		}
+
+		BUL_defend_the_new_empire_idea = {
+			picture = YUG_federal_defense_council
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+	
+			removal_cost = -1
+	
+			
+	
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+			}
 		}
 	}
 }

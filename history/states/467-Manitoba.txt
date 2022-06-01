@@ -14,7 +14,7 @@ state={
 		owner = USA #
 add_core_of = USA # CAN
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			industrial_complex = 1
 		}
 		victory_points = {
@@ -24,6 +24,8 @@ add_core_of = USA # CAN
 	}
 
 	provinces={
-		1848 1873 3721 4218 4426 4790 4872 5119 12145 12636 12688 
+		1848 1873 3721 4218 4426 4790 4872 5119 12145 12636 12688 13163 
 	}
+	buildings_max_level_factor=1.000
+	local_supplies=9.0 
 }

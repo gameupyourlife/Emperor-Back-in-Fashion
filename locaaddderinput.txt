@@ -1,0 +1,1 @@
+"c:/Users/cedri/Documents/Paradox Interactive/Hearts of Iron IV/mod/betatest/common/decisions/ebf_unification_decision.txt" "c:/Users/cedri/Documents/Paradox Interactive/Hearts of Iron IV/mod/betatest/localisation/ebf_decision_l_english.yml"

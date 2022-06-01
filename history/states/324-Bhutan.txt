@@ -32,4 +32,6 @@ add_core_of = SIK # BHU
 	provinces={
 		8010 12860 
 	}
+
+	local_supplies=0.0 
 }

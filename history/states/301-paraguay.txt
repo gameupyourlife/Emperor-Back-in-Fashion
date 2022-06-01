@@ -26,4 +26,6 @@ add_core_of = ARG # PAR
 		2152 2173 2194 11023 12901 
 	}
 	
+
+	local_supplies=0.0 
 }

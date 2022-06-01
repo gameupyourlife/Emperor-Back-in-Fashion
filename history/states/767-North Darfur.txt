@@ -10,7 +10,7 @@ state=
 	history= {
 		add_core_of = SUD
 		owner = SAU #
-add_core_of = SAU # ENG
+		add_core_of = SAU # ENG
 		buildings = {
 			infrastructure = 0
 		}
@@ -18,4 +18,6 @@ add_core_of = SAU # ENG
 	provinces={
 		7987 8103 10900
 	}
+
+	local_supplies=0.0 
 }
